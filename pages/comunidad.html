@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<!-- encabezadodelaweb ---------------------------------------------------------------------------------------------------------------------------->
+
+<head>
+  <meta name="theme-color" content="#8c9657">
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PlantBuddies</title>
+  <link rel="shortcut icon" href="../assets/imagenes/FAVICON.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Tagesschrift&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css" />
+</head>
+
+<body>
+  <header>
+    <div class="header-invisible"></div>
+    <div class="header-jefe-visible">
+      <!-- este es el menu ------------------------------------------------------------->
+      <div class="logo-container">
+        <img src="../assets/imagenes/carita1.png" alt="logoplantbuddies" />
+        <h1>PlantBuddies</h1>
+      </div>
+      <nav>
+        <ul class="header-menu">
+          <li class="header-menu-item"><a href="../index.html">Inicio</a></li>
+          <li class="header-menu-item"><a href="registro.html">Registro</a></li>
+          <li class="header-menu-item"><a href="intercambios.html">Intercambios</a></li>
+          <li class="header-menu-item"><a href="comunidad.html">Comunidad</a></li>
+          <li class="header-menu-item"><a href="contacto.html">Contacto</a></li>
+          <li class="header-menu-item">
+            <a href="perfil.html">
+              <img src="../assets/imagenes/AvatarBaseUsuario.png" alt="AvatarBaseUsuario" />
+            </a>
+
+            <div class="header-submenu">
+              <div class="submenu-usuario-online"> <!--hijo 1 color oscuro, icono avarar, nombre perfil-->
+                <img src="../assets/imagenes/AvatarBaseUsuario.png" alt="">
+                <h3>"Name"</h3>
+                <div class="stars">★ ★ ★ ★ ★</div>
+              </div>
+
+              <div class="submenu-enlaces"><!--hijo 2 color claro, enlaces de submenu-->
+                <ul>
+                  <li>
+                    <img src="../assets/imagenes/witchIcon.png" alt="plantIcon">
+                    <a href="perfil.html">Perfil</a>
+                  </li>
+                  <li>
+                    <a href="favoritos.html" img src="../assets/imagenes/plantIcon.png" alt="plantIcon">Favoritos</a>
+                  </li>
+                  <li>
+                    <a href="social.html" img src="../assets/imagenes/plantIcon.png" alt="plantIcon">Social</a>
+                  </li>
+                  <li>
+                    <a href="misintercambios.html" img src="../assets/imagenes/plantIcon.png" alt="plantIcon">Mis
+                      intercambios</a>
+                  </li>
+                  <li> <a href="offline" img src="../assets/imagenes/plantIcon.png" alt="plantIcon">Cerrar sesión</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+  <!-- FINencabezadodelaweb ---------------------------------------------------------------------------------------------------------------------------->
+
+  <!-- encabezado comunidad--------------------------->
+  <section>
+    <div class="encabezado-comunidad">
+      <h2>Actividad de la Comunidad</h2>
+      <p>Este espacio es para crecer juntxs, como un buen micelio.
+        Subí tu guía arcana de cómo hablarle a tu ficus por las mañanas, recetas para aprovechar las plantas de tu
+        huerta, entérate de los últimos susurros
+        que recorren el bosque, comparte tus pocimas y consejos. Aqui nadie juzga (salvo el helecho viejo, pero ese
+        gruñe por costumbre, no le des bola). Si sos nuevx, dejá un croar de saludo. Si ya sos de la madriguera,
+        ¡aparecé y revolvé el caldero!
+        🌻 La comunidad se riega con palabras, así que ¡Animate a participar y hacer florecer esta comunidad!🌻</p>
+      <button class="ideas">Empieza a compartir tus ideas</button>
+    </div>
+  </section>
+  <!-- FIN encabezado comunidad--------------------------->
+
+
+  <!-- contenido comunidad--------------------------->
+  <main>
+    <div class="comunidad-grid-container">
+      <!--parte izquierda, foro--------------------------->
+      <div class="foros-container">
+        <div>
+          <h2>Categorías Populares</h2>
+        </div>
+        <!-- Grid, parte de arriba con las cateogrías comunidad--------------------------->
+        <div class="categorias-populares-container">
+          <div class="categoria">
+            <div>
+              <img src="../assets/imagenes/IconGrimorios2.png" alt="iconoTutoriales">
+            </div>
+            <div>
+              <h3>Grimorios verdes</h3>
+              <p>Guías, tips, y tutoriales para el cuidado de plantas.</p>
+            </div>
+          </div>
+          <div class="categoria">
+            <div>
+              <img src="../assets/imagenes/IconoVisitantes.png" alt="Goblin conduciendo un gato icono">
+            </div>
+            <div>
+              <h3>Amigos no
+                humanos</h3>
+              <p>Visitantes inesperados que no pagan el alquiler.</p>
+            </div>
+          </div>
+          <div class="categoria">
+            <div>
+              <img src="../assets/imagenes/IconBitacora.png" alt="">
+            </div>
+            <div>
+              <h3>Bitácora de
+                Arte</h3>
+              <p>Fotos, dibujos
+                y creaciones.</p>
+            </div>
+          </div>
+          <div class="categoria">
+            <div> <img src="../assets/imagenes/IconPociones.png" alt="Pociones y recetas icono"> </div>
+            <div>
+              <h3>Pociones,
+                Alquimia y más</h3>
+              <p>Repelentes caseros,
+                homeopatía, cosméticos.</p>
+            </div>
+          </div>
+          <div class="categoria">
+            <div> <img src="../assets/imagenes/IconHallazgos.png" alt="Icono Hallazgos cofre del tesoro"></div>
+            <div>
+              <h3>Hallazgos del
+                Bosque</h3>
+              <p>Objetos perdidos,
+                tesoros encontrados,
+                curiosidades.</p>
+            </div>
+          </div>
+          <div class="categoria">
+            <div></div><img src="../assets/imagenes/IconEcos.png" alt="Icono Ecos del Bosque, goblins chismeando">
+            <div>
+              <h3>Ecos del Bosque</h3>
+              <div>
+                <p>Foro libre, eventos,
+                  rumores.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="divider-superior"></div>
+        <!-- parte de abajo , publicaciones del foro--------------------------->
+        <div class="actividad-reciente-container">
+          <h2>Últimas publicaciones</h2>
+          <div class="divisiones-publicaciones">
+            <h4>Foro</h4>
+            <h4>Comentarios</h4>
+            <h4>Último mensaje</h4>
+            <h4>Calificación</h4>
+          </div>
+          <div class="container">
+            <div class="cards-grid">
+              <!-- Card 1 -->
+              <div class="card">
+                <div class="avatar">
+                  <img src="../assets/imagenes/AvatarBaseUsuario.png" alt="Avatar de usuario">
+                </div>
+                <div class="content">
+                  <div class="title">🧟Lo encontré y ahora es mi problema</div>
+                  <div class="author">por Laurel666</div>
+                  <div class="divider"></div>
+                  <div class="description">Cosas extrañas que no pediste pero ahora viven con vos. Les presento mi
+                    colección de vecinos invasores y regalos no deseados hechos por amigues sin criterio estético.
+                    Sientan...</div>
+                </div>
+                <div class="meta">
+                  <div class="meta-top">
+                    <div class="comments">35</div>
+                    <div class="time">Hace 5 minutos</div>
+                  </div>
+                  <div class="rating">
+                    <div class="star filled"></div>
+                    <div class="star filled"></div>
+                    <div class="star filled"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="card">
+                <div class="avatar">
+                  <img src="../assets/imagenes/AvatarBaseUsuario.png" alt="Avatar de usuario">
+                </div>
+                <div class="content">
+                  <div class="title">🥀¿Esto se está muriendo?</div>
+                  <div class="author">por swampcreature</div>
+                  <div class="divider"></div>
+                  <div class="description">Una pregunta que todos nos hemos hecho alguna vez. Comparto fotos de mi
+                    planta misteriosa que parece estar en una crisis existencial. ¿Alguien puede ayudarme?</div>
+                </div>
+                <div class="meta">
+                  <div class="comments">16</div>
+                  <div class="time">Hace 8 minutos</div>
+                  <div class="rating">
+                    <div class="star filled"></div>
+                    <div class="star filled"></div>
+                    <div class="star empty"></div>
+                    <div class="star empty"></div>
+                    <div class="star empty"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="card card-3">
+                <div class="avatar">
+                  <img src="../assets/imagenes/AvatarBaseUsuario.png" alt="Avatar de usuario">
+                </div>
+                <div class="content">
+                  <div class="title">¿Tesoro o resto de un ritual?</div>
+                  <div class="author">por LordoftheLeaves</div>
+                  <div class="divider"></div>
+                  <div class="description">Encontré esto en el jardín y no sé si es algo valioso o los restos de algún
+                    ritual extraño del vecino. Las opiniones están divididas en mi casa.</div>
+                </div>
+                <div class="meta">
+                  <div class="comments">200</div>
+                  <div class="time">Ahora mismo</div>
+                  <div class="rating">
+                    <div class="star filled"></div>
+                    <div class="star empty"></div>
+                    <div class="star empty"></div>
+                    <div class="star empty"></div>
+                    <div class="star empty"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 4 -->
+              <div class="card card-4">
+                <div class="avatar">
+                  <img src="../assets/imagenes/AvatarBaseUsuario.png" alt="Avatar de usuario">
+                </div>
+                <div class="content">
+                  <div class="title">No sé qué planta es pero la amo</div>
+                  <div class="author">por LadyoftheBugs</div>
+                  <div class="divider"></div>
+                  <div class="description">Apareció en mi jardín de la nada y ahora es mi favorita. No tengo idea de qué
+                    especie es, pero le hablo todos los días y creo que me entiende.</div>
+                </div>
+                <div class="meta">
+                  <div class="comments">4</div>
+                  <div class="time">Hace 20 minutos</div>
+                  <div class="rating">
+                    <div class="star filled"></div>
+                    <div class="star filled"></div>
+                    <div class="star filled"></div>
+                    <div class="star filled"></div>
+                    <div class="star filled"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 5 -->
+              <div class="card card-5">
+                <div class="avatar">
+                  <img src="../assets/imagenes/AvatarBaseUsuario.png" alt="Avatar de usuario">
+                </div>
+                <div class="content">
+                  <div class="title">🧙‍♂️ Le hice un hechizo a mi poto para que crezca… ahora crece en dirección a mi cama</div>
+                  <div class="author">por DarkFicus69</div>
+                  <div class="divider"></div>
+                  <div class="description"> Cada noche está un poco más cerca. Ya comparte mi almohada. 
+                    Creo que se llama Javier y quiere hablar de compromiso.</div>
+                </div>
+                <div class="meta">
+                  <div class="comments">100</div>
+                  <div class="time">Hace 2 minutos</div>
+                  <div class="rating">
+                    <div class="star filled"></div>
+                    <div class="star filled"></div>
+                    <div class="star filled"></div>
+                    <div class="star filled"></div>
+                    <div class="star filled"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 6 -->
+              <div class="card card-6">
+                <div class="avatar">
+                  <img src="../assets/imagenes/AvatarBaseUsuario.png" alt="Avatar de usuario">
+                </div>
+                <div class="content">
+                  <div class="title"><p>Hay un cuervo robando mis cosas</p></div>
+                  <div class="author"><p>por GoblinMom</p></div>
+                  <div class="divider"></div>
+                  <div class="description"><p> Tiene una colección mejor que la mía. Lo odio un poco y lo respeto.</p></div>
+                </div>
+                <div class="meta">
+                  <div class="comments"><p>100</p></div>
+                  <div class="time"><p>Hace 2 minutos</p></div>
+                  <div class="rating">
+                    <div class="star filled"></div>
+                    <div class="star filled"></div>
+                    <div class="star filled"></div>
+                    <div class="star filled"></div>
+                    <div class="star filled"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- parte derecha, buscador y navegador del foro-------------------------->
+      <div class="comunidad-sidenavbars-container">
+        <div class="buscadores-container">
+          <div class="search-group">
+            <input type="text" class="search-input" placeholder="Busca puntos de encuentro">
+            <button class="search-btn" onclick="searchLocation()">
+              <svg class="search-icon" viewBox="0 0 24 24">
+                <path
+                  d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="search-group">
+            <input type="text" class="search-input" placeholder="Encontrá gente">
+            <button class="search-btn" onclick="searchPeople()">
+              <svg class="search-icon" viewBox="0 0 24 24">
+                <path
+                  d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+              </svg>
+            </button>
+          </div>
+
+          <button class="conduct-btn" onclick="showConduct()">
+            Ver normas de conducta
+          </button>
+        </div>
+        <div class="comunidad-navbar">
+          <nav class="navbar-container" id="navbar">
+            <button class="nav-item active" onclick="goToSection('inicio')">Inicio</button>
+            <button class="nav-item" onclick="goToSection('valoraciones')">Mejores valoraciones</button>
+            <button class="nav-item" onclick="goToSection('favoritos')">Favoritos</button>
+            <button class="nav-item" onclick="goToSection('publicaciones')">Publicaciones de amigos</button>
+          </nav>
+        </div>
+      </div>
+    </div>
+     </main>
+  <!-- FIN Grid comunidad--------------------------->
+
+
+  <!-- footer-->
+  <footer class="pie-de-pagina">
+    <div class="footerMenu"> <!-- DIV PADRE-->
+      <div class="descripcionPagina">
+        <a href="#home">
+          <h3>PlantBuddies</h3>
+        </a>
+        <p>Conectando amantes de las plantas desde 2025.
+          Tu aventura botánica comienza con nosotros.</p>
+      </div>
+
+      <div class="Enlaces">
+        <h3>Enlaces</h3>
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="registro.html">Registro</a></li>
+          <li><a href="intercambios.html">Intercambios</a></li>
+          <li><a href="comunidad.html">Comunidad</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="perfil.html">Perfil</a></li>
+          <ul>
+      </div>
+
+      <div class="Recursos">
+        <ul>
+          <h3>Recursos</h3>
+          <li><a href="#">Guía de intercambio</a></li>
+          <li><a href="#">Equipo de soporte</a></li>
+          <li><a href="#">Preguntas frecuentes</a></li>
+          <li><a href="#">Políticas</a></li>
+          <li><a href="#">Gestionar Suscripción</a></li>
+        </ul>
+      </div>
+
+      <div class="Siguenos">
+        <h3>Siguenos</h3>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/luna-bujalesky-b60561267/">LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/soleiatelier/">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <p id="copyright">©2025 hecho con ❤ por el equipo de PlantBuddies. Todos los derechos reservados</p>
+  </footer>
+</body>
+
+<script>
+  function searchLocation() {
+    const input = document.querySelector('input[placeholder="Busca puntos de encuentro"]');
+    alert('Buscando: ' + input.value);
+  }
+
+  function searchPeople() {
+    const input = document.querySelector('input[placeholder="Encontrá gente"]');
+    alert('Buscando personas: ' + input.value);
+  }
+
+  function showConduct() {
+    alert('Mostrando normas de conducta');
+  }
+  let lastScrollTop = 0;
+  const navbar = document.getElementById('navbar');
+  let scrollOffset = 0;
+
+  window.addEventListener('scroll', function () {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollDiff = scrollTop - lastScrollTop;
+
+    // Acumular el desplazamiento
+    scrollOffset += scrollDiff * 0.3; // Factor de suavizado
+
+    // Aplicar la transformación
+    navbar.style.transform = `translateY(${scrollOffset}px)`;
+
+    lastScrollTop = scrollTop;
+  });
+
+  function goToSection(sectionId) {
+    // Remover clase active de todos los botones
+    document.querySelectorAll('.nav-item').forEach(item => {
+      item.classList.remove('active');
+    });
+
+    // Agregar clase active al botón clickeado
+    event.target.classList.add('active');
+
+    // Scroll a la sección
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+</script>
+
+</html>

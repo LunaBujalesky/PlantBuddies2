@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="theme-color" content="#8c9657">
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/assets/imagenes/FAVICON.png">
+  <title>PlantBuddies</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Tagesschrift&family=VT323&display=swap" rel="stylesheet">
+ 
+  <link rel="stylesheet" type="text/css" href="./css/main.css">
+</head>
+
+<body>
+  <header>
+    <div class="header-invisible"></div>
+    <div class="header-jefe-visible">
+      <!-- este es el menu de pc------------------------------------------------------------->
+      <div class="logo-container">
+        <img src="assets/imagenes/carita1.png" alt="logoplantbuddies" />
+        <h1 class="primera segunda tercera" id="titulo">PlantBuddies</h1>
+      </div>
+
+
+      <!-- este es el menu de celulares aka hamburguesa ------------------------------------------------------------->
+      <div class="menu_hamburguesa_principal" id="hamburguesa">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <nav class="menu-hamburguesa-fondo">
+          <div class="submenu-container" id="submenu">
+            <div class="hover-background" id="hoverBg"></div>
+            <div class="menu-item" data-index="0"><a href="index.html"></a>Inicio</div>
+            <div class="menu-item active" data-index="1"><a href="pages/registro.html"></a>Registro</div>
+            <div class="menu-item" data-index="2"><a href="pages/intercambios.html"></a>Intercambios</div>
+            <div class="menu-item" data-index="3"><a href=".pages/comunidad.html"></a>Comunidad</div>
+            <div class="menu-item" data-index="4"><a href=".pages/contacto.html"></a>Contacto</div>
+          </div>
+
+          <div class="menu-hamburguesa-submenu" style="display: none;">
+            <div class="menu-hamburguesa-submenu-enlaces"><!--hijo 2 color claro, enlaces de submenu-->
+              <ul>
+                <li> <a href="pages/perfil.html">Perfil</a></li>
+                <li> <a href="/pages/comunidad.html">Favoritos</a></li>
+                <li><a href="pages/social.html">Social</a></li>
+                <li> <a href="pages/misintercambios.html">Mis intercambios</a> </li>
+                <li> <a href="pages/offline">Cerrar sesión</a> </li>
+              </ul>
+            </div>
+          </div>
+
+
+        </nav>
+
+
+      </div>
+
+      <!-- menu normal pc ------------------------------------------------------------->
+      <nav>
+        <ul class="header-menu">
+          <li class="header-menu-item"><a href="../index.html">Inicio</a></li>
+          <li class="header-menu-item"><a href="pages/registro.html">Registro</a></li>
+          <li class="header-menu-item"><a href="pages/intercambios.html">Intercambios</a></li>
+          <li class="header-menu-item"><a href="pages/comunidad.html">Comunidad</a></li>
+          <li class="header-menu-item"><a href="pages/contacto.html">Contacto</a></li>
+          <li class="header-menu-item">
+            <a href="pages/perfil.html">
+              <img src="assets/imagenes/AvatarBaseUsuario.png" alt="AvatarBaseUsuario" />
+            </a>
+
+            <div class="header-submenu">
+              <div class="submenu-usuario-online"> <!--hijo 1 color oscuro, icono avarar, nombre perfil-->
+                <img src="assets/imagenes/AvatarBaseUsuario.png" alt="">
+                <h3>"Name"</h3>
+                <div class="stars">★ ★ ★ ★ ★</div>
+              </div>
+
+              <div class="submenu-enlaces"><!--hijo 2 color claro, enlaces de submenu-->
+                <ul>
+                  <li>
+                    <img src="assets/imagenes/witchIcon.png" alt="plantIcon">
+                    <a href="pages/perfil.html">Perfil</a>
+                  </li>
+                  <li>
+                    <a href="pages/favoritos.html" img src="assets/imagenes/plantIcon.png" alt="plantIcon">Favoritos</a>
+                  </li>
+                  <li>
+                    <a href="pages/social.html" img src="assets/imagenes/plantIcon.png" alt="plantIcon">Social</a>
+                  </li>
+                  <li>
+                    <a href="pages/misintercambios.html" img src="assets/imagenes/plantIcon.png" alt="plantIcon">Mis
+                      intercambios</a>
+                  </li>
+                  <li> <a href="offline" img src="assets/imagenes/plantIcon.png" alt="plantIcon">Cerrar sesión</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+      </nav>
+
+
+
+
+    </div>
+  </header>
+
+  <!-- menu del perfil deslizable Desconectado------------------------------------------
+    <div class="submenu-usuario-offline">
+      <img class="AvatarBaseUsuario" src="assets/imagenes/AvatarBaseUsuario.png" alt="AvatarBaseUsuario" />
+      <h3> Desconectado </h3>
+    <div class="submenu-conectarse"> 
+      <a href="#" img src="assets/plantIcon.png" alt="plantIcon">Iniciar Sesión/a>
+    </div>
+  </div>>
+ 
+  <! -- FINencabezadodelaweb ---------------------------------------------------------------------------------------------------------------------------->
+
+
+  <!--decoraciones flotando------------------------------------------>
+  <div class="hero-image">
+    <div class="floating-leaf leaf-1"><img class="leave4Icon" src="assets/imagenes/leave4Icon.png" /></div>
+    <div class="floating-leaf leaf-2"><img class="mothIcon" src="assets/imagenes/mothIcon.png" /></div>
+    <div class="floating-leaf leaf-3"><img class="leave3Icon" src="assets/imagenes/leave3Icon.png" /></div>
+  </div>
+
+
+  <!-- primera seccion, lading page, mensaje de bienvenida ---------------------------------------------------------------------------->
+  <main>
+    <section id="mensaje-de-bienvenida">
+      <div class="container-bienvenida">
+        <div class="text-content">
+          <div class="banner-title">
+            <h2>Una aventura verde te espera!</h2>
+          </div>
+          <div class="p-container">
+            <p>
+              Únete junto a otros guardianes verdes donde intercambiar plantas se
+              convierte en una experiencia mágica. <br> Colecciona, intercambia, comparte esquejes, y aprende mientras
+              ganas recompensas y haces amigos. <br>
+              La comunidad te espera!
+            </p>
+          </div>
+          <!--al accionar boton de comienza ahora, cartel log in aka modal--------->
+          <input type="checkbox" id="aparecer-login">
+          <label for="aparecer-login" class="boton-comienza-ahora">Comienza ahora</label>
+          <!-- Checkbox oculto y modal -->
+          <div class="log-in-oculto">
+            <div class="modal">
+              <!-- Botón para cerrar el modal -->
+              <label for="aparecer-login" class="close-button">✕</label>
+
+              <!-- Formulario de login -->
+              <form>
+                <input type="email" placeholder="Email" class="input-field">
+                <div class="password-container">
+                  <input type="password" placeholder="Password" class="input-field">
+                  <span class="eye-icon">👁️</span>
+                </div>
+                <!-- Contenedor del goblin DENTRO del form -->
+                <div class="goblin-container">
+                  <div class="goblin-ojos-abiertos">
+                    <img src="assets/imagenes/logInIcon.png" alt="goblin-ojos-abiertos">
+                  </div>
+                  <div class="goblin-ojos-cerrados">
+                    <img src="assets/imagenes/logInIconContrasena.png" alt="goblin-ojos-cerrados">
+                  </div>
+                </div>
+                <button type="button" class="login-button">Log in</button>
+              </form>
+            </div>
+          </div>
+          <!--fin codigo para para el modal de log in--------->
+        </div>
+        <div class="goblinlandingpage1">
+          <img x src="assets/imagenes/goblinlandingpage1.png" alt="goblinlandingpage" />
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-------------------------------------------------------------------------------------------------------------------------->
+  <section class="BannerSponsors">
+    <h4>con el apoyo de</h4>
+    <div class="supporters-logos">
+      <div class="sponsorIngenias"><img src="assets/imagenes/sponsorIngenias.png" alt="sponsorIngenias"></div>
+      <div class="sponsorlogo2"><img src="assets/imagenes/sponsorlogo2.png" alt="sponsorlogo2"></div>
+      <div class="sponsorlogo3"><img src="assets/imagenes/sponsorlogo3.png" alt="sponsorlogo3"></div>
+    </div>
+  </section>
+
+  <!-- seccion como funciona------------------------------------------------------------------------------------------------------------------------------>
+  <section class="comofunciona">
+    <h2>¿Cómo funciona?</h2>
+    <div class="comofunciona-container">
+      <div class="Paso1">
+        <img src="assets/imagenes/configuracion.png" alt="plantIcon" />
+        <h3>Crea tu perfil</h3>
+        <p>Regístrate y carga tus plantas disponibles para intercambio.</p>
+      </div>
+      <div class="Paso2">
+        <img src="assets/imagenes/witchIcon.png" alt="plantIcon" />
+        <h3>Explora y Conecta</h3>
+        <p>Encuentra plantas
+          que te gusten y conecta con sus dueños.</p>
+      </div>
+      <div class="Paso3">
+        <img src="assets/imagenes/igualIcon.png" alt="plantIcon" />
+        <h3>Intercambia</h3>
+        <p>Concreta tu intercambio, califícalo y disfruta de las nuevas plantas en tu colección. </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- unirte a nuesrta comunidad------------------------------------------------------------------------------------------------------------------------>
+  <section class="comunidad">
+    <div class="comunidad-CONTAINER">
+      <h2>¿Porqué unirte a nuestra comunidad?</h2>
+      <h3> Conecta con personas</h3>
+      <p>Conoce a otros entusiastas de las plantas y comparte conocimientos y experiencias.</p>
+      <h3>Un jardín sin límites</h3>
+      <p>Encuentra especies únicas y agrega diversidad a tu colección sin gastar dinero demás.</p>
+      <h3>Cuida el planeta</h3>
+      <p>Contribuye a la sostenibilidad al dar nueva vida a esquejes y plantas que otros ya no necesitan.
+        ¡Únete al contador en vivo de la comunidad y avanza el tuyo propio, marcando la diferencia!</p>
+      <h3>Colecciona Insignias y sube de nivel</h3>
+      <p>Con cada nuevo intercambio, según la calificación recibiras exp.
+        Pasa de Jardinero Novato hasta Maestre Botánico.
+        ¡Desbloquea descuentos de nuestros sponsor con el último nivel!</p>
+    </div>
+  </section>
+
+
+  <!-- seccion testimonios-------------------------------------------------------------------------------------------------------------------------------->
+  <section class="testimonios">
+    <div class="testimonios-title">
+      <h2>Opiniones de nuestros usuarios</h2>
+      <div class="testimonios-container">
+        <div class="Usuario">
+          <div class="userfondo">
+            <img src="assets/imagenes/AVATARBASEUSUARIOENPEQUEÑO.png" alt="avatar1">
+            <h3>María Centurini</h3>
+            <p>
+              “Gracias a PlantBuddies
+              consegui especies que llevaba
+              años buscando!”</p>
+          </div>
+        </div>
+        <div class="Usuario">
+          <div class="userfondo">
+            <img src="assets/imagenes/AvatarBaseUsuario.png" alt="avatar2" />
+            <h3>Diego Jimenez</h3>
+            <p>
+              “No sólo amplié mi colección
+              de suculentas, también hice
+              amigues con quienes compartir
+              mi jardín tomando mate.”</p>
+          </div>
+        </div>
+        <div class="Usuario">
+          <div class="userfondo">
+            <img src="assets/imagenes/AvatarBaseUsuario.png" alt="avatar3" />
+            <h3>Marcos Aguero</h3>
+            <p>
+              “Me encanta la estética del sitio
+              y lo fácil que te acostumbras
+              a usarlo! ” </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer, fin de la primera pagina index-->
+  <footer class="pie-de-pagina">
+    <div class="footerMenu"> <!-- DIV PADRE-->
+      <div class="descripcionPagina">
+        <a href="#home">
+          <h3>PlantBuddies</h3>
+        </a>
+        <p>Conectando amantes de las plantas desde 2025.
+          Tu aventura botánica comienza con nosotros.</p>
+      </div>
+
+      <div class="Enlaces">
+        <h3>Enlaces</h3>
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="pages/registro.html">Registro</a></li>
+          <li><a href="pages/intercambios.html">Intercambios</a></li>
+          <li><a href="pages/comunidad.html">Comunidad</a></li>
+          <li><a href="pages/contacto.html">Contacto</a></li>
+          <li><a href="pages/perfil.html">Perfil</a></li>
+          <ul>
+      </div>
+
+      <div class="Recursos">
+        <ul>
+          <h3>Recursos</h3>
+          <li><a href="#">Guía de intercambio</a></li>
+          <li><a href="#">Equipo de soporte</a></li>
+          <li><a href="#">Preguntas frecuentes</a></li>
+          <li><a href="#">Políticas</a></li>
+          <li><a href="#">Gestionar Suscripción</a></li>
+        </ul>
+      </div>
+
+      <div class="Siguenos">
+        <h3>Siguenos</h3>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/luna-bujalesky-b60561267/">LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/soleiatelier/">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <p id="copyright">©2025 hecho con ❤ por el equipo de PlantBuddies. Todos los derechos reservados</p>
+  </footer>
+</body>
+
+<script src="./js/index.js"></script>
+</html>

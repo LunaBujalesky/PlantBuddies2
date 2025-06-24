@@ -1,0 +1,215 @@
+
+/* aqui comienza contacto-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+*/
+/* decoraciones del fondo------------- */
+.decoracion1 {
+  position: absolute;
+  bottom: 65%;
+  left: 18%;
+  height: auto;
+  width: 100px;
+  animation-delay: 2s;
+  z-index: 1;
+  animation: float 6s ease-in-out infinite;
+  box-shadow: 0 6px 12px --verde-goblin(0, 0, 0, 0.3);
+}
+
+.decoracion2 {
+  position: absolute;
+  bottom: -2%;
+  left: 70%;
+  height: auto;
+  width: 400px;
+  z-index: 1;
+  box-shadow: 0 6px 12px --verde-goblin(0, 0, 0, 0.3);
+}
+
+/* formulario ----------------------*/
+.formulario-container {
+  margin: auto;
+  margin-top: 120px;
+  width: 1000px;
+  @include flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.encabezado-contacto {
+  width: 1000px;
+  height: 100px;
+  border-radius: 12px 12px 0px 0px;
+  background-color: $Black;
+  font-family: $fuente2;
+  color: $Marron-clarito;
+  justify-self: left;
+  align-self: center;
+}
+
+.encabezado-contacto h2 {
+  font-weight: lighter;
+  margin: 2rem 0 0 1rem;
+}
+
+.formulario {
+  width: 1000px;
+  height: 493px;
+  background-color: $Marron-intermedio;
+  border-width: 2px;
+  border-color: $Black;
+  border-radius: 0px 0px 1px 20px;
+  font-family: $fuente2;
+}
+
+/* parte1................*/
+.formulario-parte1 {
+  @include flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 84%;
+  margin: auto;
+}
+
+.name-usuario input,
+.Correo-electronico input {
+  width: 300px;
+  height: 60px;
+  border-radius: 44px;
+  margin-top: 2rem;
+  background-color: transparent;
+  border: none;
+  font-family: $fuente2;
+  background-color: $Marron-clarito;
+  padding-left: 2rem;
+  font-size: 1rem;
+}
+
+.name-usuario input:focus,
+.Correo-electronico input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(106, 133, 71, 0.25);
+}
+
+/* parte 2 ................*/
+.formulario-parte2 {
+  width: 84%;
+  height: 250px;
+  border-radius: 20px;
+  margin: 6% auto auto auto;
+  background-color: transparent;
+}
+
+.formulario-parte2 input {
+  width: 100%;
+  height: 250px;
+  border-radius: 20px;
+  background-color: $Marron-clarito;
+  border: none;
+  font-family: $fuente2;
+}
+
+.formulario-parte2 input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(106, 133, 71, 0.25);
+}
+
+.formulario-parte2 img {
+  position: absolute;
+  width: 40px;
+  height: auto;
+  bottom: 0;
+  right: 0;
+}
+
+/* Mobile (≤ 600px) */
+@media (max-width: 600px) {
+  .formulario-container {
+    width: 95%;
+    margin-top: 60px;
+    height: auto;
+  }
+  .encabezado-contacto {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    border-radius: 20px 20px 0 0;
+  }
+  .formulario {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+  }
+  .formulario-parte1 {
+    flex-direction: column;
+  }
+  .name-usuario {
+    width: 90%;
+    margin: 10px auto;
+  }
+  .Correo-electronico {
+    width: 90%;
+    margin: 10px auto;
+  }
+  .formulario-parte2 {
+    width: 90%;
+    height: 150px;
+    margin: 20px auto;
+    padding: 15px;
+  }
+  .formulario-parte2 input {
+    width: 100%;
+    height: 150px;
+    margin-top: 0;
+    padding: 15px;
+  }
+  .decoracion1,
+  .decoracion2 {
+    display: none;
+  }
+}
+/* Tablets (≥ 768px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .formulario-container {
+    width: 90%;
+    margin-top: 80px;
+  }
+  .encabezado-contacto {
+    width: 100%;
+  }
+  .formulario {
+    width: 100%;
+  }
+  .formulario-parte1 {
+    flex-direction: column;
+  }
+  .name-usuario {
+    width: 80%;
+    margin: 15px auto;
+  }
+  .Correo-electronico {
+    width: 80%;
+    margin: 15px auto;
+  }
+  .formulario-parte2 {
+    width: 80%;
+    margin: 30px auto;
+  }
+  .decoracion2 {
+    width: 300px;
+    left: 60%;
+  }
+}
+/* Desktops grandes (≥ 1200px) */
+@media (min-width: 1200px) {
+  .formulario-container {
+    width: 1000px;
+    margin: 120px auto;
+  }
+  .decoracion2 {
+    width: 400px;
+    left: 70%;
+  }
+}

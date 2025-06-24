@@ -1,0 +1,81 @@
+
+/* aqui comienza perfil -----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+*/
+.perfil-container {
+  @include flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 800px;
+  font-family: $fuente2;
+  color: $Black;
+}
+
+.perfil-container h2 {
+  font-size: 8rem;
+  margin: 0;
+}
+
+.perfil-container h3 {
+  text-align: center;
+}
+
+.perfil-botones {
+  @include flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+}
+
+/* Estilos para el botón con efecto de línea */
+.perfil-boton-efecto-linea {
+  position: relative;
+  display: inline-block;
+}
+
+.perfil-boton-efecto-linea::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -15px; /* Más separada */
+  width: 0;
+  height: 3px; /* Más gruesa */
+  background: $Black;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 2px;
+}
+
+.perfil-boton-efecto-linea:hover::after {
+  width: 100%;
+}
+
+.boton-registro1 {
+  background-color: transparent;
+  border-style: none;
+  padding: 1rem 2rem;
+  font-size: medium;
+  font-family: $fuente2;
+  color: $Black;
+  cursor: pointer;
+  font-weight: bold;
+  width: auto;
+  text-align: center;
+  text-decoration: none;
+}
+
+.boton-registro1:hover {
+  color: $Black;
+  transform: scale(1.05);
+}
+
+.goblinapenado {
+  width: 20%;
+  height: auto;
+}
+
+/*# sourceMappingURL=main.css.map */

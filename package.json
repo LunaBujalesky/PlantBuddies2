@@ -1,0 +1,16 @@
+{
+  "name": "plantbuddies2.0",
+  "version": "1.0.0",
+  "description": "_Funcion en JS Menu hamburguesa, cada vez que clickeo la clase \"hamburguesa\", me abre el menú, que está oculto o desoculto dependientemente del viewport seleccionado en mediaquerie,\r se activa o desactiva con el \"display: none\", \"display: flex\"._",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass _sass/main.scss css/main.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.89.2"
+  }
+}

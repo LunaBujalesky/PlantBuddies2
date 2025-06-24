@@ -1,0 +1,355 @@
+
+/* Encabezado------------------------------------------------------------------------------------------------------- */
+header {
+  position: relative;
+
+  h1 {
+    font-family: $fuente2;
+    font-weight: 400;
+    font-style: bold;
+    color: $verde-logo;
+    margin: 0;
+    font-size: 2.5rem;
+  }
+}
+
+.header-jefe-visible {
+  @include flex;
+  background-color: $verde-acento;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 105px;
+  box-shadow: 0 6px 12px $verde-goblin;
+  padding: 0 20px;
+}
+
+.header-invisible {
+  width: 100%;
+  height: 105px;
+}
+
+.logo-container {
+  @include flex;
+  align-items: center;
+  gap: 1rem;
+
+  img {
+    width: 60px;
+    height: auto;
+    font-size: 2.5rem;
+  }
+}
+
+
+
+
+/* Menú -----------------------------------------------------------------------------------------------------*/
+/* MENU EN COMPUTADORAS ----------------------------------------------------------------*/
+.header-menu {
+  @include flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.header-menu-item {
+  height: 100%;
+  margin: auto 0;
+}
+
+.header-menu a {
+  text-decoration: none;
+  color: $Marron-oscuro;
+  font-family: $fuente2;
+  font-size: 1.2rem;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.header-menu>li:last-child {
+  position: relative;
+}
+
+.header-menu a:hover {
+  color: $verde-oscuro;
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
+.header-menu-item img {
+  width: 60px;
+  height: 60px;
+}
+
+
+
+
+
+/* Menu hamburguesa en celulares ----------------------------------------------------------*/
+.submenu-container {
+  position: relative;
+  background: #3a3a3a;
+  border-radius: 25px;
+  padding: 0;
+  width: 280px;
+  overflow: visible;
+}
+
+.menu-item {
+  position: relative;
+  padding: 20px 30px;
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  z-index: 3;
+  text-align: right;
+}
+
+.menu-item:first-child {
+  padding-top: 25px;
+}
+
+.menu-item:last-child {
+  padding-bottom: 25px;
+}
+
+.hover-background {
+  position: absolute;
+  background: #d0d0d0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(0);
+  width: calc(100% + 15px);
+  height: 60px;
+  left: -15px;
+  border-radius: 0 30px 30px 0;
+}
+
+.hover-background.active {
+  opacity: 1;
+}
+
+/* Recorte superior continuo */
+.hover-background::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -15px;
+  width: calc(100% - 30px);
+  height: 15px;
+  background: #3a3a3a;
+  border-radius: 0 0 15px 15px;
+}
+
+/* Recorte inferior continuo */
+.hover-background::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  width: calc(100% - 30px);
+  height: 15px;
+  background: #3a3a3a;
+  border-radius: 15px 15px 0 0;
+}
+
+.menu-item.active {
+  color: #3a3a3a;
+}
+
+.submenu-container:hover .menu-item {
+  color: white;
+}
+
+.submenu-container:hover .menu-item.active {
+  color: #3a3a3a;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: $verde-oscuro;
+  border-width: 3px;
+  border-color: $verde-triada;
+  border-radius: 3px;
+  margin: 4px 0;
+  font-family: $fuente2;
+  color: $Marron-clarito;
+  transition: 0.3s;
+}
+
+.bar:hover:first-child {
+  background-color: $verde-oscuro;
+  border-radius: 3px;
+  transform: rotate(45deg);
+}
+
+/*
+.bar:hover:nth-child {
+  opacity: 0;
+}
+*/
+
+.bar:hover:first-child {
+  background-color: $verde-oscuro;
+  border-radius: 3px;
+  transform: rotate(-45deg);
+}
+
+
+
+
+
+/* MenuDeslizable Conectado------------------------------------------------------------------------------------------------------------------------- */
+/* contenedor padre menu desplegable*/
+.header-submenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  width: 400px;
+  z-index: 100;
+
+  display: none;
+  /*display: block; <- clave */
+}
+
+.header-menu>li:last-child:hover .header-submenu {
+  display: block;
+}
+
+/* Diseño hijo 1 color oscuro*/
+.submenu-usuario-online {
+  @include flex;
+  height: 126px;
+  width: 100%;
+  border-radius: 1172px 0px 0px 0px;
+  background-color: $Black;
+  padding-left: 50px;
+}
+
+.submenu-usuario-online img {
+  width: 65px;
+  height: 65px;
+  margin: 2rem 0 0 2rem;
+}
+
+.submenu-usuario-online h3 {
+  padding: 0;
+  font-family: $fuente2;
+  font-weight: normal;
+  color: $beige;
+  margin: 2rem 0 0 2rem;
+}
+
+.submenu-usuario-online .stars {
+  margin-top: 70px;
+  margin-left: -4rem;
+  color: $beige;
+}
+
+/* Diseño hijo 2 color claro*/
+.submenu-enlaces {
+  /* contenedor*/
+  @include flex;
+  padding-left: 50px;
+  background-color: #b3b792;
+  width: 100%;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.submenu-enlaces ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.submenu-enlaces li {
+  @include flex;
+  padding: 12px 0px;
+  border-bottom: 1px solid #eee;
+  align-items: center;
+}
+
+.submenu-enlaces img {
+  width: 35px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.submenu-enlaces a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  width: 100%;
+}
+
+.submenu-enlaces li:hover {
+  background-color: #f0f0f0;
+}
+
+
+
+
+
+
+/* MenuDeslizable Desconectado------------------------------------------------------------------------------------------------------------------------- */
+/* animacion decoraciones */
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-20px) rotate(10deg);
+    /*  rotate, el valor de rotación, translate como se mueve en Y */
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+.floating-leaf {
+  position: absolute;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* regula tamaño decoraciones */
+.floating-leaf img {
+  width: 80px;
+  height: auto;
+}
+
+.leaf-1 {
+  top: 18%;
+  left: 10%;
+  animation-delay: 0s;
+  z-index: 1;
+}
+
+.leaf-2 {
+  top: 20%;
+  right: 15%;
+  animation-delay: 1s;
+  z-index: 1;
+}
+
+.leaf-3 {
+  bottom: 15%;
+  left: 20%;
+  animation-delay: 2s;
+  z-index: 1;
+}

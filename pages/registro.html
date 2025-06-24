@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<!-- encabezadodelaweb ---------------------------------------------------------------------------------------------------------------------------->
+
+<head>
+  <meta name="theme-color" content="#8c9657">
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PlantBuddies</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="shortcut icon" href=../assets/imagenes/FAVICON.png>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Tagesschrift&family=VT323&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/main.css" />
+
+</head>
+
+<body>
+  <header>
+    <div class="header-invisible"></div>
+    <div class="header-jefe-visible">
+      <!-- este es el menu ------------------------------------------------------------->
+      <div class="logo-container">
+        <img src="../assets/imagenes/carita1.png" alt="logoplantbuddies" />
+        <h1>PlantBuddies</h1>
+      </div>
+      <nav>
+        <ul class="header-menu">
+          <li class="header-menu-item"><a href="../index.html">Inicio</a></li>
+          <li class="header-menu-item"><a href="registro.html">Registro</a></li>
+          <li class="header-menu-item"><a href="intercambios.html">Intercambios</a></li>
+          <li class="header-menu-item"><a href="comunidad.html">Comunidad</a></li>
+          <li class="header-menu-item"><a href="contacto.html">Contacto</a></li>
+          <li class="header-menu-item">
+            <a href="perfil.html">
+              <img src="../assets/imagenes/AvatarBaseUsuario.png" alt="AvatarBaseUsuario" />
+            </a>
+
+            <div class="header-submenu">
+              <div class="submenu-usuario-online"> <!--hijo 1 color oscuro, icono avarar, nombre perfil-->
+                <img src="../assets/imagenes/AvatarBaseUsuario.png" alt="">
+                <h3>"Name"</h3>
+                <div class="stars">★ ★ ★ ★ ★</div>
+              </div>
+
+              <div class="submenu-enlaces"><!--hijo 2 color claro, enlaces de submenu-->
+                <ul>
+                  <li>
+                    <img src="../assets/imagenes/witchIcon.png" alt="plantIcon">
+                    <a href="perfil.html">Perfil</a>
+                  </li>
+                  <li>
+                    <a href="favoritos.html" img src="../assets/imagenes/plantIcon.png" alt="plantIcon">Favoritos</a>
+                  </li>
+                  <li>
+                    <a href="social.html" img src="../assets/imagenes/plantIcon.png" alt="plantIcon">Social</a>
+                  </li>
+                  <li>
+                    <a href="misintercambios.html" img src="../assets/imagenes/plantIcon.png" alt="plantIcon">Mis
+                      intercambios</a>
+                  </li>
+                  <li> <a href="offline" img src="../assets/imagenes/plantIcon.png" alt="plantIcon">Cerrar sesión</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+  <!-- FINencabezadodelaweb ---------------------------------------------------------------------------------------------------------------------------->
+  <!--hijo 2 color claro, enlaces de submenu-->
+  <main>
+    <section>
+      <div class="registra-tu-planta">
+        <h3>Registra tu planta</h3>
+        <img src="../assets/imagenes/PotatoIcon.png" alt="IconoPapa">
+      </div>
+
+      <!--Registra contenedor-->
+      <div class="registra-abuelo">
+
+        <!--Registra hijo 1 formulario-->
+        <div class="formulario-plantas">
+          <form>
+            <div class="titulo-container">
+              <div class="Titulo">
+                <p>Título</p>
+              </div>
+              <input type="Titulo"
+                placeholder="Dale un nombre atractivo a tu publicación que haga que otras personas se fijen en él."
+                class="input-Titulo">
+            </div>
+            <div class="Especie-container">
+              <div class="Especie">
+                <p>Especie</p>
+              </div>
+              <input type="Especie" placeholder="Escribe su nombre científico y su nombre común." class="input-Especie">
+            </div>
+            <div class="Categorías-container">
+              <div class="Categorías">
+                <p>Categorías</p>
+              </div>
+              <input type="Categorías" placeholder=" Introduce palabras clave para que
+      sea ubicada en el buscador como #suculenta" class="input-Categorías">
+            </div>
+            <div class="Descripción-container">
+              <div class="Descripción">
+                <p>Descripción</p>
+              </div>
+              <input type="Descripción" placeholder="Cuéntale a otras personas porqué 
+      deberían enamorarse de tu propuesta.
+      Incluye detalles que deberían saber antes
+      de ofertar, dimensiones, estado, edad." class="input-Descripción">
+            </div>
+            <button class="boton-registro1">Dar en adopción</button>
+          </form>
+        </div>
+
+        <!--Registra hijo 2 imagenes-->
+        <div class="sube-fotos-oferta">
+          <!-- Upload/input de Imágenes -->
+          <form id="plantForm">
+            <div class="form-group">
+
+              <div class="image-upload-container" id="imageUpload">
+                <input type="file" id="imageInput" accept="image/*" multiple>
+                <div class="upload-content">
+                  <i class="bi bi-camera upload-icon"></i>
+                  <div class="upload-text">
+                    <h5>Sube fotos de tu planta</h5>
+                    <p class="mb-2">Arrastra y suelta las imágenes aquí o haz clic para seleccionar</p>
+                    <small class="text-muted">PNG, JPG, GIF hasta 5MB cada una (máximo 6 fotos)</small>
+                  </div>
+                </div>
+              </div>
+              <div class="multiple-images-container" id="multiplePreview" style="display: none;"></div>
+              <div class="image-counter" id="imageCounter" style="display: none;">
+                0 de 6 fotos seleccionadas
+              </div>
+            </div>
+            <button type="submit" class="boton-registro2">Cargar fotos</button>
+          </form>
+        </div>
+
+      </div>
+      <img class="ranaSaltando" src="../assets/imagenes/rana2.png" alt="ranaSaltando">
+      <img class="ranaSaltando2" src="../assets/imagenes/rana1.png" alt="ranaSaltando">
+    </section>
+  </main>
+
+  <!-- footer, fin de la primera pagina index-->
+  <footer class="pie-de-pagina">
+    <div class="footerMenu"> <!-- DIV PADRE-->
+      <div class="descripcionPagina">
+        <a href="#home">
+          <h3>PlantBuddies</h3>
+        </a>
+        <p>Conectando amantes de las plantas desde 2025.
+          Tu aventura botánica comienza con nosotros.</p>
+      </div>
+
+      <div class="Enlaces">
+        <h3>Enlaces</h3>
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href=".pages/registro.html">Registro</a></li>
+          <li><a href=".pages/intercambios.html">Intercambios</a></li>
+          <li><a href=".pages/comunidad.html">Comunidad</a></li>
+          <li><a href=".pages/contacto.html">Contacto</a></li>
+          <li><a href=".pages/perfil.html">Perfil</a></li>
+          <ul>
+      </div>
+
+      <div class="Recursos">
+        <ul>
+          <h3>Recursos</h3>
+          <li><a href="#">Guía de intercambio</a></li>
+          <li><a href="#">Equipo de soporte</a></li>
+          <li><a href="#">Preguntas frecuentes</a></li>
+          <li><a href="#">Políticas</a></li>
+          <li><a href="#">Gestionar Suscripción</a></li>
+        </ul>
+      </div>
+
+      <div class="Siguenos">
+        <h3>Siguenos</h3>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/luna-bujalesky-b60561267/">LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/soleiatelier/">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <p id="copyright">©2025 hecho con ❤ por el equipo de PlantBuddies. Todos los derechos reservados</p>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script>
+
+    let selectedFiles = [];
+    const maxFiles = 6;
+
+    // Verificar que todos los elementos existan antes de continuar
+    document.addEventListener('DOMContentLoaded', function () {
+      const imageInput = document.getElementById('imageInput');
+      const plantForm = document.getElementById('plantForm');
+
+      if (!imageInput) {
+        console.error('No se encontró el elemento imageInput');
+        return;
+      }
+
+      if (!plantForm) {
+        console.error('No se encontró el elemento plantForm');
+        return;
+      }
+
+      // Event listener para el input de imágenes
+      imageInput.addEventListener('change', function (e) {
+        const files = Array.from(e.target.files);
+        handleFiles(files);
+      });
+
+      // Event listener para el formulario
+      plantForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        if (selectedFiles.length === 0) {
+          alert('Por favor, sube al menos una foto de tu planta.');
+          return;
+        }
+
+        console.log('Archivos seleccionados:', selectedFiles);
+        alert(`¡Formulario enviado! Se subieron ${selectedFiles.length} fotos.`);
+      });
+
+      // Configurar drag and drop
+      setupDragAndDrop();
+    });
+
+    // Resto de tus funciones (sin cambios)
+    function setupDragAndDrop() {
+      const container = document.getElementById('imageUpload');
+
+      ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+        container.addEventListener(eventName, preventDefaults, false);
+      });
+
+      function preventDefaults(e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+
+      ['dragenter', 'dragover'].forEach(eventName => {
+        container.addEventListener(eventName, () => {
+          container.classList.add('dragover');
+        }, false);
+      });
+
+      ['dragleave', 'drop'].forEach(eventName => {
+        container.addEventListener(eventName, () => {
+          container.classList.remove('dragover');
+        }, false);
+      });
+
+      container.addEventListener('drop', function (e) {
+        const dt = e.dataTransfer;
+        const files = Array.from(dt.files);
+        handleFiles(files);
+      }, false);
+    }
+
+    function handleFiles(files) {
+      const imageFiles = files.filter(file => file.type.startsWith('image/'));
+      const availableSlots = maxFiles - selectedFiles.length;
+      const filesToAdd = imageFiles.slice(0, availableSlots);
+
+      if (imageFiles.length > availableSlots) {
+        alert(`Solo puedes subir ${availableSlots} fotos más. Máximo ${maxFiles} fotos en total.`);
+      }
+
+      filesToAdd.forEach(file => {
+        if (file.size > 5 * 1024 * 1024) {
+          alert(`La imagen "${file.name}" es muy grande. Máximo 5MB por imagen.`);
+          return;
+        }
+
+        selectedFiles.push(file);
+        displayImage(file, selectedFiles.length - 1);
+      });
+
+      updateUI();
+    }
+
+    function displayImage(file, index) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        const container = document.getElementById('multiplePreview');
+
+        const imageItem = document.createElement('div');
+        imageItem.className = 'image-item';
+        imageItem.dataset.index = index;
+        imageItem.innerHTML = `
+                <img src="${e.target.result}" alt="Foto ${index + 1}">
+                <button class="remove-btn" onclick="removeImage(${index})">
+                    <i class="bi bi-x"></i>
+                </button>
+            `;
+
+        container.appendChild(imageItem);
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function removeImage(index) {
+      selectedFiles.splice(index, 1);
+
+      const container = document.getElementById('multiplePreview');
+      container.innerHTML = '';
+
+      selectedFiles.forEach((file, newIndex) => {
+        displayImage(file, newIndex);
+      });
+
+      updateUI();
+    }
+
+    function updateUI() {
+      const container = document.getElementById('multiplePreview');
+      const counter = document.getElementById('imageCounter');
+      const uploadArea = document.getElementById('imageUpload');
+
+      if (selectedFiles.length > 0) {
+        container.style.display = 'grid';
+        counter.style.display = 'inline-block';
+        counter.textContent = `${selectedFiles.length} de ${maxFiles} fotos seleccionadas`;
+
+        if (selectedFiles.length >= maxFiles) {
+          uploadArea.style.display = 'none';
+        }
+      } else {
+        container.style.display = 'none';
+        counter.style.display = 'none';
+        uploadArea.style.display = 'block';
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,420 @@
+
+/* aquí empieza intercambios-----------------------------------------------------------------------------------------------------*/
+/* ENCABEZADO WEB INTERCAMBIOS----------------------------------------- */
+.intercambio-encabezado {
+  background-color: $verde-oscuro;
+  width: 100%;
+  height: 290px;
+  @include flex;
+  flex-direction: row;
+}
+
+.intercambio-encabezado h2 {
+  color: $Marron-clarito;
+  font-family: $fuente2;
+  margin: 100px 0 30px 360px;
+  font-weight: normal;
+  font-size: 32px;
+}
+
+.intercambio-encabezado p {
+  color: $Marron-clarito;
+  font-family: $fuente2;
+  margin: 0px 0 42px 360px;
+}
+
+.contador-ecologico {
+  background-color: $Black;
+  width: 380px;
+  height: 66px;
+  border-radius: 32px;
+  margin: 130px 0 0 360px;
+}
+
+.contador-ecologico p {
+  font-family: $fuente1;
+  color: beige;
+  font-size: 30px;
+  font-weight: normal;
+  margin: auto;
+  padding: 18px;
+  text-align: center;
+  /*Buscador de Bootstrap */
+}
+
+.search-wrapper {
+  position: relative;
+  @include flex;
+  align-items: center;
+  margin: -70px 0px 0 1180px;
+  gap: 15px;
+  width: 400px;
+}
+
+.plantbuddy-search-input {
+  background-color: #b8c5a6 !important;
+  border: none !important;
+  border-radius: 25px !important;
+  padding: 15px 25px !important;
+  font-family: $fuente2;
+  font-size: 16px !important;
+  color: $falso-blanco !important;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s ease;
+}
+
+.plantbuddy-search-input::placeholder {
+  color: $falso-blanco !important;
+}
+
+.plantbuddy-search-input:focus {
+  background-color: #a6b596 !important;
+  box-shadow: 0 0 0 0.2rem rgba(184, 197, 166, 0.5) !important;
+  transform: translateY(-2px);
+}
+
+.search-btn {
+  background-color: #8faa72 !important;
+  border: none !important;
+  border-radius: 50% !important;
+  width: 60px !important;
+  height: 50px !important;
+  @include flex;
+  align-items: center;
+  justify-content: center;
+  color: $falso-blanco !important;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(143, 170, 114, 0.3);
+}
+
+.search-btn:hover {
+  background-color: #7a9660 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(143, 170, 114, 0.4);
+}
+
+/* Plantilla Oferta que debe ir dentro de GRid---------------------------------*/
+.card.expanded .toggle {
+  transform: rotate(180deg);
+}
+
+/* sección de la grid con todas las ofertas disponibles---------------------- */
+/* grilla*/
+.ofertas-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 5 columnas de igual tamaño */
+  grid-template-rows: repeat(3, auto); /* 3 filas que se ajustan al contenido */
+  height: auto;
+  width: 1000px;
+  row-gap: 50px;
+  column-gap: 8px;
+  align-items: center; /* eje vertical de las celdas */
+  justify-items: center; /* contenido dentro de las celdas */
+  margin: 0 auto; /* centra el grid dentro del contenedor padre */
+}
+
+/* Estilo común para todos los elementos del grid */
+.ofertas-grid > div {
+  background-color: $verde-acento;
+  height: 300px;
+  width: 200px;
+  border-radius: 44px;
+  padding: 0px;
+}
+
+/* Estilo primera oferta /elemento de la grid -----------------------------------*/
+.varOferta1 {
+  @include flex;
+  flex-direction: column;
+  height: 300px;
+  width: 200px;
+  background-color: $verde-oscuro;
+  font-family: $fuente1;
+}
+
+/* Estilo /elementos parte de arriba -------------------*/
+.parte-superior {
+  @include flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: $verde-oscuro;
+  border-radius: 44px 44px 0 0;
+  height: 100px;
+}
+
+.encabezado1 h3 {
+  font-size: small;
+}
+
+.encabezado1 {
+  @include flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* imagen avatar */
+.encabezado1 img {
+  width: 30px;
+  height: auto;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+/* planta en oferta*/
+.monstera img {
+  width: 100px;
+  height: auto;
+  border-radius: 30%;
+  margin: 2px -45px;
+  position: absolute;
+  z-index: 10;
+}
+
+/* para cerrar la oferta una vez agrandada */
+.toggle {
+  width: 0;
+  height: 0;
+  background: transparent;
+  border-radius: 0;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.toggle:hover {
+  transform: rotate(180deg);
+}
+
+/* componentes partes de abajo ----------------------------*/
+.parte-inferior-blanca {
+  background-color: $Marron-clarito;
+  border-width: 1.8px;
+  border-style: solid;
+  border-color: $Black;
+  @include flex;
+  flex-direction: column;
+  height: fit-content;
+  width: 200px;
+  border-radius: 0 0 44px 44px;
+  margin-top: 40px;
+  position: relative;
+  align-items: center;
+}
+
+.parte-a {
+  @include flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+}
+
+.parte-a h3 {
+  font-size: 20px;
+  margin-top: 120px;
+  padding: 10px;
+}
+
+/* boton comentarios papa */
+.parte-a img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 10px 0 0 -40px;
+  background: transparent;
+}
+
+.potato-comentarios {
+  margin: 120px 0 0 -40px;
+  @include flex;
+  flex-direction: row;
+  width: 20px;
+  gap: 0;
+}
+
+.parte-a button {
+  border-style: none;
+  background: transparent;
+  height: fit-content;
+  margin: auto;
+}
+
+.parte-b {
+  font-family: $fuente1;
+  color: $Black;
+  height: fit-content;
+  margin-top: 60px;
+  font-size: small;
+  padding-left: 1rem;
+}
+
+.parte-c {
+  @include flex;
+  flex-direction: column;
+  width: fit-content;
+  height: fit-content;
+}
+
+.clasificacion {
+  @include flex;
+  flex-direction: row;
+  font-size: 8px;
+}
+
+.likes {
+  @include flex;
+  flex-direction: row;
+  font-size: 8px;
+}
+
+/* estilos botones proponer, likes y calificaciones */
+.parte-c button {
+  background-color: $Black;
+  border-style: none;
+  font-family: $fuente1;
+  color: $falso-blanco;
+  cursor: pointer;
+  font-size: 13px;
+  border-radius: 30px;
+  height: fit-content;
+  transition: all 0.3s ease;
+  text-align: center;
+  margin: -16px 5px;
+}
+
+.parte-d {
+  background-color: $Black;
+  border-style: none;
+  border-radius: 30px;
+  color: $falso-blanco;
+  font-size: 13px;
+  margin: 10px;
+}
+
+/* Efectos de los item grilla------------------------------------------------------------------------------*/
+.varOferta1 {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Efecto al pasar el cursor */
+.varOferta1:hover {
+  transform: scale(1.05);
+  z-index: 5;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Personalización de la paginación Bootstrap */
+.pagination .page-link {
+  color: $verde-acento;
+  border-color: $verde-acento;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: $verde-acento !important;
+  border-color: $verde-acento;
+}
+
+.pagination .page-link:hover {
+  background-color: var(--verde-claro);
+  border-color: $verde-acento;
+}
+
+/* para sobreescribir bootstrap */
+body,
+html {
+  background: $Marron-clarito !important;
+}
+
+header,
+footer {
+  color: $verde-oscuro !important;
+}
+
+/* MEDIAQUERIE RESPONSIVE_____________/
+
+/* Tablets (≥ 768px) */
+@media (max-width: 768px) {
+  .intercambio-encabezado {
+    height: auto;
+    padding: 20px;
+    flex-direction: column;
+  }
+  .intercambio-encabezado h2 {
+    margin: 40px 20px 20px 20px;
+    font-size: 28px;
+    text-align: center;
+  }
+  .intercambio-encabezado p {
+    margin: 0 20px;
+    text-align: center;
+  }
+  .contador-ecologico {
+    width: 80%;
+    margin: 20px auto;
+  }
+  .search-wrapper {
+    margin: 10px 0 0 120px;
+  }
+  .ofertas-grid {
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    gap: 20px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  .ofertas-grid > div {
+    width: 180px;
+    height: 270px;
+  }
+  .pie-de-pagina {
+    margin-top: auto;
+  }
+}
+/* mobile (≤ 600px) */
+@media (max-width: 600px) {
+  .intercambio-encabezado {
+    padding: 15px;
+  }
+  .intercambio-encabezado h2 {
+    font-size: 24px;
+    margin: 30px 15px 15px 15px;
+  }
+  .contador-ecologico {
+    width: 90%;
+    height: 50px;
+  }
+  .contador-ecologico p {
+    font-size: 24px;
+    padding: 12px;
+  }
+  .ofertas-grid {
+    grid-template-columns: 1fr;
+    width: 95%;
+    gap: 30px;
+    margin-bottom: 100px;
+  }
+  .ofertas-grid > div {
+    width: 200px;
+    height: 300px;
+  }
+  .grid-item:hover {
+    transform: scale(1.02);
+  }
+  .pie-de-pagina {
+    margin-top: auto;
+  }
+}
+/* Desktops grandes (≥ 1200px) */
+@media (min-width: 1200px) {
+  .ofertas-grid {
+    margin-bottom: 100px;
+    margin-top: 100px;
+  }
+  .pie-de-pagina {
+    margin-top: auto;
+  }
+}

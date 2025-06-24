@@ -1,0 +1,665 @@
+
+/* aqui comienza comunidad -----------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+/* encabezado comunidad */
+.encabezado-comunidad {
+  width: 100%;
+  height: 300px;
+  background-color: $Black;
+  font-family: $fuente2;
+  color: $Marron-clarito;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.encabezado-comunidad h2 {
+  font-weight: normal;
+  margin-top: 0px;
+  text-align: left;
+  padding: 64px 200px 0px 240px;
+}
+
+.encabezado-comunidad p {
+  font-weight: normal;
+  margin-top: 0px;
+  text-align: left;
+  padding: 10px 600px 0px 240px;
+}
+
+.ideas {
+  background-color: $verde-triada;
+  border-width: 1px;
+  padding: 1rem 2rem;
+  font-size: medium;
+  font-family: $fuente2;
+  color: $Black;
+  cursor: pointer;
+  border-radius: 20px;
+  width: auto;
+  display: inline-block;
+  transition: all 0.3s ease;
+  margin-left: 1460px;
+  margin-top: 8px;
+  position: absolute;
+  text-align: center;
+}
+
+/* grid comunidad */
+.comunidad-grid-container {
+  @include flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  height: fit-content;
+  margin: 2rem;
+  gap: 8%;
+}
+
+.comunidad-grid-container:last-child {
+  justify-content: flex-end;
+}
+
+/* foros parte derecha, comunidad */
+.foros-container {
+  @include flex;
+  flex-direction: column;
+  background-color: $Marron-intermedio;
+  margin-top: 2rem;
+  margin: 2rem 0 0 4rem;
+  width: 60%;
+  height: fit-content;
+  border-radius: 12px;
+  border-width: 3px;
+  border-color: $Black;
+  font-family: $fuente2;
+  color: $Black;
+}
+
+.foros-container h2 {
+  margin: 3rem 0 0 4rem;
+}
+
+.divider-superior {
+  width: 80%;
+  height: 2px;
+  background-color: $Marron-clarito;
+  margin-left: 10%;
+}
+
+/* categorias populares comunidad */
+.categorias-populares-container {
+  color: $verde-acento;
+  font-family: $fuente2;
+  width: 800px;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 5 columnas de igual tamaño */
+  grid-template-rows: repeat(2, auto); /* 3 filas que se ajustan al contenido */
+  row-gap: 8%;
+  column-gap: 2rem;
+  align-content: center;
+  align-items: center; /* eje vertical de las celdas */
+  justify-items: center; /* contenido dentro de las celdas */
+  margin: 4rem 1rem 3rem 2rem;
+}
+
+.categorias-populares-container h2 {
+  margin: 2rem 0 0 4rem;
+}
+
+.categoria {
+  background: linear-gradient(135deg, $verde-acento 0%, $verde-oscuro 100%);
+  width: 325px;
+  height: 157px;
+  @include flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 8px;
+  padding: 1rem;
+  /* Agregadas para el efecto */
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.categoria img {
+  width: 100px;
+  height: auto;
+  margin: auto;
+  opacity: 80%;
+  border-radius: 5px;
+}
+
+.categoria {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.categoria:hover {
+  transform: scale(1.05);
+  z-index: 5;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto de brillo principal */
+.categoria::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.1) 25%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 100%);
+  transition: left 0.8s ease-in-out;
+  z-index: 1;
+  border-radius: 8px; /* Mismo border-radius que el contenedor */
+}
+
+.categoria:hover::before {
+  left: 100%;
+}
+
+/* Efecto de olas suaves */
+.categoria::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 120%;
+  height: 100%;
+  background: radial-gradient(ellipse 200px 100px at 30% 20%, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 40%, transparent 70%), radial-gradient(ellipse 150px 80px at 70% 60%, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.06) 50%, transparent 80%), radial-gradient(ellipse 180px 60px at 20% 80%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.04) 60%, transparent 90%), linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.03) 25%, rgba(255, 255, 255, 0.08) 50%, rgba(255, 255, 255, 0.03) 75%, transparent 100%);
+  transition: left 1.3s ease-out;
+  z-index: 2;
+  opacity: 0;
+  border-radius: 8px; /* Mismo border-radius que el contenedor */
+}
+
+.categoria:hover::after {
+  left: 120%;
+  opacity: 1;
+}
+
+/* Asegura que el contenido esté por encima */
+.categoria > * {
+  position: relative;
+  z-index: 3;
+}
+
+/* publicaciones foro comunidad ----------------------------------------------------------------------*/
+.actividad-reciente-container {
+  @include flex;
+  flex-direction: column;
+  font-family: $fuente2;
+  color: $Black;
+  margin: 2rem 0;
+}
+
+.actividad-reciente-container h2 {
+  margin: 0 0 2rem 4rem;
+}
+
+.divisiones-publicaciones {
+  @include flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $verde-triada;
+  height: 4rem;
+  border-radius: 8px;
+  width: 89%;
+  margin-left: 4rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin-top: 1rem;
+}
+
+.cards-grid {
+  display: grid;
+  margin: auto;
+  gap: 6px;
+  grid-template-columns: 1fr;
+  width: 90%;
+}
+
+.card {
+  border-radius: 12px;
+  padding: 16px 20px;
+  @include flex;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  height: 80px;
+  cursor: pointer;
+}
+
+.card:hover {
+  height: fit-content;
+  transform: translateY(-2px); /* ← Efecto de elevación */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* ← Sombra  */
+}
+
+.card:hover .description {
+  opacity: 1;
+  max-height: 60px;
+}
+
+.card:hover .divider {
+  opacity: 6;
+  background-color: $Black;
+}
+
+/* Gradiente específico para cada card - de más claro a más oscuro */
+.card:nth-child(1) {
+  background-color: rgba(190, 197, 155, 0.862745098);
+}
+
+.card:nth-child(2) {
+  background-color: #b4bb8f;
+}
+
+.card:nth-child(3) {
+  background-color: #a7b07a;
+}
+
+.card:nth-child(4) {
+  background-color: $verde-triada;
+}
+
+.card:nth-child(5) {
+  background-color: #757e48;
+}
+
+.card:nth-child(6) {
+  background-color: #62693b;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Placeholder para avatares sin imagen */
+.avatar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, $verde-triada, $verde-acento);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.title {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.author {
+  font-size: 13px;
+  color: #585858;
+  margin-bottom: 8px;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: #bbb;
+  margin: 8px 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.description {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.4;
+  opacity: 0;
+  max-height: 0;
+  transition: all 0.3s ease;
+}
+
+.meta {
+  @include flex;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 200px;
+}
+
+.meta-top {
+  @include flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.comments {
+  font-size: 18px;
+  font-weight: 600;
+  color: #555;
+  min-width: 40px;
+  text-align: center;
+}
+
+.time {
+  font-size: 13px;
+  color: #666;
+  white-space: nowrap;
+}
+
+.rating {
+  @include flex;
+  gap: 3px;
+  justify-content: center;
+}
+
+/* Estrellas con forma de estrella */
+.star {
+  width: 20px;
+  height: 20px;
+  background: #ccc;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  transition: all 0.2s ease;
+}
+
+.star.filled {
+  background: linear-gradient(45deg, #333, #555);
+}
+
+.star.empty {
+  background: #ccc;
+}
+
+/* Estilos específicos para iconos de cada card */
+.card-3 .title::before {
+  content: "🦴";
+  color: #28a745;
+  margin-right: 6px;
+  font-weight: bold;
+}
+
+.card-4 .title::before {
+  content: "🌿";
+  margin-right: 6px;
+}
+
+/* sidebars comunidad ------------------------------------------------------*/
+/* foros parte izquierda, comunidad */
+.comunidad-sidenavbars-container {
+  @include flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 1rem;
+  width: 20rem;
+  height: 1600px;
+}
+
+/* primer bloque, buscadores*/
+.buscadores-container {
+  background-color: $Black;
+  border-radius: 10px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-group {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 45px 12px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: $Marron-clarito;
+  font-family: $fuente2;
+  font-size: 14px;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: #666;
+}
+
+.search-btn {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+}
+
+.search-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.search-icon {
+  width: 16px;
+  height: 16px;
+  fill: #666;
+}
+
+.conduct-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: $verde-oscuro;
+  color: $Marron-clarito;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 5px;
+  font-family: $fuente2;
+}
+
+.conduct-btn:hover {
+  background-color: $verde-triada;
+}
+
+/* segundo bloque, navcomunidad, verticalnav */
+.navbar-container {
+  position: relative;
+  top: 20px;
+  background-color: $Black;
+  border-radius: 10px;
+  padding: 15px;
+  width: 280px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.1s ease-out;
+}
+
+.nav-item {
+  display: block;
+  width: 100%;
+  padding: 12px 15px;
+  background-color: $verde-triada;
+  font-family: $fuente2;
+  color: $beige;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 8px;
+  text-align: left;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.nav-item:hover {
+  background-color: $Black;
+  transform: translateX(3px);
+}
+
+.nav-item:last-child {
+  margin-bottom: 0;
+}
+
+.nav-item.active {
+  background-color: $verde-oscuro;
+}
+
+.content {
+  padding: 4px;
+  margin-left: 2rem;
+  line-height: 1.6;
+  width: 20px;
+  flex: 1;
+  @include flex;
+  flex-direction: column;
+}
+
+/* Mobile (≤ 600px) */
+@media (max-width: 600px) {
+  .comunidad-container {
+    flex-direction: column;
+    padding: 0px;
+    width: 100%;
+    margin-top: auto;
+  }
+  .comunidad-titulo {
+    font-size: 24px;
+    margin: 8px 0;
+    text-align: center;
+  }
+  .ideas {
+    position: static;
+    margin: 20px auto;
+    display: block;
+    width: 80%;
+    max-width: 200px;
+    font-size: 16px;
+    padding: 0.8rem 1.5rem;
+    margin-left: 250px;
+  }
+  .encabezado-comunidad {
+    height: auto;
+    min-height: 250px;
+    margin-top: 0;
+    padding-top: 0%;
+  }
+  .encabezado-comunidad h2 {
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+  }
+  .encabezado-comunidad p {
+    padding: 10px 20px;
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+  }
+  .comunidad-grid-container {
+    display: grid;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .categorias-populares-container {
+    @include flex;
+    flex-direction: column;
+  }
+  .foros-container {
+    width: 100%;
+    height: fit-content;
+  }
+  .actividad-reciente-container {
+    width: fit-content;
+  }
+  .buscadores-container {
+    position: static;
+    justify-content: center;
+  }
+  .pie-de-pagina {
+    margin-top: auto;
+  }
+}
+/* Tablets (≥ 768px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .comunidad-container {
+    flex-direction: column;
+    padding: 20px;
+    width: 90%;
+  }
+  .comunidad-titulo {
+    font-size: 28px;
+    margin: 30px 0;
+  }
+  .comunidad-texto {
+    margin: 15px;
+    font-size: 18px;
+  }
+  .encabezado-comunidad {
+    height: auto;
+    min-height: 280px;
+    margin-top: 0;
+    padding-top: 0%;
+  }
+  .encabezado-comunidad h2 {
+    margin: 0;
+    padding: 30px 20px 10px;
+  }
+  .encabezado-comunidad p {
+    padding: 0px;
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 0px;
+  }
+  .ideas {
+    margin-left: 250px;
+  }
+  .comunidad-grid-container {
+    @include flex;
+    flex-direction: column;
+  }
+  .pie-de-pagina {
+    margin-top: auto;
+  }
+}
+/* Desktops grandes (≥ 1200px) */
+@media (min-width: 1200px) {
+  .comunidad-container {
+    flex-direction: row;
+    padding: 40px;
+    width: 1100px;
+    margin: 0 auto;
+  }
+  .comunidad-titulo {
+    font-size: 32px;
+    margin: 40px 0;
+  }
+  .comunidad-texto {
+    margin: 20px;
+    font-size: 20px;
+  }
+  .comunidad-imagen {
+    width: 40%;
+    margin: 30px;
+  }
+  .pie-de-pagina {
+    margin-top: auto;
+  }
+}

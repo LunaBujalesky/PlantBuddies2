@@ -1,0 +1,853 @@
+/* Sección de bienvenida ---------------------------------------------------------------------------------------*/
+#mensaje-de-bienvenida {
+  width: 100%;
+  margin: 100px auto 150px auto;
+}
+
+.container-bienvenida {
+  @include flex;
+  flex-direction: row;
+  align-content: center;
+  width: 880px;
+  height: 500px;
+  background-color: $Marron-intermedio;
+  margin: 80px auto;
+}
+
+/* cartel bienvenida */
+.text-content {
+  justify-content: left;
+  width: 875px;
+  height: auto;
+}
+
+.banner-title {
+  background-color: $Black;
+  border-radius: 8px;
+  width: 600px;
+  height: 100px;
+  align-content: center;
+  margin-top: 30px;
+  border-radius: 0px 18px 18px 0px;
+}
+
+.banner-title h2 {
+  font-family: $fuente2;
+  color: $Marron-clarito;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.p-container {
+  border-radius: 26px;
+  margin: 36px 0px 6px 38px;
+  background-color: $Marron-clarito;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px 20px 6px 0px;
+}
+
+.text-content p {
+  font-family: $fuente2;
+  color: $Black;
+  margin: 40px 40px 40px 40px;
+  height: auto;
+  width: auto;
+  text-align: left;
+  line-height: 1.8;
+}
+
+.goblinlandingpage1 {
+  width: 45%;
+  @include flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.goblinlandingpage1 img {
+  width: 600px;
+  height: auto;
+  position: relative;
+  margin-top: 100px;
+}
+/* AQUI EMPIEZA EL INDEX------------------------------------------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------- */
+
+
+/* Boton de log in pop up ------------------------------------------------------------------------------------------------------------------------------ */
+/* Estilo para la etiqueta que funciona como botón */
+.boton-comienza-ahora {
+  background-color: $verde-lima;
+  border-width: 1px;
+  border-color: #365746;
+  border-style: solid;
+  padding: 1rem 2rem;
+  font-size: medium;
+  font-family: $fuente2;
+  color: $Marron-oscuro;
+  cursor: pointer;
+  border-radius: 4px;
+  width: auto;
+  display: inline-block;
+  transition: all 0.3s ease;
+  margin: 0px 0px 41px 78px;
+  text-align: center;
+}
+
+.boton-comienza-ahora:hover {
+  background-color: $verde-oscuro;
+  color: $color-fondo;
+  transform: scale(1.05);
+}
+
+/* El elemento a mostrar/ocultar */
+.log-in-oculto {
+  display: none;
+  position: fixed;
+  margin: -400px 0px 0px 78px;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+/* Mostrar el elemento cuando se clikeo el falso boton---------------------- */
+#aparecer-login:checked ~ .log-in-oculto {
+  @include flex;
+  justify-content: center;
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Cambiar el texto del botón cuando está abierto*/
+#aparecer-login:checked + .button-label::after {
+  content: " Haz clic para ocultar";
+}
+
+/* Checkbox oculto para controlar el modal */
+#aparecer-login {
+  display: none;
+}
+
+/* Componentes del log in oculto cuando se abre-------------------------------------------------------------------------- */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: $Marron-oscuro;
+  color: $verde-logo;
+  border: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  @include flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Estilos base para ambos estados del goblin */
+.goblin-ojos-cerrados,
+.goblin-ojos-abiertos {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: opacity 0.3s ease;
+}
+
+/* El modal con el formulario */
+.modal {
+  background-color: $beige;
+  border-radius: 10px;
+  padding: 20px;
+  width: 320px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border: 4px solid $verde-oscuro;
+  background-color: $verde-acento;
+  @include flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Contenedor para el goblin y sus variantes */
+.goblin-container {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  margin: 20px 0;
+}
+
+/* Estilos para los campos del formulario */
+.input-field {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid $Black;
+  border-radius: 5px;
+  font-family: $fuente2;
+  background-color: $beige;
+}
+
+form {
+  width: 100%;
+  @include flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.goblin-ojos-cerrados img,
+.goblin-ojos-abiertos img {
+  /*estilos para las imágenes */
+  width: 100%;
+  height: auto;
+}
+
+/* Goblin con ojos abiertos (por defecto visible) */
+.goblin-ojos-abiertos {
+  opacity: 1;
+}
+
+/* Goblin con ojos cerrados (por defecto invisible) */
+.goblin-ojos-cerrados {
+  opacity: 0;
+}
+
+/* Cuando el campo de contraseña está enfocado, invertir las opacidades */
+.password-container:focus-within ~ .goblin-container .goblin-ojos-abiertos {
+  opacity: 0;
+}
+
+.password-container:focus-within ~ .goblin-container .goblin-ojos-cerrados {
+  opacity: 1;
+}
+
+/* Botón de login */
+.login-button {
+  background-color: $verde-oscuro;
+  color: $beige;
+  border: none;
+  padding: 12px;
+  width: 95%;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: $fuente2;
+  font-weight: bold;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #2a4535;
+  transform: scale(1.02);
+}
+
+.eye-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: $verde-oscuro;
+}
+
+/* Campo de contraseña con icono de ojo */
+.password-container {
+  position: relative;
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* Cambio de estado cuando se enfoca el campo de contraseña */
+.password-container:focus-within ~ .goblin-container .goblin-ojos-abiertos,
+.password-container input:focus ~ .goblin-container .goblin-ojos-abiertos {
+  opacity: 0;
+}
+
+.password-container:focus-within ~ .goblin-container .goblin-ojos-cerrados,
+.password-container input:focus ~ .goblin-container .goblin-ojos-cerrados {
+  opacity: 1;
+}
+
+/* FIN Boton de log in pop up ------------------------------------------------------------------------------------------------------------------------------ */
+/* Sección de sponsors ------------------------------------------------------------------------------------------------------------------------------*/
+.BannerSponsors {
+  width: 100%;
+  height: 180px;
+  background-color: $verde-oscuro;
+  font-family: $fuente2;
+  font-size: medium;
+  color: $Marron-clarito;
+  margin: auto;
+  text-align: center;
+}
+
+.supporters-logos {
+  flex-direction: row;
+  width: 100%;
+  @include flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.supporters-logos img {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+
+/* Sección como funciona------------------------------------------------------------------------------------------------------------------------------*/
+.comofunciona {
+  width: 100%;
+  height: 660px;
+}
+
+.comofunciona h2 {
+  font-family: $fuente2;
+  text-align: center;
+  color: $verde-oscuro;
+  margin-top: 160px;
+}
+
+.comofunciona-container {
+  @include flex;
+  align-items: center;
+  padding: 2rem;
+  justify-content: space-between;
+  border-radius: 8px;
+  margin: 10px;
+  max-width: 100%;
+  font-family: $fuente2;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.comofunciona-container img {
+  width: 86px;
+  height: auto;
+}
+
+.comofunciona-container div {
+  background-color: $verde-acento;
+  width: 300px;
+  height: 200px;
+  margin: 30px;
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+}
+
+.comofunciona-container div:hover {
+  background-color: $verde-oscuro;
+  color: $color-fondo;
+  transform: scale(1.05) rotate(8deg);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ¿Porqué unirte a nuestra comunidad?------------------------------------------------------------------------------------------------------------------------------*/
+.comunidad {
+  font-family: $fuente2;
+  text-align: center;
+  background-color: $verde-oscuro;
+  align-content: center;
+  color: $Black;
+}
+
+.comunidad-CONTAINER {
+  @include flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-around;
+  background-color: $Marron-clarito;
+  border-radius: 20px;
+  width: 1200px;
+  margin: 50px auto;
+  padding: 60px;
+}
+
+/* Testimonios------------------------------------------------------------------------------------------------------------------------------*/
+.testimonios {
+  font-family: $fuente2;
+  text-align: center;
+  margin: 100px 0 180px 0;
+}
+
+.testimonios-container {
+  @include flex;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 320px;
+  justify-content: space-around;
+}
+
+.testimonios-container p {
+  padding: 0px 36px 2px 36px;
+  color: $Black;
+}
+
+.testimonios-container h3 {
+  color: $Black;
+}
+
+.testimonios-title h2 {
+  color: $Black;
+}
+
+/* Users cards ------------------*/
+.userfondo {
+  background-color: $Marron-clarito;
+  border-width: 3px;
+  border-top: 4px solid #677e52;
+  border-radius: 0px 0px 30px 30px;
+  margin-top: 66px;
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.Usuario {
+  background-color: #365746;
+  margin-top: -300px;
+  border-radius: 30px;
+  width: 300px;
+  height: 266px;
+  border-width: 3px;
+  border-color: #677e52;
+  border-style: solid;
+}
+
+.Usuario img {
+  margin-top: -40px;
+  width: 80px;
+  height: auto;
+}
+
+.Usuario:hover {
+  transform: scale(1.05);
+}
+
+/* Pantallas chicas: celulares */
+@media (max-width: 600px) {
+  /* Para cambiar de menu al hamburguesa en celular*/
+  .menu_hamburguesa_principal {
+    @include flex;
+  }
+  /* Solo mostrar en móviles (hasta 768px) */
+  /* Mensaje para desktop */
+  /* primera parte bienvenida*/
+  /* segunda parte banner sponsors */
+  /* segunda parte como funciona */
+  /* segunda parte se parte de la comunidad */
+  /* tercera parte testimonios */
+  /* footer mobile */
+}
+@media (max-width: 600px) and (max-width: 768px) {
+  .submenu-container {
+    display: block;
+    position: relative;
+    background: $Black;
+    border-radius: 15px;
+    padding: 0;
+    width: 200px;
+    overflow: visible;
+    height: fit-content;
+    left: 60%;
+    top: 16%; /* Empieza fuera de la pantalla por la derecha */
+    justify-content: flex-end; /* Alinea el contenido a la derecha */
+  }
+  .menu-item {
+    position: relative;
+    padding: 20px 30px;
+    color: $Marron-clarito;
+    font-size: 15px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 3;
+    text-align: right;
+  }
+  .menu-item:first-child {
+    padding-top: 25px;
+  }
+  .menu-item:last-child {
+    padding-bottom: 25px;
+  }
+  .hover-background {
+    position: absolute;
+    background: $falso-blanco;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(0);
+    width: calc(100% + 15px);
+    height: 50px;
+    left: -30px;
+    border-radius: 0 30px 30px 0;
+  }
+  .hover-background.active {
+    opacity: 1;
+  }
+  /* Recorte superior continuo */
+  .hover-background::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -15px;
+    width: calc(100% - 30px);
+    height: 15px;
+    background: $Black;
+    border-radius: 0 0 15px 15px;
+  }
+  /* Recorte inferior continuo */
+  .hover-background::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    width: calc(100% - 30px);
+    height: 15px;
+    background: $Black;
+    border-radius: 15px 15px 0 0;
+  }
+  .menu-item.active {
+    color: $verde-triada;
+  }
+  .submenu-container:hover .menu-item {
+    color: $Black;
+  }
+  .submenu-container:hover .menu-item.active {
+    color: $verde-triada;
+  }
+}
+@media (max-width: 600px) {
+  .desktop-message {
+    display: block;
+    text-align: center;
+    color: #666;
+    font-size: 18px;
+  }
+  .nav {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .header-jefe-visible {
+    flex-wrap: wrap;
+  }
+  .header-jefe-visible h1 {
+    font-size: 36px;
+  }
+  .header-menu {
+    display: none;
+    align-content: center;
+    background-color: $verde-acento;
+  }
+  .nav > li {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    margin: 15px 0;
+  }
+  .header-menu .show {
+    @include flex;
+    background-color: $verde-acento;
+  }
+  .banner-title {
+    border-radius: 0px 0px 60px 60px;
+    width: 100%;
+    height: 200px;
+    box-shadow: 0px -5px 10px var --Black 0, 0, 0, 0.8;
+    z-index: 2;
+    position: relative;
+  }
+  .banner-title H2 {
+    text-align: center;
+    padding: 10%;
+    margin-top: 50px;
+    font-weight: lighter;
+  }
+  .text-content {
+    padding: 10px 5px 6px 5px;
+    width: 100%;
+    height: 424px;
+    margin: 0;
+  }
+  .text-content p {
+    margin: 0 30px 0 50px;
+    text-align: center !important;
+    font-size: 15px;
+  }
+  .p-container {
+    border-radius: 0px 0px 60px 60px;
+    margin: 8px 0px 0px 7%;
+    z-index: 1;
+    height: 240px;
+    width: 320px;
+  }
+  .container-bienvenida {
+    flex-direction: column;
+    width: 390px;
+    height: 560px;
+    margin-top: 0;
+    margin-left: 5%;
+    padding: 0;
+    position: absolute;
+    align-items: center;
+    top: 0;
+    /* ajusta según la altura del header */
+    border-radius: 30px;
+  }
+  .boton-comienza-ahora {
+    margin-left: 100px;
+    margin-top: 80px;
+    z-index: 11;
+    position: relative;
+  }
+  .log-in-oculto {
+    margin-left: -4px;
+  }
+  .goblinlandingpage1 img {
+    width: 400px;
+    height: auto;
+    z-index: 0;
+  }
+  .goblinlandingpage1 {
+    margin-top: 30%;
+  }
+  .leaf-1,
+  .leaf-2,
+  .leaf-3 {
+    z-index: 10;
+  }
+  .BannerSponsors {
+    min-height: 80px;
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 8px 0;
+    margin-top: 180%;
+    clip-path: polygon(0% 0%, 0% 0%, 50% 12%, 100% 0%, 100% 30%, 100% 100%, 50% 90%, 0% 100%);
+    box-shadow: 5px 5px 15px var --Black 0, 0, 0, 0.8, 0px -5px 10px var --Black 0, 0, 0, 0.8;
+    /* sombra arriba */
+  }
+  .BannerSponsors h4 {
+    font-size: 1rem;
+    margin-top: 8%;
+  }
+  .supporters-logos {
+    flex-direction: row;
+    gap: 8px;
+  }
+  .supporters-logos img {
+    width: 80px;
+    height: 80px;
+  }
+  .comofunciona-container {
+    @include flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    justify-content: space-between;
+  }
+  .comofunciona {
+    width: 100%;
+    height: auto;
+  }
+  .comunidad-CONTAINER {
+    width: 60%;
+    height: 600px;
+  }
+  .comunidad {
+    width: auto;
+    height: 100%;
+    font-size: 80%;
+  }
+  .userfondo {
+    width: 260px;
+    height: 200px;
+    border-top: 4px solid #677e52;
+  }
+  .Usuario {
+    width: 260px;
+    height: 265px;
+    border-radius: 30px;
+  }
+  .testimonios-container {
+    @include flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: fit-content;
+    padding: 0%;
+    font-size: 90%;
+    border-radius: 8px;
+    margin-top: 320px;
+    justify-content: space-between;
+    align-content: stretch;
+    min-height: 65vh;
+    /* o la altura necesaria */
+    overflow: visible;
+    margin-top: 90%;
+  }
+  .pie-de-pagina {
+    margin-top: auto;
+  }
+}
+/* Tablets --------------------------------------------------------) */
+@media (min-width: 600px) and (max-width: 1000px) {
+  /* Para cambiar de menu al hamburguesa en tablets*/
+  .menu_hamburguesa_principal {
+    @include flex;
+  }
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: $verde-oscuro;
+    border-width: 3px;
+    border-color: $verde-triada;
+    border-radius: 3px;
+    margin: 4px 0;
+    font-family: $fuente2;
+    color: $Marron-clarito;
+    transition: 0.3s;
+    @include flex;
+    flex-direction: column;
+  }
+  .bar:hover:first-child {
+    background-color: $verde-oscuro;
+    border-radius: 3px;
+    transform: rotate(45deg);
+  }
+  .bar:hover:nth-child {
+    opacity: 0;
+  }
+  .bar:hover:first-child {
+    background-color: $verde-oscuro;
+    border-radius: 3px;
+    transform: rotate(-45deg);
+  }
+  .menu_hamburguesa_item {
+    font-family: $fuente2;
+    color: $falso-blanco;
+  }
+  .menu-hamburguesa-fondo .active {
+    display: none;
+    background-color: $verde-acento;
+    width: 50px;
+    height: 100px;
+    right: -100%; /* Empieza fuera de la pantalla por la derecha */
+    justify-content: flex-end; /* Alinea el contenido a la derecha */
+  }
+  .nav {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .header-jefe-visible {
+    justify-content: space-between;
+  }
+  .header-jefe-visible h1 {
+    font-size: 36px;
+  }
+  .header-menu {
+    display: none;
+    align-content: center;
+    background-color: $verde-acento;
+  }
+  .nav > li {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    margin: 15px 0;
+  }
+  .header-menu .show {
+    @include flex;
+    background-color: $verde-acento;
+  }
+  .BannerSponsors {
+    height: 140px;
+    font-size: 1.1rem;
+    padding: 18px 0;
+  }
+  .supporters-logos img {
+    width: 80px;
+    height: 80px;
+  }
+  .container-bienvenida {
+    flex-direction: row;
+    width: 90vw;
+    height: 400px;
+    margin: 60px auto;
+    padding: 20px;
+  }
+  .goblinlandingpage1 img {
+    width: 350px;
+    margin-top: 40px;
+  }
+  .banner-title {
+    width: 400px;
+    height: 80px;
+    margin-top: 20px;
+  }
+  .p-container {
+    margin: 24px 0 8px 0;
+    padding: 16px 10px 8px 10px;
+  }
+  .comunidad-CONTAINER {
+    width: 90vw;
+    padding: 40px 20px;
+  }
+  .testimonios-container {
+    width: auto;
+    height: fit-content;
+    padding: 0%;
+  }
+  .userfondo {
+    width: 260px;
+    height: 200px;
+    border-top: 4px solid #677e52;
+  }
+  .Usuario {
+    width: 260px;
+    height: 265px;
+    border-radius: 30px;
+  }
+  .testimonios-container p {
+    font-size: 80%;
+  }
+  .pie-de-pagina {
+    margin-top: auto;
+  }
+}
+/* Desktops grandes (≥ 1200px) */
+@media (min-width: 1200px) {
+  .header-jefe-visible {
+    height: 105px;
+  }
+  .container-bienvenida {
+    @include flex;
+    flex-direction: row;
+    align-content: center;
+    width: 880px;
+    height: 500px;
+    background-color: $Marron-intermedio;
+    margin: 80px auto;
+  }
+  .pie-de-pagina {
+    margin-top: auto;
+  }
+  /* Ocultar el submenú por defecto en desktop */
+  .submenu-container {
+    display: none;
+  }
+}

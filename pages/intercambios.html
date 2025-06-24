@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html>
+<!-- encabezadodelaweb ---------------------------------------------------------------------------------------------------------------------------->
+
+<head>
+  <meta name="theme-color" content="#8c9657">
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PlantBuddies</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="shortcut icon" href="../assets/imagenes/FAVICON.png">
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Tagesschrift&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome para los iconos -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-invisible"></div>
+    <div class="header-jefe-visible">
+      <!-- este es el menu ------------------------------------------------------------->
+      <div class="logo-container">
+        <img src="../assets/imagenes/carita1.png" alt="logoplantbuddies" />
+        <h1>PlantBuddies</h1>
+      </div>
+      <nav>
+        <ul class="header-menu">
+          <li class="header-menu-item"><a href="../index.html">Inicio</a></li>
+          <li class="header-menu-item"><a href="registro.html">Registro</a></li>
+          <li class="header-menu-item"><a href="intercambios.html">Intercambios</a></li>
+          <li class="header-menu-item"><a href="comunidad.html">Comunidad</a></li>
+          <li class="header-menu-item"><a href="contacto.html">Contacto</a></li>
+          <li class="header-menu-item">
+            <a href="perfil.html">
+              <img src="../assets/imagenes/AvatarBaseUsuario.png" alt="AvatarBaseUsuario" />
+            </a>
+
+            <div class="header-submenu">
+              <div class="submenu-usuario-online"> <!--hijo 1 color oscuro, icono avarar, nombre perfil-->
+                <img src="../assets/imagenes/AvatarBaseUsuario.png" alt="">
+                <h3>"Name"</h3>
+                <div class="stars">★ ★ ★ ★ ★</div>
+              </div>
+
+              <div class="submenu-enlaces"><!--hijo 2 color claro, enlaces de submenu-->
+                <ul>
+                  <li>
+                    <img src="../assets/imagenes/witchIcon.png" alt="plantIcon">
+                    <a href="perfil.html">Perfil</a>
+                  </li>
+                  <li>
+                    <a href="favoritos.html" img src="../assets/imagenes/plantIcon.png" alt="plantIcon">Favoritos</a>
+                  </li>
+                  <li>
+                    <a href="social.html" img src="../assets/imagenes/plantIcon.png" alt="plantIcon">Social</a>
+                  </li>
+                  <li>
+                    <a href="misintercambios.html" img src="../assets/imagenes/plantIcon.png" alt="plantIcon">Mis
+                      intercambios</a>
+                  </li>
+                  <li> <a href="offline" img src="../assets/imagenes/plantIcon.png" alt="plantIcon">Cerrar sesión</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+  <!-- FINencabezadodelaweb ---------------------------------------------------------------------------------------------------------------------------->
+
+
+  <!-- Intercambio, encabezado------------------------------------------>
+  <section class="intercambios">
+    <div class="intercambio-encabezado">
+      <div>
+        <h2>Intercambios</h2>
+        <p>Busca y ofrece esquejes, plantas, servicios, accesorios y más <br>con Plant Buddies cercanos a vos.
+        </p>
+      </div>
+      <div class="contador-ecologico">
+        <p>00030 Contador en vivo</p>
+      </div>
+    </div>
+    <div class="search-wrapper">
+      <input type="search" class="form-control plantbuddy-search-input flex-grow-1"
+        placeholder="Busca plantas, consejos, servicios..." id="searchInput">
+      <button class="btn search-btn" type="button" onclick="handleSearch()">
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
+
+    <main>
+      <section class="ofertas">
+        <div class="oferta-individual-container">
+          <!--<div class="plantilla-oferta">  
+                  <div class="parte-superior-oferta"> 
+                      <img class="avatar-usuario-ofertador" src="assets/imagenes/AVATARBASEUSUARIOENPEQUEÑO.png"
+                          alt="avatar-usuario-ofertador">
+                      <div>
+                          <h3>Hermosa Monstera</h3>
+                          <img class="planta-en-oferta" src="assets/imagenes/3512101-POKON_Atmosphere_04_SQ_MJ.webp"
+                              alt="planta-en-oferta">
+                      </div>
+                  </div>
+                  <divc class="parte-inferior-oferta"> 
+                      <div class="alineacion-texto-comentarios">
+                          <h3>Monstera obliqua</h3>
+                          <p>Se encuentra en excelente estado, no encontraras iguales de este tamaño.</p>
+                      </div>
+                      <div class="comentarios">
+                          <button><img src="/PlantBuddies/assets/imagenes/GreenPotatoIcon.png"
+                                  alt="icono comentarios">
+                              <p>6</p>
+                          </button>
+                      </div>
+              </div>
+              <div class="alineacion-botones">
+                  <div class="flex-primeros-botones">
+                      <div class="clasificacion">
+                          <p>8</p> <button>calificación</button>
+                          <div class="likes">
+                              <button>likes</button>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="proponer-boton"> <button>proponer oferta</button></div>
+              </div>-->
+        </div>
+        <div class="ofertas-grid">
+
+          <div class="varOferta1">
+            <div class="card" onclick="toggleExpand(this)"></div>
+            <div class="parte-superior">
+              <div class="encabezado1">
+                <div><img src="../assets/imagenes/AvatarBaseUsuario.png" alt="avatar-usuario-ofertador"></div>
+                <div>
+                  <h3>Hermosa Monstera</h3>
+                </div>
+                <div> <button class="toggle"></button>
+                </div>
+
+              </div>
+              <div class="monstera"><img src="../assets/imagenes/Monstera.webp" alt=""></div>
+              <div class="parte-inferior-blanca">
+                <div class="parte-a">
+                  <div>
+                    <h3>Monstera</h3>
+                  </div>
+                  <div class="potato-comentarios">
+                    <div><button><img src="../assets/imagenes/GreenPotatoIcon.png" alt="icono comentarios"></button>
+                    </div>
+                    <div>
+                      <p>6</p>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="parte-b">
+                  <p>Se encuentra en excelente estado, no encontraras iguales de este tamaño.
+                </div>
+                <div class="parte-c">
+                  <div class="clasificacion">
+                    <button> ⭐8  calificación</button>
+                    <div class="likes">
+                     <button> ❤8 likes</button>
+                    </div>
+                  </div>
+                </div>
+                <div><button class="parte-d" class="main-action">↻ Proponer oferta</button></div>
+              </div>
+            </div>
+          </div>
+          <div class="varOferta1">
+            <div class="card" onclick="toggleExpand(this)"></div>
+            <div class="parte-superior">
+              <div class="encabezado1">
+                <div><img src="../assets/imagenes/AvatarBaseUsuario.png" alt="avatar-usuario-ofertador"></div>
+                <div>
+                  <h3>Esqueje de Lavanda (Modo Chill)</h3>
+                </div>
+                <div> <button class="toggle"></button>
+                </div>
+
+              </div>
+              <div class="monstera"><img src="../assets/imagenes/fotoOferta2.jpg" alt=""></div>
+              <div class="parte-inferior-blanca">
+                <div class="parte-a">
+                  <div>
+                    <h3>Lavanda</h3>
+                  </div>
+                  <div class="potato-comentarios">
+                    <div><button><img src="../assets/imagenes/GreenPotatoIcon.png" alt="icono comentarios"></button>
+                    </div>
+                    <div>
+                      <p>6</p>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="parte-b">
+                  <p>Ideal para ventanas soleadas y mates tranquilos.Esta lavanda trae paz, aroma y cero drama. #Aromáticas
+                </div>
+                <div class="parte-c">
+                  <div class="clasificacion">
+                    <button> ⭐0  calificación</button>
+                    <div class="likes">
+                     <button> ❤0 likes</button>
+                    </div>
+                  </div>
+                </div>
+                <div><button class="parte-d" class="main-action">↻ Proponer oferta</button></div>
+              </div>
+            </div>
+          </div>
+          <div class="varOferta1">
+            <div class="card" onclick="toggleExpand(this)"></div>
+            <div class="parte-superior">
+              <div class="encabezado1">
+                <div><img src="../assets/imagenes/AvatarBaseUsuario.png" alt="avatar-usuario-ofertador"></div>
+                <div>
+                  <h3>Pluma de Aire</h3>
+                </div>
+                <div> <button class="toggle"></button>
+                </div>
+
+              </div>
+              <div class="monstera"><img src="../assets/imagenes/TillandsiaLonantha.webp" alt=""></div>
+              <div class="parte-inferior-blanca">
+                <div class="parte-a">
+                  <div>
+                    <h3>Tillandsia Ionantha</h3>
+                  </div>
+                  <div class="potato-comentarios">
+                    <div><button><img src="../assets/imagenes/GreenPotatoIcon.png" alt="icono comentarios"></button>
+                    </div>
+                    <div>
+                      <p>6</p>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="parte-b">
+                  <p>Vive sin tierra. Solo aire, luz y una rociada amorosa de vez en cuando. Parece salida de un cuento de hadas.</p>
+                </div>
+                <div class="parte-c">
+                  <div class="clasificacion">
+                    <button> ⭐8  calificación</button>
+                    <div class="likes">
+                     <button> ❤8 likes</button>
+                    </div>
+                  </div>
+                </div>
+                <div><button class="parte-d" class="main-action">↻ Proponer oferta</button></div>
+              </div>
+            </div>
+          </div>
+          <div class="varOferta1">
+            <div class="card" onclick="toggleExpand(this)"></div>
+            <div class="parte-superior">
+              <div class="encabezado1">
+                <div><img src="../assets/imagenes/AvatarBaseUsuario.png" alt="avatar-usuario-ofertador"></div>
+                <div>
+                  <h3>Ficus Lyrata (Edición Dramática)</h3>
+                </div>
+                <div> <button class="toggle"></button>
+                </div>
+
+              </div>
+              <div class="monstera"><img src="../assets/imagenes/FicusLyrata.jpg" alt=""></div>
+              <div class="parte-inferior-blanca">
+                <div class="parte-a">
+                  <div>
+                    <h3>Ficus Lyrata</h3>
+                  </div>
+                  <div class="potato-comentarios">
+                    <div><button><img src="../assets/imagenes/GreenPotatoIcon.png" alt="icono comentarios"></button>
+                    </div>
+                    <div>
+                      <p>6</p>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="parte-b">
+                  <p>Le gusta la atención y odia las corrientes de aire. La reina del drama, pero te premia con hojas enormes y bellas.</p>
+                </div>
+                <div class="parte-c">
+                  <div class="clasificacion">
+                    <button> ⭐10  calificación</button>
+                    <div class="likes">
+                     <button> ❤220 likes</button>
+                    </div>
+                  </div>
+                </div>
+                <div><button class="parte-d" class="main-action">↻ Proponer oferta</button></div>
+              </div>
+            </div>
+          </div>
+          <div class="varOferta1">
+            <div class="card" onclick="toggleExpand(this)"></div>
+            <div class="parte-superior">
+              <div class="encabezado1">
+                <div><img src="../assets/imagenes/AvatarBaseUsuario.png" alt="avatar-usuario-ofertador"></div>
+                <div>
+                  <h3>Mini Cactus Samurai</h3>
+                </div>
+                <div> <button class="toggle"></button>
+                </div>
+
+              </div>
+              <div class="monstera"><img src="../assets/imagenes/Cactus.jpg" alt=""></div>
+              <div class="parte-inferior-blanca">
+                <div class="parte-a">
+                  <div>
+                    <h3>Cactus</h3>
+                  </div>
+                  <div class="potato-comentarios">
+                    <div><button><img src="../assets/imagenes/GreenPotatoIcon.png" alt="icono comentarios"></button>
+                    </div>
+                    <div>
+                      <p>6</p>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="parte-b">
+                  <p>Pequeño pero poderoso. Este cactus sobrevivió a cuatro mudanzas y un gato curioso. Ideal para principiantes con alma zen.</p>
+                </div>
+                <div class="parte-c">
+                  <div class="clasificacion">
+                    <button> ⭐8  calificación</button>
+                    <div class="likes">
+                     <button> ❤8 likes</button>
+                    </div>
+                  </div>
+                </div>
+                <div><button class="parte-d" class="main-action">↻ Proponer oferta</button></div>
+              </div>
+            </div>
+          </div>
+          <div class="varOferta1">
+            <div class="card" onclick="toggleExpand(this)"></div>
+            <div class="parte-superior">
+              <div class="encabezado1">
+                <div><img src="../assets/imagenes/AvatarBaseUsuario.png" alt="avatar-usuario-ofertador"></div>
+                <div>
+                  <h3>Reina de la Sombra</h3>
+                </div>
+                <div> <button class="toggle"></button>
+                </div>
+
+              </div>
+              <div class="monstera"><img src="../assets/imagenes/calathea.jpg" alt=""></div>
+              <div class="parte-inferior-blanca">
+                <div class="parte-a">
+                  <div>
+                    <h3>Calathea Orbifolia</h3>
+                  </div>
+                  <div class="potato-comentarios">
+                    <div><button><img src="../assets/imagenes/GreenPotatoIcon.png" alt="icono comentarios"></button>
+                    </div>
+                    <div>
+                      <p>6</p>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="parte-b">
+                  <p> Amante de los rincones con poca luz, esta belleza despliega hojas como abanicos plateados. Casi no necesita mantenimiento, pero sí mucho amor.</p>
+                </div>
+                <div class="parte-c">
+                  <div class="clasificacion">
+                    <button> ⭐8  calificación</button>
+                    <div class="likes">
+                     <button> ❤8 likes</button>
+                    </div>
+                  </div>
+                </div>
+                <div><button class="parte-d" class="main-action">↻ Proponer oferta</button></div>
+              </div>
+            </div>
+          </div>
+          <div class="varOferta1">
+            <div class="card" onclick="toggleExpand(this)"></div>
+            <div class="parte-superior">
+              <div class="encabezado1">
+                <div><img src="../assets/imagenes/AvatarBaseUsuario.png" alt="avatar-usuario-ofertador"></div>
+                <div>
+                  <h3>Hija Rebelde</h3>
+                </div>
+                <div> <button class="toggle"></button>
+                </div>
+
+              </div>
+              <div class="monstera"><img src="../assets/imagenes/Chinese-Money-Plant-in-Water1.webp" alt=""></div>
+              <div class="parte-inferior-blanca">
+                <div class="parte-a">
+                  <div>
+                    <h3>Pilea Peperomioides</h3>
+                  </div>
+                  <div class="potato-comentarios">
+                    <div><button><img src="../assets/imagenes/GreenPotatoIcon.png" alt="icono comentarios"></button>
+                    </div>
+                    <div>
+                      <p>8</p>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="parte-b">
+                  <p>Heredada de una madre orgullosa, esta Pilea decidió crecer a su manera. Tiene forma peculiar, pero mucho carácter.</p>
+                </div>
+                <div class="parte-c">
+                  <div class="clasificacion">
+                    <button> ⭐3 calificación</button>
+                    <div class="likes">
+                     <button> ❤0likes</button>
+                    </div>
+                  </div>
+                </div>
+                <div><button class="parte-d" class="main-action">↻ Proponer oferta</button></div>
+              </div>
+            </div>
+          </div>
+          <div class="varOferta1">
+            <div class="card" onclick="toggleExpand(this)"></div>
+            <div class="parte-superior">
+              <div class="encabezado1">
+                <div><img src="../assets/imagenes/AvatarBaseUsuario.png" alt="avatar-usuario-ofertador"></div>
+                <div>
+                  <h3>Mini Sol Personal</h3>
+                </div>
+                <div> <button class="toggle"></button>
+                </div>
+
+              </div>
+              <div class="monstera"><img src="../assets/imagenes/HelianthusAnnuus.jpg" alt=""></div>
+              <div class="parte-inferior-blanca">
+                <div class="parte-a">
+                  <div>
+                    <h3>Helianthus Annuus</h3>
+                  </div>
+                  <div class="potato-comentarios">
+                    <div><button><img src="../assets/imagenes/GreenPotatoIcon.png" alt="icono comentarios"></button>
+                    </div>
+                    <div>
+                      <p>6</p>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="parte-b">
+                  <p>Un sol en miniatura para tu escritorio. Sigue la luz del día y te alegra la tarde. Perfecto para espacios reducidos.</p>
+                </div>
+                <div class="parte-c">
+                  <div class="clasificacion">
+                    <button> ⭐6  calificación</button>
+                    <div class="likes">
+                     <button> ❤0 likes</button>
+                    </div>
+                  </div>
+                </div>
+                <div><button class="parte-d" class="main-action">↻ Proponer oferta</button></div>
+              </div>
+            </div>
+          </div>
+          <div class="varOferta1">
+            <div class="card" onclick="toggleExpand(this)"></div>
+            <div class="parte-superior">
+              <div class="encabezado1">
+                <div><img src="../assets/imagenes/AvatarBaseUsuario.png" alt="avatar-usuario-ofertador"></div>
+                <div>
+                  <h3>Orejas de conejo</h3>
+                </div>
+                <div> <button class="toggle"></button>
+                </div>
+
+              </div>
+              <div class="monstera"><img src="../assets/imagenes/Opuntia microdasys.jpg" alt=""></div>
+              <div class="parte-inferior-blanca">
+                <div class="parte-a">
+                  <div>
+                    <h3>Opuntia microdasys</h3>
+                  </div>
+                  <div class="potato-comentarios">
+                    <div><button><img src="../assets/imagenes/GreenPotatoIcon.png" alt="icono comentarios"></button>
+                    </div>
+                    <div>
+                      <p>6</p>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="parte-b">
+                  <p>Tierna, pero no tanto. No te dejes engañar por sus orejitas, ¡tiene carácter! Ideal para principiantes con estilo. </p>
+                </div>
+                <div class="parte-c">
+                  <div class="clasificacion">
+                    <button> ⭐8  calificación</button>
+                    <div class="likes">
+                     <button> ❤8 likes</button>
+                    </div>
+                  </div>
+                </div>
+                <div><button class="parte-d" class="main-action">↻ Proponer oferta</button></div>
+              </div>
+            </div>
+          </div>
+          <div class="varOferta1">
+            <div class="card" onclick="toggleExpand(this)"></div>
+            <div class="parte-superior">
+              <div class="encabezado1">
+                <div><img src="../assets/imagenes/AvatarBaseUsuario.png" alt="avatar-usuario-ofertador"></div>
+                <div>
+                  <h3>Invencible</h3>
+                </div>
+                <div> <button class="toggle"></button>
+                </div>
+
+              </div>
+              <div class="monstera"><img src="../assets/imagenes/PotusMutante.jpg" alt=""></div>
+              <div class="parte-inferior-blanca">
+                <div class="parte-a">
+                  <div>
+                    <h3>Potus Mutante</h3>
+                  </div>
+                  <div class="potato-comentarios">
+                    <div><button><img src="../assets/imagenes/GreenPotatoIcon.png" alt="icono comentarios"></button>
+                    </div>
+                    <div>
+                      <p>6</p>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="parte-b">
+                  <p>Nació Potus, pero nadie sabe bien qué es ahora. Crece sin parar, incluso si olvidás regarlo.
+                </div>
+                <div class="parte-c">
+                  <div class="clasificacion">
+                    <button> ⭐8  calificación</button>
+                    <div class="likes">
+                     <button> ❤8 likes</button>
+                    </div>
+                  </div>
+                </div>
+                <div><button class="parte-d" class="main-action">↻ Proponer oferta</button></div>
+              </div>
+            </div>
+          </div>
+          <div class="varOferta1">
+            <div class="card" onclick="toggleExpand(this)"></div>
+            <div class="parte-superior">
+              <div class="encabezado1">
+                <div><img src="../assets/imagenes/AvatarBaseUsuario.png" alt="avatar-usuario-ofertador"></div>
+                <div>
+                  <h3>🌺Tesoro Tropical</h3>
+                </div>
+                <div> <button class="toggle"></button>
+                </div>
+
+              </div>
+              <div class="monstera"><img src="../assets/imagenes/Anthurium-andraeanum-1.webp" alt=""></div>
+              <div class="parte-inferior-blanca">
+                <div class="parte-a">
+                  <div>
+                    <h3>Anthurium Andraeanum</h3>
+                  </div>
+                  <div class="potato-comentarios">
+                    <div><button><img src="../assets/imagenes/GreenPotatoIcon.png" alt="icono comentarios"></button>
+                    </div>
+                    <div>
+                      <p>6</p>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="parte-b">
+                  <p>Sus flores parecen de cera. Esta planta es símbolo de hospitalidad y pasión. Perfecta para regalar (o no compartir nunca).</p>
+                </div>
+                <div class="parte-c">
+                  <div class="clasificacion">
+                    <button> ⭐8  calificación</button>
+                    <div class="likes">
+                     <button> ❤8 likes</button>
+                    </div>
+                  </div>
+                </div>
+                <div><button class="parte-d" class="main-action">↻ Proponer oferta</button></div>
+              </div>
+            </div>
+          </div>
+          <div class="varOferta1">
+            <div class="card" onclick="toggleExpand(this)"></div>
+            <div class="parte-superior">
+              <div class="encabezado1">
+                <div><img src="../assets/imagenes/AvatarBaseUsuario.png" alt="avatar-usuario-ofertador"></div>
+                <div>
+                  <h3> La de la Suerte</h3>
+                </div>
+                <div> <button class="toggle"></button>
+                </div>
+
+              </div>
+              <div class="monstera"><img src="../assets/imagenes/Oxalitriangularis.jpg" alt=""></div>
+              <div class="parte-inferior-blanca">
+                <div class="parte-a">
+                  <div>
+                    <h3>Oxalis triangularis</h3>
+                  </div>
+                  <div class="potato-comentarios">
+                    <div><button><img src="../assets/imagenes/GreenPotatoIcon.png" alt="icono comentarios"></button>
+                    </div>
+                    <div>
+                      <p>6</p>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="parte-b">
+                  <p> Sus hojas moradas se abren de día y duermen de noche. No da suerte, pero sí muchas ganas de mirarla todo el día.</p>
+                </div>
+                <div class="parte-c">
+                  <div class="clasificacion">
+                    <button> ⭐8  calificación</button>
+                    <div class="likes">
+                     <button> ❤8 likes</button>
+                    </div>
+                  </div>
+                </div>
+                <div><button class="parte-d" class="main-action">↻ Proponer oferta</button></div>
+              </div>
+            </div>
+          </div>
+          <div class="varOferta1">
+            <div class="card" onclick="toggleExpand(this)"></div>
+            <div class="parte-superior">
+              <div class="encabezado1">
+                <div><img src="../assets/imagenes/AvatarBaseUsuario.png" alt="avatar-usuario-ofertador"></div>
+                <div>
+                  <h3>Explosión de Color</h3>
+                </div>
+                <div> <button class="toggle"></button>
+                </div>
+
+              </div>
+              <div class="monstera"><img src="../assets/imagenes/Monstera.webp" alt=""></div>
+              <div class="parte-inferior-blanca">
+                <div class="parte-a">
+                  <div>
+                    <h3>Tradescantia Nanouk</h3>
+                  </div>
+                  <div class="potato-comentarios">
+                    <div><button><img src="../assets/imagenes/GreenPotatoIcon.png" alt="icono comentarios"></button>
+                    </div>
+                    <div>
+                      <p>6</p>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="parte-b">
+                  <p>Hojas moradas, verdes y rosadas. No necesita filtros para llamar la atención. Muy fácil de cuidar.</p>
+                </div>
+                <div class="parte-c">
+                  <div class="clasificacion">
+                    <button> ⭐8  calificación</button>
+                    <div class="likes">
+                     <button> ❤40 likes</button>
+                    </div>
+                  </div>
+                </div>
+                <div><button class="parte-d" class="main-action">↻ Proponer oferta</button></div>
+              </div>
+            </div>
+          </div>
+          <div class="varOferta1">
+            <div class="card" onclick="toggleExpand(this)"></div>
+            <div class="parte-superior">
+              <div class="encabezado1">
+                <div><img src="../assets/imagenes/AvatarBaseUsuario.png" alt="avatar-usuario-ofertador"></div>
+                <div>
+                  <h3>Diva tropical</h3>
+                </div>
+                <div> <button class="toggle"></button>
+                </div>
+
+              </div>
+              <div class="monstera"><img src="../assets/imagenes/REX-BEGONIA-‘HARMONYS-DANCE-OF-DRAGONS.webp" alt=""></div>
+              <div class="parte-inferior-blanca">
+                <div class="parte-a">
+                  <div>
+                    <h3>🌸Begonia Maculata</h3>
+                  </div>
+                  <div class="potato-comentarios">
+                    <div><button><img src="../assets/imagenes/GreenPotatoIcon.png" alt="icono comentarios"></button>
+                    </div>
+                    <div>
+                      <p>6</p>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="parte-b">
+                  <p>Con sus hojas manchadas y su porte elegante, esta begonia está lista para cualquier sesión de fotos. Necesita luz... y halagos.</p>
+                </div>
+                <div class="parte-c">
+                  <div class="clasificacion">
+                    <button> ⭐1  calificación</button>
+                    <div class="likes">
+                     <button> ❤22 likes</button>
+                    </div>
+                  </div>
+                </div>
+                <div><button class="parte-d" class="main-action">↻ Proponer oferta</button></div>
+              </div>
+            </div>
+          </div>
+          <div class="varOferta1">
+            <div class="card" onclick="toggleExpand(this)"></div>
+            <div class="parte-superior">
+              <div class="encabezado1">
+                <div><img src="../assets/imagenes/AvatarBaseUsuario.png" alt="avatar-usuario-ofertador"></div>
+                <div>
+                  <h3>Detector de Malos Tratos</h3>
+                </div>
+                <div> <button class="toggle"></button>
+                </div>
+
+              </div>
+              <div class="monstera"><img src="../assets/imagenes/Peace-lily-care-indoor.jpg" alt=""></div>
+              <div class="parte-inferior-blanca">
+                <div class="parte-a">
+                  <div>
+                    <h3>Espatifilo</h3>
+                  </div>
+                  <div class="potato-comentarios">
+                    <div><button><img src="../assets/imagenes/GreenPotatoIcon.png" alt="icono comentarios"></button>
+                    </div>
+                    <div>
+                      <p>7</p>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="parte-b">
+                  <p>Se pone triste si la ignorás. Pero te lo hace saber con drama visual. Excelente compañera si te olvidás de regar.</p>
+                </div>
+                <div class="parte-c">
+                  <div class="clasificacion">
+                    <button> ⭐8  calificación</button>
+                    <div class="likes">
+                     <button> ❤8 likes</button>
+                    </div>
+                  </div>
+                </div>
+                <div><button class="parte-d" class="main-action">↻ Proponer oferta</button></div>
+              </div>
+            </div>
+          </div>
+          <div class="varOferta1">
+            <div class="card" onclick="toggleExpand(this)"></div>
+            <div class="parte-superior">
+              <div class="encabezado1">
+                <div><img src="../assets/imagenes/AvatarBaseUsuario.png" alt="avatar-usuario-ofertador"></div>
+                <div>
+                  <h3>Insomne Profesional</h3>
+                </div>
+                <div> <button class="toggle"></button>
+                </div>
+
+              </div>
+              <div class="monstera"><img src="../assets/imagenes/calathea-white-fusion-2.jpg" alt=""></div>
+              <div class="parte-inferior-blanca">
+                <div class="parte-a">
+                  <div>
+                    <h3>Calathea</h3>
+                  </div>
+                  <div class="potato-comentarios">
+                    <div><button><img src="../assets/imagenes/GreenPotatoIcon.png" alt="icono comentarios"></button>
+                    </div>
+                    <div>
+                      <p>6</p>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="parte-b">
+                  <p>Sus hojas se mueven de día y de noche. Parece que baila sola. No le gusta el sol directo ni los cambios bruscos (igual que vos).
+                </div>
+                <div class="parte-c">
+                  <div class="clasificacion">
+                    <button> ⭐8  calificación</button>
+                    <div class="likes">
+                     <button> ❤8 likes</button>
+                    </div>
+                  </div>
+                </div>
+                <div><button class="parte-d" class="main-action">↻ Proponer oferta</button></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <nav aria-label="Navegación de intercambios" class="mt-4">
+        <ul class="pagination justify-content-center">
+          <li class="page-item disabled">
+            <span class="page-link">Anterior</span>
+          </li>
+          <li class="page-item active">
+            <a class="page-link" href="#">1</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">2</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">3</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">Siguiente</a>
+          </li>
+        </ul>
+      </nav>
+  </section>
+  </main>
+  <!-- footer, fin de la pagina---------------------------------------------------------------------------------------------------------->
+  <footer class="pie-de-pagina">
+    <div class="footerMenu"> <!-- DIV PADRE-->
+      <div class="descripcionPagina">
+        <a href="#home">
+          <h3>PlantBuddies</h3>
+        </a>
+        <p>Conectando amantes de las plantas desde 2025.
+          Tu aventura botánica comienza con nosotros.</p>
+      </div>
+      <div class="Enlaces">
+        <h3>Enlaces</h3>
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="registro.html">Registro</a></li>
+          <li><a href="intercambios.html">Intercambios</a></li>
+          <li><a href="comunidad.html">Comunidad</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="perfil.html">Perfil</a></li>
+        </ul>
+      </div>
+      <div class="Recursos">
+        <ul>
+          <h3>Recursos</h3>
+          <li><a href="#">Guía de intercambio</a></li>
+          <li><a href="#">Equipo de soporte</a></li>
+          <li><a href="#">Preguntas frecuentes</a></li>
+          <li><a href="#">Políticas</a></li>
+          <li><a href="#">Gestionar Suscripción</a></li>
+        </ul>
+      </div>
+      <div class="Siguenos">
+        <h3>Siguenos</h3>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/luna-bujalesky-b60561267/">LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/soleiatelier/">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+    <p id="copyright">©2025 hecho con ❤ por el equipo de PlantBuddies. Todos los derechos reservados</p>
+  </footer>
+  <script>
+    function toggleExpand(card) {
+      card.classList.toggle('expanded');
+    }
+
+    // input buscador de Bootstrap
+    function handleSearch() {
+      const searchTerm = document.getElementById('searchInput').value;
+      if (searchTerm.trim() !== '') {
+        // Aquí puedes agregar tu lógica de búsqueda
+        console.log('Buscando:', searchTerm);
+        // Por ejemplo: window.location.href = '/buscar?q=' + encodeURIComponent(searchTerm);
+      }
+    }
+
+    // Búsqueda al presionar Enter
+    document.getElementById('searchInput').addEventListener('keypress', function (e) {
+      if (e.key === 'Enter') {
+        handleSearch();
+      }
+    });
+  </script>
+</body>
+
+</html>
