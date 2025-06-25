@@ -153,6 +153,7 @@ myModal.addEventListener('shown.bs.modal', () => {
     menuFondo.classList.toggle('active');
   });
 
+  /*
   // Cerrar al hacer clic en el fondo
   menuFondo.addEventListener('click', (e) => {
     if (e.target === menuFondo) {
@@ -160,3 +161,4 @@ myModal.addEventListener('shown.bs.modal', () => {
       menuFondo.classList.remove('active');
     }
   });
+  */
