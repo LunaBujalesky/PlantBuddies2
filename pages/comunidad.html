@@ -3,16 +3,33 @@
 <!-- encabezadodelaweb ---------------------------------------------------------------------------------------------------------------------------->
 
 <head>
+  <!-- SEO------------------------------------------------------------->
+  <meta charset="UTF-8">
   <meta name="theme-color" content="#8c9657">
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PlantBuddies</title>
+  <meta name="description" content="Leé y compartí notas, consejos, preguntas y experiencias sobre el mundo botánico.">
+  <meta name="keywords"
+    content="intercambio de plantas, botánica, esquejes, sostenibilidad, coleccionistas de plantas, PlantBuddies">
+  <meta name="author" content="Luna Bujalesky">
+  <title>PlantBuddies | Comunidad </title>
+  <!-- Open Graph para compartir en redes sociales -->
+  <meta property="og:title" content="PlantBuddies - Un espacio para compartir saberes y hacer nuevos amigos" />
+  <!-- Título visible en redes-->
+  <meta property="og:description"
+    content="Sumate a la conversación, publicá tu experiencia o ayudá a otras personas en este foro de amantes de las plantas." />
+  <!-- Texto descriptivo del sitio-->
+  <meta property="og:image" content="./assets/imagenes/PlantBuddiesLogoMain.svg" /> <!-- URL de una imagen destacada-->
+  <meta property="og:url" content="https://lunabujalesky.github.io/PlantBuddies2/" /> <!-- URL de tu sitio-->
+  <meta property="og:type" content="website" /> <!-- tipo de contenido-->
+
   <link rel="shortcut icon" href="../assets/imagenes/FAVICON.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Tagesschrift&family=VT323&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/main.css" />
+  <script src="./js/index.js"></script>
 </head>
 
 <body>
@@ -38,7 +55,7 @@
 
             <div class="header-submenu">
               <div class="submenu-usuario-online"> <!--hijo 1 color oscuro, icono avarar, nombre perfil-->
-                <img src="../assets/imagenes/AvatarBaseUsuario.png" alt="">
+                <img src="../assets/imagenes/AvatarBaseUsuario.png" alt="Avatar Personalizable Usuario">
                 <h3>"Name"</h3>
                 <div class="stars">★ ★ ★ ★ ★</div>
               </div>
@@ -120,7 +137,7 @@
           </div>
           <div class="categoria">
             <div>
-              <img src="../assets/imagenes/IconBitacora.png" alt="">
+              <img src="../assets/imagenes/IconBitacora.png" alt="Icono sección Bitácora de Arte">
             </div>
             <div>
               <h3>Bitácora de
@@ -279,10 +296,11 @@
                   <img src="../assets/imagenes/AvatarBaseUsuario.png" alt="Avatar de usuario">
                 </div>
                 <div class="content">
-                  <div class="title">🧙‍♂️ Le hice un hechizo a mi poto para que crezca… ahora crece en dirección a mi cama</div>
+                  <div class="title">🧙‍♂️ Le hice un hechizo a mi poto para que crezca… ahora crece en dirección a mi
+                    cama</div>
                   <div class="author">por DarkFicus69</div>
                   <div class="divider"></div>
-                  <div class="description"> Cada noche está un poco más cerca. Ya comparte mi almohada. 
+                  <div class="description"> Cada noche está un poco más cerca. Ya comparte mi almohada.
                     Creo que se llama Javier y quiere hablar de compromiso.</div>
                 </div>
                 <div class="meta">
@@ -303,14 +321,24 @@
                   <img src="../assets/imagenes/AvatarBaseUsuario.png" alt="Avatar de usuario">
                 </div>
                 <div class="content">
-                  <div class="title"><p>Hay un cuervo robando mis cosas</p></div>
-                  <div class="author"><p>por GoblinMom</p></div>
+                  <div class="title">
+                    <p>Hay un cuervo robando mis cosas</p>
+                  </div>
+                  <div class="author">
+                    <p>por GoblinMom</p>
+                  </div>
                   <div class="divider"></div>
-                  <div class="description"><p> Tiene una colección mejor que la mía. Lo odio un poco y lo respeto.</p></div>
+                  <div class="description">
+                    <p> Tiene una colección mejor que la mía. Lo odio un poco y lo respeto.</p>
+                  </div>
                 </div>
                 <div class="meta">
-                  <div class="comments"><p>100</p></div>
-                  <div class="time"><p>Hace 2 minutos</p></div>
+                  <div class="comments">
+                    <p>100</p>
+                  </div>
+                  <div class="time">
+                    <p>Hace 2 minutos</p>
+                  </div>
                   <div class="rating">
                     <div class="star filled"></div>
                     <div class="star filled"></div>
@@ -362,7 +390,7 @@
         </div>
       </div>
     </div>
-     </main>
+  </main>
   <!-- FIN Grid comunidad--------------------------->
 
 
@@ -413,54 +441,55 @@
     </div>
     <p id="copyright">©2025 hecho con ❤ por el equipo de PlantBuddies. Todos los derechos reservados</p>
   </footer>
-</body>
+  <script>
+    function searchLocation() {
+      const input = document.querySelector('input[placeholder="Busca puntos de encuentro"]');
+      alert('Buscando: ' + input.value);
+    }
 
-<script>
-  function searchLocation() {
-    const input = document.querySelector('input[placeholder="Busca puntos de encuentro"]');
-    alert('Buscando: ' + input.value);
-  }
+    function searchPeople() {
+      const input = document.querySelector('input[placeholder="Encontrá gente"]');
+      alert('Buscando personas: ' + input.value);
+    }
 
-  function searchPeople() {
-    const input = document.querySelector('input[placeholder="Encontrá gente"]');
-    alert('Buscando personas: ' + input.value);
-  }
+    function showConduct() {
+      alert('Mostrando normas de conducta');
+    }
+    let lastScrollTop = 0;
+    const navbar = document.getElementById('navbar');
+    let scrollOffset = 0;
 
-  function showConduct() {
-    alert('Mostrando normas de conducta');
-  }
-  let lastScrollTop = 0;
-  const navbar = document.getElementById('navbar');
-  let scrollOffset = 0;
+    window.addEventListener('scroll', function () {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const scrollDiff = scrollTop - lastScrollTop;
 
-  window.addEventListener('scroll', function () {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const scrollDiff = scrollTop - lastScrollTop;
+      // Acumular el desplazamiento
+      scrollOffset += scrollDiff * 0.3; // Factor de suavizado
 
-    // Acumular el desplazamiento
-    scrollOffset += scrollDiff * 0.3; // Factor de suavizado
+      // Aplicar la transformación
+      navbar.style.transform = `translateY(${scrollOffset}px)`;
 
-    // Aplicar la transformación
-    navbar.style.transform = `translateY(${scrollOffset}px)`;
-
-    lastScrollTop = scrollTop;
-  });
-
-  function goToSection(sectionId) {
-    // Remover clase active de todos los botones
-    document.querySelectorAll('.nav-item').forEach(item => {
-      item.classList.remove('active');
+      lastScrollTop = scrollTop;
     });
 
-    // Agregar clase active al botón clickeado
-    event.target.classList.add('active');
+    function goToSection(sectionId) {
+      // Remover clase active de todos los botones
+      document.querySelectorAll('.nav-item').forEach(item => {
+        item.classList.remove('active');
+      });
 
-    // Scroll a la sección
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
+      // Agregar clase active al botón clickeado
+      event.target.classList.add('active');
+
+      // Scroll a la sección
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
     }
-  }
-</script>
+  </script>
+</body>
+
+
 
 </html>
