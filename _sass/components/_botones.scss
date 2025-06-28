@@ -1,0 +1,62 @@
+//Botón utilizado en: inicio, comunidad
+.green-button {
+  background-color: var($verde-triada);
+  border-width: 1px;
+  padding: 1rem 2rem;
+  font-size: medium;
+  font-family: "tagesschrift";
+  color: var($Black);
+  cursor: pointer;
+  border-radius: 20px;
+  width: auto;
+  display: inline-block;
+  transition: all 0.3s ease;
+  position: absolute;
+  text-align: center;
+}
+
+.black-button:hover {
+  background-color: var($Black);
+  color: var($verde-triada);
+}
+
+// Botón utilizado en :registro, intercambios, contacto
+.black-button {
+  background-color: var($Black);
+  border-width: 1px;
+  border-style: none;
+  padding: 1rem 2rem;
+  font-size: medium;
+  font-family: "tagesschrift";
+  color: var($falso-blanco);
+  cursor: pointer;
+  font-weight: normal;
+  border-radius: 214px;
+  width: auto;
+  display: inline-block;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.black-button:hover {
+  background-color: var($falso-blanco);
+  color: var($Black);
+}
+
+// Botón utilizado en: perfil
+.simple-button {
+  border-style: none;
+  padding: 1rem 2rem;
+  font-size: medium;
+  font-family: "tagesschrift";
+  color: var($Black);
+  cursor: pointer;
+  font-weight: normal;
+  width: auto;
+  display: inline-block;
+  transition: all 0.3s ease;
+  text-align: center;
+  margin-left: auto;
+  background-color: transparent;
+  text-decoration: none;
+}

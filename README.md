@@ -35,7 +35,8 @@ PlantBuddies es una plataforma para intercambiar plantas y esquejes con otras pe
  -Validaciones del formulario y base de datos real, incorporación sistema de usuarios, avatars personalizables.
  -Incorporación de minijuegos y sistemas de recompensas/medallas en el perfil.
  -Hacer calculadora funcional para que registre cuántos intercambios se han realizado en el sitio y en base a ello calcule el oxigeno aportado/contaminación combatida. 
- -Incluir seguridad y protección de datos
+ -Incluir seguridad y protección de datos.
+-En la página intercambios, que se agrande y expandan las cards al apretar un icono/toggle.
 
 ## ▶️ Cómo usarlo
 
