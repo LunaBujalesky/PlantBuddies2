@@ -51,7 +51,6 @@
   align-items: flex-start;
   width: 100%;
   height: fit-content;
-  margin: 2rem;
   gap: 8%;
 }
 
@@ -445,11 +444,7 @@
   right: 8px;
   top: 50%;
   transform: translateY(-50%);
-  background: none;
-  border: none;
   cursor: pointer;
-  padding: 8px;
-  border-radius: 3px;
   transition: background-color 0.3s;
 }
 

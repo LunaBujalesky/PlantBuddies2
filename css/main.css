@@ -640,7 +640,7 @@ form {
 /* Sección como funciona------------------------------------------------------------------------------------------------------------------------------*/
 .comofunciona {
   width: 100%;
-  height: 660px;
+  height: fit-content;
 }
 
 .comofunciona h2 {
@@ -742,8 +742,8 @@ form {
   border-top: 4px solid #677e52;
   border-radius: 0px 0px 30px 30px;
   margin-top: 66px;
-  width: 300px;
-  height: 200px;
+  width: 294px;
+  height: 194px;
   position: absolute;
   box-sizing: border-box;
 }
@@ -1139,9 +1139,9 @@ form {
 .search-btn {
   background-color: #8faa72 !important;
   border: none !important;
-  border-radius: 50% !important;
-  width: 60px !important;
-  height: 50px !important;
+  border-radius: 60% !important;
+  width: 40px !important;
+  height: 40px !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1532,7 +1532,6 @@ footer {
   align-items: flex-start;
   width: 100%;
   height: fit-content;
-  margin: 2rem;
   gap: 8%;
 }
 
@@ -1926,11 +1925,7 @@ footer {
   right: 8px;
   top: 50%;
   transform: translateY(-50%);
-  background: none;
-  border: none;
   cursor: pointer;
-  padding: 8px;
-  border-radius: 3px;
   transition: background-color 0.3s;
 }
 
@@ -2500,7 +2495,7 @@ footer {
   background-color: #473f34;
   font-family: "tagesschrift";
   font-weight: lighter;
-  color: #e5d7c4;
+  color: #e5e0d8;
   border-radius: 41px;
   width: 600px;
   margin: 6px 20px 20px 100px;
@@ -2513,6 +2508,8 @@ footer {
   border-radius: 41px;
   color: #473f34;
   width: 500px;
+  padding: 10px 20px;
+  border-color: #473f34;
 }
 
 .formulario-plantas > form > div > input:hover {
@@ -2520,6 +2517,7 @@ footer {
   font-weight: lighter;
   color: #e5d7c4;
   transform: scale(1.05);
+  border-color: #e5d7c4;
 }
 
 .boton-registro1 {
@@ -2529,7 +2527,7 @@ footer {
   padding: 1rem 2rem;
   font-size: medium;
   font-family: "tagesschrift";
-  color: beige;
+  color: #e5e0d8;
   cursor: pointer;
   font-weight: normal;
   border-radius: 214px;
@@ -2542,14 +2540,13 @@ footer {
 
 .boton-registro1:hover,
 .boton-registro2:hover {
-  background-color: beige;
+  background-color: #e5e0d8;
   color: #473f34;
   transform: scale(1.05);
 }
 
 /* estilo cada burbuja del formulario--*/
 .Titulo {
-  height: 70px;
   margin: auto;
 }
 
@@ -2557,29 +2554,12 @@ footer {
   height: 70px;
 }
 
-.Especie {
-  height: 70px;
-  margin: auto;
-}
-
 .input-Especie {
   height: 70px;
 }
 
-.Categorías {
-  height: 80px;
-  width: 120px;
-  margin: auto;
-}
-
 .input-Categorías {
   height: 80px;
-}
-
-.Descripción {
-  height: 120px;
-  width: 120px;
-  margin: auto;
 }
 
 .input-Descripción {
@@ -2609,7 +2589,7 @@ footer {
   border: none;
   border-radius: 0 25px 25px 25px;
   padding: 15px 20px;
-  background: var(--beige-claro);
+  background: #e5e0d8;
   border: 2px solid transparent;
   transition: all 0.3s ease;
 }
@@ -2629,7 +2609,6 @@ footer {
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
-  overflow: hidden;
   margin: 50px 0 0 50px;
   width: 440px;
   height: auto;
@@ -2655,6 +2634,7 @@ footer {
   height: 100%;
   opacity: 0;
   cursor: pointer;
+  position: absolute;
 }
 
 .upload-icon {
@@ -2694,7 +2674,6 @@ footer {
   position: relative;
   aspect-ratio: 1;
   border-radius: 15px;
-  overflow: hidden;
   border: 3px solid var(--verde-principal);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
@@ -2745,7 +2724,7 @@ footer {
   padding: 1rem 2rem;
   font-size: medium;
   font-family: "tagesschrift";
-  color: beige;
+  color: #e5e0d8;
   font-weight: normal;
   cursor: pointer;
   border-radius: 214px;

@@ -61,7 +61,7 @@
   background-color: $Black;
   font-family: $fuente2;
   font-weight: lighter;
-  color: $Marron-clarito;
+  color: $falso-blanco;
   border-radius: 41px;
   width: 600px;
   margin: 6px 20px 20px 100px;
@@ -74,6 +74,8 @@
   border-radius: 41px;
   color: $Black;
   width: 500px;
+  padding: 10px 20px;
+  border-color: $Black;
 }
 
 .formulario-plantas > form > div > input:hover {
@@ -81,6 +83,7 @@
   font-weight: lighter;
   color: $Marron-clarito;
   transform: scale(1.05);
+  border-color: $Marron-clarito;
 }
 
 .boton-registro1 {
@@ -90,7 +93,7 @@
   padding: 1rem 2rem;
   font-size: medium;
   font-family: $fuente2;
-  color: beige;
+  color: $falso-blanco;
   cursor: pointer;
   font-weight: normal;
   border-radius: 214px;
@@ -103,14 +106,13 @@
 
 .boton-registro1:hover,
 .boton-registro2:hover {
-  background-color: beige;
+  background-color: $falso-blanco;
   color: $Black;
   transform: scale(1.05);
 }
 
 /* estilo cada burbuja del formulario--*/
 .Titulo {
-  height: 70px;
   margin: auto;
 }
 
@@ -118,30 +120,15 @@
   height: 70px;
 }
 
-.Especie {
-  height: 70px;
-  margin: auto;
-}
-
 .input-Especie {
   height: 70px;
 }
 
-.Categorías {
-  height: 80px;
-  width: 120px;
-  margin: auto;
-}
 
 .input-Categorías {
   height: 80px;
 }
 
-.Descripción {
-  height: 120px;
-  width: 120px;
-  margin: auto;
-}
 
 .input-Descripción {
   height: 120px;
@@ -170,7 +157,7 @@
   border: none;
   border-radius: 0 25px 25px 25px;
   padding: 15px 20px;
-  background: var(--beige-claro);
+  background: $falso-blanco;
   border: 2px solid transparent;
   transition: all 0.3s ease;
 }
@@ -190,7 +177,6 @@
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
-  overflow: hidden;
   margin: 50px 0 0 50px;
   width: 440px;
   height: auto;
@@ -216,6 +202,7 @@
   height: 100%;
   opacity: 0;
   cursor: pointer;
+  position: absolute;
 }
 
 .upload-icon {
@@ -255,7 +242,6 @@
   position: relative;
   aspect-ratio: 1;
   border-radius: 15px;
-  overflow: hidden;
   border: 3px solid var(--verde-principal);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
@@ -306,7 +292,7 @@
   padding: 1rem 2rem;
   font-size: medium;
   font-family: $fuente2;
-  color: beige;
+  color:$falso-blanco;
   font-weight: normal;
   cursor: pointer;
   border-radius: 214px;
