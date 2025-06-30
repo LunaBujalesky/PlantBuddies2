@@ -31,18 +31,52 @@
     rel="stylesheet">
 
   <link rel="stylesheet" href="../css/main.css" />
-<script src="./js/index.js"></script>
+  <script src="../js/index.js" defer></script>
 </head>
 
 <body>
   <header>
     <div class="header-invisible"></div>
     <div class="header-jefe-visible">
-      <!-- este es el menu ------------------------------------------------------------->
+      <!-- este es el menu de pc------------------------------------------------------------->
       <div class="logo-container">
         <img src="../assets/imagenes/carita1.png" alt="logoplantbuddies" />
-        <h1>PlantBuddies</h1>
+        <h1 class="primera segunda tercera" id="titulo">PlantBuddies</h1>
       </div>
+
+
+      <!-- este es el menu de celulares aka hamburguesa ------------------------------------------------------------->
+      <div class="burger-menu-container">
+        <div class="menu-hamburguesa-icon" id="burgerIcon">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+
+        <nav class="burger-menu invisible" id="burgerMenu">
+          <a href="../index.html">
+            <div class="burger-item">Inicio</div>
+          </a>
+          <a href="registro.html">
+            <div class="burger-item">Registro</div>
+          </a>
+          <a href="intercambios.html">
+            <div class="burger-item">Intercambios</div>
+          </a>
+          <a href="comunidad.html">
+            <div class="burger-item">Comunidad</div>
+          </a>
+          <a href="contacto.html">
+            <div class="burger-item">Contacto</div>
+          </a>
+        </nav>
+
+      </div>
+
+
+
+
+      <!-- menu normal pc ------------------------------------------------------------->
       <nav>
         <ul class="header-menu">
           <li class="header-menu-item"><a href="../index.html">Inicio</a></li>
@@ -50,14 +84,13 @@
           <li class="header-menu-item"><a href="intercambios.html">Intercambios</a></li>
           <li class="header-menu-item"><a href="comunidad.html">Comunidad</a></li>
           <li class="header-menu-item"><a href="contacto.html">Contacto</a></li>
-          <li class="header-menu-item">
-            <a href="perfil.html">
+          <li class="header-menu-item"><a href="perfil.html">
               <img src="../assets/imagenes/AvatarBaseUsuario.png" alt="AvatarBaseUsuario" />
             </a>
 
             <div class="header-submenu">
               <div class="submenu-usuario-online"> <!--hijo 1 color oscuro, icono avarar, nombre perfil-->
-                <img src="../assets/imagenes/AvatarBaseUsuario.png" alt="Avatar">
+                <img src="../assets/imagenes/AvatarBaseUsuario.png" alt="Avatar personalizado del usuario">
                 <h3>"Name"</h3>
                 <div class="stars">★ ★ ★ ★ ★</div>
               </div>
@@ -69,25 +102,33 @@
                     <a href="perfil.html">Perfil</a>
                   </li>
                   <li>
-                    <a href="favoritos.html" img src="../assets/imagenes/plantIcon.png" alt="plantIcon">Favoritos</a>
+                    <img src="../assets/imagenes/witchIcon.png" alt="plantIcon">
+                    <a href="perfil.html">Favoritos</a>
                   </li>
                   <li>
-                    <a href="social.html" img src="../assets/imagenes/plantIcon.png" alt="plantIcon">Social</a>
+                    <img src="../assets/imagenes/witchIcon.png" alt="plantIcon">
+                    <a href="perfil.html">Social</a>
                   </li>
                   <li>
-                    <a href="misintercambios.html" img src="../assets/imagenes/plantIcon.png" alt="plantIcon">Mis
-                      intercambios</a>
+                    <img src="../assets/imagenes/witchIcon.png" alt="plantIcon">
+                    <a href="perfil.html">Mis intercambios</a>
                   </li>
-                  <li> <a href="offline" img src="../assets/imagenes/plantIcon.png" alt="plantIcon">Cerrar sesión</a>
+                  <li>
+                    <img src="../assets/imagenes/witchIcon.png" alt="plantIcon">
+                    <a href="perfil.html">Cerrar sesión</a>
                   </li>
                 </ul>
               </div>
             </div>
           </li>
         </ul>
-      </nav>
-    </div>
 
+      </nav>
+
+
+
+
+    </div>
   </header>
   <!-- FINencabezadodelaweb ---------------------------------------------------------------------------------------------------------------------------->
   <!--hijo 2 color claro, enlaces de submenu-->
@@ -173,7 +214,7 @@
   <!-- footer, fin de la primera pagina index-->
   <footer class="pie-de-pagina">
     <div class="footerMenu"> <!-- DIV PADRE-->
-      <div class="descripcionPagina">
+      <div class="footer-columna">
         <a href="#home">
           <h3>PlantBuddies</h3>
         </a>
@@ -181,7 +222,7 @@
           Tu aventura botánica comienza con nosotros.</p>
       </div>
 
-      <div class="Enlaces">
+      <div class="footer-columna">
         <h3>Enlaces</h3>
         <ul>
           <li><a href="../index.html">Inicio</a></li>
@@ -193,7 +234,7 @@
           <ul>
       </div>
 
-      <div class="Recursos">
+      <div class="footer-columna">
         <ul>
           <h3>Recursos</h3>
           <li><a href="#">Guía de intercambio</a></li>
@@ -204,7 +245,7 @@
         </ul>
       </div>
 
-      <div class="Siguenos">
+      <div class="footer-columna">
         <h3>Siguenos</h3>
         <ul>
           <li><a href="https://www.linkedin.com/in/luna-bujalesky-b60561267/">LinkedIn</a></li>

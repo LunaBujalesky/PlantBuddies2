@@ -46,7 +46,7 @@ header h1 {
   z-index: 1000;
   width: 100%;
   height: 105px;
-  box-shadow: 0 6px 12px #979f34;
+  box-shadow: 0 6px 12px 0.5 #677e52;
   padding: 0 20px;
 }
 
@@ -185,7 +185,6 @@ header h1 {
   width: 400px;
   z-index: 100;
   display: none;
-  /*display: block; <- clave */
 }
 
 .header-menu > li:last-child:hover .header-submenu {
@@ -260,7 +259,7 @@ header h1 {
 }
 
 .submenu-enlaces li:hover {
-  background-color: #f0f0f0;
+  background-color: #8c9657;
 }
 
 /* MenuDeslizable Desconectado------------------------------------------------------------------------------------------------------------------------- */
@@ -1153,7 +1152,6 @@ form {
 
 .search-btn:hover {
   background-color: #7a9660 !important;
-  transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(143, 170, 114, 0.4);
 }
 
@@ -1230,7 +1228,7 @@ form {
 /* planta en oferta*/
 .monstera img {
   width: 100px;
-  height: auto;
+  height: 100px;
   border-radius: 30%;
   margin: 2px -45px;
   position: absolute;
@@ -2877,20 +2875,19 @@ body {
   font-weight: none;
 }
 
-.descripcionPagina a h3 {
+.footer-columna h3 {
   color: #e5e0d8;
   margin: 0px 0px 0px 0px;
 }
 
-.descripcionPagina div {
+.footer-columna {
   width: auto;
   color: #e5e0d8;
-  max-width: 100px;
   margin-right: 20px;
-  margin-top: 0px;
+  margin-top: 20px;
 }
 
-.descripcionPagina p {
+.footer-columna p {
   width: auto;
   color: #e5e0d8;
   text-align: left;

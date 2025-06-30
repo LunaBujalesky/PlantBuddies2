@@ -10,20 +10,19 @@
   font-weight: none;
 }
 
-.descripcionPagina a h3 {
+.footer-columna h3 {
   color: $falso-blanco;
   margin: 0px 0px 0px 0px;
 }
 
-.descripcionPagina div {
+.footer-columna {
   width: auto;
   color: $falso-blanco;
-  max-width: 100px;
   margin-right: 20px;
-  margin-top: 0px;
+  margin-top: 20px;
 }
 
-.descripcionPagina p {
+.footer-columna p {
   width: auto;
   color: $falso-blanco;
   text-align: left;

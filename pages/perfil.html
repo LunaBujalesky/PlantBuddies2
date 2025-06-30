@@ -3,20 +3,24 @@
 <!-- encabezadodelaweb ---------------------------------------------------------------------------------------------------------------------------->
 
 <head>
-    <!-- SEO------------------------------------------------------------->
+  <!-- SEO------------------------------------------------------------->
   <meta charset="UTF-8">
   <meta name="theme-color" content="#8c9657">
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="PlantBuddies es una plataforma para intercambiar plantas y esquejes, conectar con amantes de la botánica y hacer crecer tu colección de forma sostenible.">
-  <meta name="keywords"content="intercambio de plantas, botánica, esquejes, sostenibilidad, coleccionistas de plantas, PlantBuddies">
+  <meta name="description"
+    content="PlantBuddies es una plataforma para intercambiar plantas y esquejes, conectar con amantes de la botánica y hacer crecer tu colección de forma sostenible.">
+  <meta name="keywords"
+    content="intercambio de plantas, botánica, esquejes, sostenibilidad, coleccionistas de plantas, PlantBuddies">
   <meta name="author" content="Luna Bujalesky">
 
   <!-- SEO------------------------------------------------------------->
-<title>PlantBuddies | Mi perfil</title>
-  <meta name="description"  content="Gestioná tu información, ofertas y preferencias dentro de la comunidad PlantBuddies." />
+  <title>PlantBuddies | Mi perfil</title>
+  <meta name="description"
+    content="Gestioná tu información, ofertas y preferencias dentro de la comunidad PlantBuddies." />
   <meta property="og:title" content="PlantBuddies - Tu espacio personal en la comunidad" />
-  <meta property="og:description" content="Accedé a tu perfil para editar tus datos, ver tus intercambios y conectar con otros usuarios. ¡Personaliza tu avatar y crea un perfil único!" />
+  <meta property="og:description"
+    content="Accedé a tu perfil para editar tus datos, ver tus intercambios y conectar con otros usuarios. ¡Personaliza tu avatar y crea un perfil único!" />
   <meta property="og:image" content="./assets/imagenes/PlantBuddiesLogoMain.svg" /> <!-- URL de una imagen destacada-->
   <meta property="og:url" content="https://lunabujalesky.github.io/PlantBuddies2/" /> <!-- URL de tu sitio-->
   <meta property="og:type" content="profile" /> <!-- tipo de contenido-->
@@ -27,18 +31,52 @@
   <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Tagesschrift&family=VT323&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/main.css" />
-  <script src="./js/index.js"></script>
+  <script src="../js/index.js" defer></script>
 </head>
 
 <body>
   <header>
     <div class="header-invisible"></div>
     <div class="header-jefe-visible">
-      <!-- este es el menu ------------------------------------------------------------->
+      <!-- este es el menu de pc------------------------------------------------------------->
       <div class="logo-container">
         <img src="../assets/imagenes/carita1.png" alt="logoplantbuddies" />
-        <h1>PlantBuddies</h1>
+        <h1 class="primera segunda tercera" id="titulo">PlantBuddies</h1>
       </div>
+
+
+      <!-- este es el menu de celulares aka hamburguesa ------------------------------------------------------------->
+      <div class="burger-menu-container">
+        <div class="menu-hamburguesa-icon" id="burgerIcon">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+
+        <nav class="burger-menu invisible" id="burgerMenu">
+          <a href="../index.html">
+            <div class="burger-item">Inicio</div>
+          </a>
+          <a href="registro.html">
+            <div class="burger-item">Registro</div>
+          </a>
+          <a href="intercambios.html">
+            <div class="burger-item">Intercambios</div>
+          </a>
+          <a href="comunidad.html">
+            <div class="burger-item">Comunidad</div>
+          </a>
+          <a href="contacto.html">
+            <div class="burger-item">Contacto</div>
+          </a>
+        </nav>
+
+      </div>
+
+
+
+
+      <!-- menu normal pc ------------------------------------------------------------->
       <nav>
         <ul class="header-menu">
           <li class="header-menu-item"><a href="../index.html">Inicio</a></li>
@@ -46,14 +84,13 @@
           <li class="header-menu-item"><a href="intercambios.html">Intercambios</a></li>
           <li class="header-menu-item"><a href="comunidad.html">Comunidad</a></li>
           <li class="header-menu-item"><a href="contacto.html">Contacto</a></li>
-          <li class="header-menu-item">
-            <a href="perfil.html">
+          <li class="header-menu-item"><a href="perfil.html">
               <img src="../assets/imagenes/AvatarBaseUsuario.png" alt="AvatarBaseUsuario" />
             </a>
 
             <div class="header-submenu">
               <div class="submenu-usuario-online"> <!--hijo 1 color oscuro, icono avarar, nombre perfil-->
-                <img src="../assets/imagenes/AvatarBaseUsuario.png" alt="Avatar personalizable Usuario">
+                <img src="../assets/imagenes/AvatarBaseUsuario.png" alt="Avatar personalizado del usuario">
                 <h3>"Name"</h3>
                 <div class="stars">★ ★ ★ ★ ★</div>
               </div>
@@ -65,25 +102,33 @@
                     <a href="perfil.html">Perfil</a>
                   </li>
                   <li>
-                    <a href="favoritos.html" img src="../assets/imagenes/plantIcon.png" alt="plantIcon">Favoritos</a>
+                    <img src="../assets/imagenes/witchIcon.png" alt="plantIcon">
+                    <a href="perfil.html">Favoritos</a>
                   </li>
                   <li>
-                    <a href="social.html" img src="../assets/imagenes/plantIcon.png" alt="plantIcon">Social</a>
+                    <img src="../assets/imagenes/witchIcon.png" alt="plantIcon">
+                    <a href="perfil.html">Social</a>
                   </li>
                   <li>
-                    <a href="misintercambios.html" img src="../assets/imagenes/plantIcon.png" alt="plantIcon">Mis
-                      intercambios</a>
+                    <img src="../assets/imagenes/witchIcon.png" alt="plantIcon">
+                    <a href="perfil.html">Mis intercambios</a>
                   </li>
-                  <li> <a href="offline" img src="../assets/imagenes/plantIcon.png" alt="plantIcon">Cerrar sesión</a>
+                  <li>
+                    <img src="../assets/imagenes/witchIcon.png" alt="plantIcon">
+                    <a href="perfil.html">Cerrar sesión</a>
                   </li>
                 </ul>
               </div>
             </div>
           </li>
         </ul>
-      </nav>
-    </div>
 
+      </nav>
+
+
+
+
+    </div>
   </header>
   <!-- FINencabezadodelaweb ---------------------------------------------------------------------------------------------------------------------------->
 
@@ -103,21 +148,19 @@
         <!-- botones del perfil -->
         <div class="perfil-botones">
           <!-- Vertically centered modal de bootstrap -->
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="perfil-boton-efecto-linea">
-              <button type="button" class="simple-button" data-toggle="modal">Ver Adelanto</button>
-            </div>
-            <!-- <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-               <div class="modal-dialog modal-dialog-centered" role="document">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                   <span aria-hidden="true">&times;</span>
-                     </button>
-                   <img src="../assets/imagenes/Perfilsisoloregresa.png" alt="PerfilPreview">
-                   </div>
-                   </div>-->
+          <!--  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="perfil-boton-efecto-linea">
+                <button type="button" class="close" data-toggle="modal" data-dismiss="modal" aria-label="Close">Ver
+                  Adelanto</button>
+                <span aria-hidden="true">&times;</span>
+                <img src="../assets/imagenes/Perfilsisoloregresa.png" alt="PerfilPreview">
+              </div>
 
-          </div>
-           <!-- botón que no es modal -->
+            </div>
+          </div>-->
+          <!-- botón que no es modal -->
           <div class="perfil-boton-efecto-linea">
             <a class="simple-button" href="../index.html">Volver a Inicio</a>
           </div>
@@ -127,7 +170,7 @@
 
     </div>
   </main>
- 
+
 
 
 
