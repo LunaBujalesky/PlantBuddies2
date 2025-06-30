@@ -1,3 +1,5 @@
+
+
 /* Sección de bienvenida ---------------------------------------------------------------------------------------*/
 #mensaje-de-bienvenida {
   width: 100%;
@@ -439,99 +441,18 @@ form {
   transform: scale(1.05);
 }
 
-/* Pantallas chicas: celulares */
-@media (max-width: 600px) {
-  /* Para cambiar de menu al hamburguesa en celular*/
-  .menu_hamburguesa_principal {
-    @include flex;
-  }
-  /* Solo mostrar en móviles (hasta 768px) */
-  /* Mensaje para desktop */
-  /* primera parte bienvenida*/
-  /* segunda parte banner sponsors */
-  /* segunda parte como funciona */
-  /* segunda parte se parte de la comunidad */
-  /* tercera parte testimonios */
-  /* footer mobile */
-}
-@media (max-width: 600px) and (max-width: 768px) {
-  .submenu-container {
-    display: block;
-    position: relative;
-    background: $Black;
-    border-radius: 15px;
-    padding: 0;
-    width: 200px;
-    overflow: visible;
-    height: fit-content;
-    left: 60%;
-    top: 16%; /* Empieza fuera de la pantalla por la derecha */
-    justify-content: flex-end; /* Alinea el contenido a la derecha */
-  }
-  .menu-item {
-    position: relative;
-    padding: 20px 30px;
-    color: $Marron-clarito;
-    font-size: 15px;
-    font-weight: 400;
-    cursor: pointer;
-    transition: color 0.3s ease;
-    z-index: 3;
-    text-align: right;
-  }
-  .menu-item:first-child {
-    padding-top: 25px;
-  }
-  .menu-item:last-child {
-    padding-bottom: 25px;
-  }
-  .hover-background {
-    position: absolute;
-    background: $falso-blanco;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 1;
-    opacity: 0;
-    transform: translateY(0);
-    width: calc(100% + 15px);
-    height: 50px;
-    left: -30px;
-    border-radius: 0 30px 30px 0;
-  }
-  .hover-background.active {
-    opacity: 1;
-  }
-  /* Recorte superior continuo */
-  .hover-background::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: -15px;
-    width: calc(100% - 30px);
-    height: 15px;
-    background: $Black;
-    border-radius: 0 0 15px 15px;
-  }
-  /* Recorte inferior continuo */
-  .hover-background::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -15px;
-    width: calc(100% - 30px);
-    height: 15px;
-    background: $Black;
-    border-radius: 15px 15px 0 0;
-  }
-  .menu-item.active {
-    color: $verde-triada;
-  }
-  .submenu-container:hover .menu-item {
-    color: $Black;
-  }
-  .submenu-container:hover .menu-item.active {
-    color: $verde-triada;
-  }
-}
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 600px) {
   .desktop-message {
     display: block;
@@ -549,20 +470,11 @@ form {
   .header-jefe-visible h1 {
     font-size: 36px;
   }
-  .header-menu {
-    display: none;
-    align-content: center;
-    background-color: $verde-acento;
-  }
   .nav > li {
     width: 100%;
     flex-direction: column;
     text-align: center;
     margin: 15px 0;
-  }
-  .header-menu .show {
-    @include flex;
-    background-color: $verde-acento;
   }
   .banner-title {
     border-radius: 0px 0px 60px 60px;
@@ -704,51 +616,78 @@ form {
     margin-top: auto;
   }
 }
-/* Tablets --------------------------------------------------------) */
-@media (min-width: 600px) and (max-width: 1000px) {
-  /* Para cambiar de menu al hamburguesa en tablets*/
-  .menu_hamburguesa_principal {
-    @include flex;
-  }
-  .bar {
-    width: 25px;
-    height: 3px;
-    background-color: $verde-oscuro;
-    border-width: 3px;
-    border-color: $verde-triada;
-    border-radius: 3px;
-    margin: 4px 0;
-    font-family: $fuente2;
-    color: $Marron-clarito;
-    transition: 0.3s;
-    @include flex;
-    flex-direction: column;
-  }
-  .bar:hover:first-child {
-    background-color: $verde-oscuro;
-    border-radius: 3px;
-    transform: rotate(45deg);
-  }
-  .bar:hover:nth-child {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 600px) and (max-width: 768px) {
+  
+  .hover-background {
+    position: absolute;
+    background: $falso-blanco;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
     opacity: 0;
+    transform: translateY(0);
+    width: calc(100% + 15px);
+    height: 50px;
+    left: -30px;
+    border-radius: 0 30px 30px 0;
   }
-  .bar:hover:first-child {
-    background-color: $verde-oscuro;
-    border-radius: 3px;
-    transform: rotate(-45deg);
+  .hover-background.active {
+    opacity: 1;
   }
-  .menu_hamburguesa_item {
-    font-family: $fuente2;
-    color: $falso-blanco;
+  /* Recorte superior continuo */
+  .hover-background::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -15px;
+    width: calc(100% - 30px);
+    height: 15px;
+    background: $Black;
+    border-radius: 0 0 15px 15px;
   }
-  .menu-hamburguesa-fondo .active {
-    display: none;
-    background-color: $verde-acento;
-    width: 50px;
-    height: 100px;
-    right: -100%; /* Empieza fuera de la pantalla por la derecha */
-    justify-content: flex-end; /* Alinea el contenido a la derecha */
+  /* Recorte inferior continuo */
+  .hover-background::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    width: calc(100% - 30px);
+    height: 15px;
+    background: $Black;
+    border-radius: 15px 15px 0 0;
   }
+
+}
+
+
+
+
+
+/* Tablets --------------------------------------------------------) */
+@media (min-width: 768px) and (max-width: 1000px) {
+
   .nav {
     justify-content: space-between;
     width: 100%;
@@ -759,20 +698,11 @@ form {
   .header-jefe-visible h1 {
     font-size: 36px;
   }
-  .header-menu {
-    display: none;
-    align-content: center;
-    background-color: $verde-acento;
-  }
   .nav > li {
     width: 100%;
     flex-direction: column;
     text-align: center;
     margin: 15px 0;
-  }
-  .header-menu .show {
-    @include flex;
-    background-color: $verde-acento;
   }
   .BannerSponsors {
     height: 140px;
@@ -829,8 +759,21 @@ form {
     margin-top: auto;
   }
 }
+
+
+
+
+
+
+
+
+
+
 /* Desktops grandes (≥ 1200px) */
 @media (min-width: 1200px) {
+
+
+
   .header-jefe-visible {
     height: 105px;
   }
@@ -846,8 +789,5 @@ form {
   .pie-de-pagina {
     margin-top: auto;
   }
-  /* Ocultar el submenú por defecto en desktop */
-  .submenu-container {
-    display: none;
-  }
+
 }

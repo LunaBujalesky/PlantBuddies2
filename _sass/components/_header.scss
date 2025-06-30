@@ -93,87 +93,67 @@ header {
 
 
 /* Menu hamburguesa en celulares ----------------------------------------------------------*/
-.submenu-container {
-  position: relative;
-  background: #3a3a3a;
-  border-radius: 25px;
-  padding: 0;
-  width: 280px;
-  overflow: visible;
+.burger-menu-container {
+  margin-left: auto;
 }
 
-.menu-item {
+.menu-hamburguesa-icon {
+  display: none;
+  flex-direction: column;
+}	
+
+
+.burger-menu {
+  font-family: $fuente2;
+  background: $Black;
+  border-radius: 25px;
+  padding: 15px;
+  width: 280px;
+  overflow: visible;
+  box-shadow: 0 4px 8px rgba(10, 10, 10, 0.6);
+}
+
+
+.burger-item {
   position: relative;
   padding: 20px 30px;
-  color: white;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 400;
-  cursor: pointer;
   transition: color 0.3s ease;
   z-index: 3;
   text-align: right;
+  color: $Marron-clarito;
+  background-color: $verde-triada;
+  border-radius: 0px;
+  margin-bottom: 10px;
+  border-radius: 20px 20px 20px 20px;
+
 }
 
-.menu-item:first-child {
+.burger-menu a {
+  cursor: pointer;
+  text-decoration: none; 
+  color: inherit; 
+}
+
+/*
+.burger-menu a:first-child .burger-item {
   padding-top: 25px;
+  border-radius: 23px 23px 0px 0px;
 }
-
-.menu-item:last-child {
+.burger-menu a:last-child .burger-item {
   padding-bottom: 25px;
+  border-radius:  0px 0px 23px 23px;
+}
+  */
+
+.burger-item:hover {
+  
+  background-color: $Black;
 }
 
-.hover-background {
-  position: absolute;
-  background: #d0d0d0;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 1;
-  opacity: 0;
-  transform: translateY(0);
-  width: calc(100% + 15px);
-  height: 60px;
-  left: -15px;
-  border-radius: 0 30px 30px 0;
-}
 
-.hover-background.active {
-  opacity: 1;
-}
 
-/* Recorte superior continuo */
-.hover-background::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: -15px;
-  width: calc(100% - 30px);
-  height: 15px;
-  background: #3a3a3a;
-  border-radius: 0 0 15px 15px;
-}
-
-/* Recorte inferior continuo */
-.hover-background::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -15px;
-  width: calc(100% - 30px);
-  height: 15px;
-  background: #3a3a3a;
-  border-radius: 15px 15px 0 0;
-}
-
-.menu-item.active {
-  color: #3a3a3a;
-}
-
-.submenu-container:hover .menu-item {
-  color: white;
-}
-
-.submenu-container:hover .menu-item.active {
-  color: #3a3a3a;
-}
 
 .bar {
   width: 25px;
@@ -186,24 +166,6 @@ header {
   font-family: $fuente2;
   color: $Marron-clarito;
   transition: 0.3s;
-}
-
-.bar:hover:first-child {
-  background-color: $verde-oscuro;
-  border-radius: 3px;
-  transform: rotate(45deg);
-}
-
-/*
-.bar:hover:nth-child {
-  opacity: 0;
-}
-*/
-
-.bar:hover:first-child {
-  background-color: $verde-oscuro;
-  border-radius: 3px;
-  transform: rotate(-45deg);
 }
 
 
@@ -352,4 +314,33 @@ header {
   left: 20%;
   animation-delay: 2s;
   z-index: 1;
+}
+
+
+// Menu hamburguesa en celulares ----------------------------------------------------------
+@media (max-width: 1000px) {
+  .menu-hamburguesa-icon {
+    @include flex;
+  }
+
+  .header-menu {
+    display: none;
+  }
+
+  .burger-menu {
+    position: absolute;
+    right: 15px;
+    top: 120px;
+  }
+}
+
+// Ocultar el menú hamburguesa en pantallas grandes -----------------------------------------
+@media (min-width: 1000px) {
+  .menu-hamburguesa-icon {
+    display: none;
+  }
+
+  .burger-menu {
+    display: none ;
+  }
 }

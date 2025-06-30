@@ -7,18 +7,23 @@
   <meta name="theme-color" content="#8c9657">
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="PlantBuddies es una plataforma para intercambiar plantas y esquejes, conectar con amantes de la botánica y hacer crecer tu colección de forma sostenible.">
-  <meta name="keywords"content="intercambio de plantas, botánica, esquejes, sostenibilidad, coleccionistas de plantas, PlantBuddies">
+  <meta name="description"
+    content="PlantBuddies es una plataforma para intercambiar plantas y esquejes, conectar con amantes de la botánica y hacer crecer tu colección de forma sostenible.">
+  <meta name="keywords"
+    content="intercambio de plantas, botánica, esquejes, sostenibilidad, coleccionistas de plantas, PlantBuddies">
   <meta name="author" content="Luna Bujalesky">
- 
+
   <!-- Open Graph para compartir en redes sociales -->
-  <meta property="og:title" content="PlantBuddies - Construimos comunidad, por un mundo mas verde" />  <!-- Título visible en redes-->
-  <meta property="og:description" content="Conectate con amantes de las plantas, intercambia especies únicas y compartí cuidados. ¡Una red verde, mágica y colaborativa!" /><!-- Texto descriptivo del sitio-->
+  <meta property="og:title" content="PlantBuddies - Construimos comunidad, por un mundo mas verde" />
+  <!-- Título visible en redes-->
+  <meta property="og:description"
+    content="Conectate con amantes de las plantas, intercambia especies únicas y compartí cuidados. ¡Una red verde, mágica y colaborativa!" />
+  <!-- Texto descriptivo del sitio-->
   <meta property="og:image" content="./assets/imagenes/PlantBuddiesLogoMain.svg" /> <!-- URL de una imagen destacada-->
   <meta property="og:url" content="https://lunabujalesky.github.io/PlantBuddies2/" /> <!-- URL de tu sitio-->
   <meta property="og:type" content="website" /> <!-- tipo de contenido-->
 
-  <link rel="shortcut icon" href="/assets/imagenes/FAVICON.png"> 
+  <link rel="shortcut icon" href="/assets/imagenes/FAVICON.png">
   <title>PlantBuddies</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +31,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Tagesschrift&family=VT323&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" type="text/css" href="./css/main.css">
-  <script src="./js/index.js"></script>
+  <script src="./js/index.js" defer></script>
 </head>
 
 <body>
@@ -41,37 +46,25 @@
 
 
       <!-- este es el menu de celulares aka hamburguesa ------------------------------------------------------------->
-      <div class="menu_hamburguesa_principal" id="hamburguesa">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <nav class="menu-hamburguesa-fondo">
-          <div class="submenu-container" id="submenu">
-            <div class="hover-background" id="hoverBg"></div>
-            <div class="menu-item" data-index="0"><a href="index.html"></a>Inicio</div>
-            <div class="menu-item active" data-index="1"><a href="pages/registro.html"></a>Registro</div>
-            <div class="menu-item" data-index="2"><a href="pages/intercambios.html"></a>Intercambios</div>
-            <div class="menu-item" data-index="3"><a href=".pages/comunidad.html"></a>Comunidad</div>
-            <div class="menu-item" data-index="4"><a href=".pages/contacto.html"></a>Contacto</div>
-          </div>
-
-          <div class="menu-hamburguesa-submenu" style="display: none;">
-            <div class="menu-hamburguesa-submenu-enlaces"><!--hijo 2 color claro, enlaces de submenu-->
-              <ul>
-                <li> <a href="pages/perfil.html">Perfil</a></li>
-                <li> <a href="/pages/comunidad.html">Favoritos</a></li>
-                <li><a href="pages/social.html">Social</a></li>
-                <li> <a href="pages/misintercambios.html">Mis intercambios</a> </li>
-                <li> <a href="pages/offline">Cerrar sesión</a> </li>
-              </ul>
-            </div>
-          </div>
-
-
+      <div class="burger-menu-container">
+        <div class="menu-hamburguesa-icon" id="burgerIcon">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        
+        <nav class="burger-menu invisible" id="burgerMenu">
+          <a href="../index.html"><div class="burger-item">Inicio</div></a>
+          <a href="./pages/registro.html"><div class="burger-item">Registro</div></a>
+          <a href="./pages/intercambios.html"><div class="burger-item">Intercambios</div></a>
+          <a href="./pages/comunidad.html"><div class="burger-item">Comunidad</div></a>
+          <a href="./pages/contacto.html"><div class="burger-item">Contacto</div></a>
         </nav>
-
-
+            
       </div>
+
+
+
 
       <!-- menu normal pc ------------------------------------------------------------->
       <nav>
