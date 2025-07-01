@@ -1,5 +1,3 @@
-
-
 /* Sección de bienvenida ---------------------------------------------------------------------------------------*/
 #mensaje-de-bienvenida {
   width: 100%;
@@ -21,6 +19,17 @@
   justify-content: left;
   width: 875px;
   height: auto;
+
+  p {
+    font-family: $fuente2;
+    color: $Black;
+    margin: 40px 40px 40px 40px;
+    height: auto;
+    width: auto;
+    text-align: left;
+    line-height: 1.8;
+  }
+
 }
 
 .banner-title {
@@ -31,14 +40,16 @@
   align-content: center;
   margin-top: 30px;
   border-radius: 0px 18px 18px 0px;
+
+  h2 {
+    font-family: $fuente2;
+    color: $Marron-clarito;
+    text-align: left;
+    padding-left: 20px;
+  }
 }
 
-.banner-title h2 {
-  font-family: $fuente2;
-  color: $Marron-clarito;
-  text-align: left;
-  padding-left: 20px;
-}
+
 
 .p-container {
   border-radius: 26px;
@@ -48,29 +59,23 @@
   padding: 20px 20px 6px 0px;
 }
 
-.text-content p {
-  font-family: $fuente2;
-  color: $Black;
-  margin: 40px 40px 40px 40px;
-  height: auto;
-  width: auto;
-  text-align: left;
-  line-height: 1.8;
-}
 
 .goblinlandingpage1 {
   width: 45%;
   @include flex;
   justify-content: center;
   align-items: center;
+
+  img {
+    width: 600px;
+    height: auto;
+    position: relative;
+    margin-top: 100px;
+  }
 }
 
-.goblinlandingpage1 img {
-  width: 600px;
-  height: auto;
-  position: relative;
-  margin-top: 100px;
-}
+
+
 /* AQUI EMPIEZA EL INDEX------------------------------------------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------- */
 
 
@@ -79,11 +84,13 @@
 .boton-comienza-ahora {
   @extend .green-button;
   margin: 0px 0px 41px 78px;
+
+  :hover {
+    @extend .green-button:hover;
+  }
 }
 
-.boton-comienza-ahora:hover {
-  @extend .green-button:hover;
-}
+
 
 /* El elemento a mostrar/ocultar */
 .log-in-oculto {
@@ -95,7 +102,7 @@
 }
 
 /* Mostrar el elemento cuando se clikeo el falso boton---------------------- */
-#aparecer-login:checked ~ .log-in-oculto {
+#aparecer-login:checked~.log-in-oculto {
   @include flex;
   justify-content: center;
   animation: fadeIn 0.5s;
@@ -105,12 +112,14 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
+
 /* Cambiar el texto del botón cuando está abierto*/
-#aparecer-login:checked + .button-label::after {
+#aparecer-login:checked+.button-label::after {
   content: " Haz clic para ocultar";
 }
 
@@ -212,11 +221,11 @@ form {
 }
 
 /* Cuando el campo de contraseña está enfocado, invertir las opacidades */
-.password-container:focus-within ~ .goblin-container .goblin-ojos-abiertos {
+.password-container:focus-within~.goblin-container .goblin-ojos-abiertos {
   opacity: 0;
 }
 
-.password-container:focus-within ~ .goblin-container .goblin-ojos-cerrados {
+.password-container:focus-within~.goblin-container .goblin-ojos-cerrados {
   opacity: 1;
 }
 
@@ -233,12 +242,14 @@ form {
   font-weight: bold;
   margin-top: 15px;
   transition: all 0.3s ease;
+
+  :hover {
+    background-color: #2a4535;
+    transform: scale(1.02);
+  }
 }
 
-.login-button:hover {
-  background-color: #2a4535;
-  transform: scale(1.02);
-}
+
 
 .eye-icon {
   position: absolute;
@@ -257,13 +268,13 @@ form {
 }
 
 /* Cambio de estado cuando se enfoca el campo de contraseña */
-.password-container:focus-within ~ .goblin-container .goblin-ojos-abiertos,
-.password-container input:focus ~ .goblin-container .goblin-ojos-abiertos {
+.password-container:focus-within~.goblin-container .goblin-ojos-abiertos,
+.password-container input:focus~.goblin-container .goblin-ojos-abiertos {
   opacity: 0;
 }
 
-.password-container:focus-within ~ .goblin-container .goblin-ojos-cerrados,
-.password-container input:focus ~ .goblin-container .goblin-ojos-cerrados {
+.password-container:focus-within~.goblin-container .goblin-ojos-cerrados,
+.password-container input:focus~.goblin-container .goblin-ojos-cerrados {
   opacity: 1;
 }
 
@@ -286,26 +297,30 @@ form {
   @include flex;
   justify-content: space-around;
   align-items: center;
+
+  img {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+  }
 }
 
-.supporters-logos img {
-  width: 100px;
-  height: 100px;
-  margin: auto;
-}
+
 
 /* Sección como funciona------------------------------------------------------------------------------------------------------------------------------*/
 .comofunciona {
   width: 100%;
   height: fit-content;
+
+  h2 {
+    font-family: $fuente2;
+    text-align: center;
+    color: $verde-oscuro;
+    margin-top: 160px;
+  }
 }
 
-.comofunciona h2 {
-  font-family: $fuente2;
-  text-align: center;
-  color: $verde-oscuro;
-  margin-top: 160px;
-}
+
 
 .comofunciona-container {
   @include flex;
@@ -318,29 +333,35 @@ form {
   font-family: $fuente2;
   transition: transform 0.3s ease;
   cursor: pointer;
+
+  img {
+    width: 86px;
+    height: auto;
+
+    div {
+      background-color: $verde-acento;
+      width: 300px;
+      height: 200px;
+      margin: 30px;
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+
+      :hover {
+        background-color: $verde-oscuro;
+        color: $color-fondo;
+        transform: scale(1.05) rotate(8deg);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
 }
 
-.comofunciona-container img {
-  width: 86px;
-  height: auto;
-}
 
-.comofunciona-container div {
-  background-color: $verde-acento;
-  width: 300px;
-  height: 200px;
-  margin: 30px;
-  border-radius: 16px;
-  padding: 30px;
-  text-align: center;
-}
 
-.comofunciona-container div:hover {
-  background-color: $verde-oscuro;
-  color: $color-fondo;
-  transform: scale(1.05) rotate(8deg);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
+
+
 
 /* ¿Porqué unirte a nuestra comunidad?------------------------------------------------------------------------------------------------------------------------------*/
 .comunidad {
@@ -377,15 +398,16 @@ form {
   border-radius: 8px;
   margin-top: 320px;
   justify-content: space-around;
-}
 
-.testimonios-container p {
-  padding: 0px 36px 2px 36px;
-  color: $Black;
-}
+  p {
+    padding: 0px 36px 2px 36px;
+    color: $Black;
 
-.testimonios-container h3 {
-  color: $Black;
+    h3 {
+      color: $Black;
+    }
+
+  }
 }
 
 .testimonios-title h2 {
@@ -414,29 +436,19 @@ form {
   border-width: 3px;
   border-color: #677e52;
   border-style: solid;
+
+  img {
+    margin-top: -40px;
+    width: 80px;
+    height: auto;
+  }
+
+  :hover {
+    transform: scale(1.05);
+  }
 }
 
-.Usuario img {
-  margin-top: -40px;
-  width: 80px;
-  height: auto;
-}
-
-.Usuario:hover {
-  transform: scale(1.05);
-}
-
-
-
-
-
-
-
-
-
-
-
-
+/* Mediaqueries / Responsive ------------------------------------------------------------------------------------------------------------------------------*/
 
 @media (max-width: 600px) {
   .desktop-message {
@@ -445,22 +457,27 @@ form {
     color: #666;
     font-size: 18px;
   }
+
   .nav {
     justify-content: space-between;
     width: 100%;
   }
+
   .header-jefe-visible {
     flex-wrap: wrap;
   }
+
   .header-jefe-visible h1 {
     font-size: 36px;
   }
-  .nav > li {
+
+  .nav>li {
     width: 100%;
     flex-direction: column;
     text-align: center;
     margin: 15px 0;
   }
+
   .banner-title {
     border-radius: 0px 0px 60px 60px;
     width: 100%;
@@ -468,24 +485,32 @@ form {
     box-shadow: 0px -5px 10px var --Black 0, 0, 0, 0.8;
     z-index: 2;
     position: relative;
+
+    h2 {
+      text-align: center;
+      padding: 10%;
+      margin-top: 50px;
+      font-weight: lighter;
+    }
+
   }
-  .banner-title H2 {
-    text-align: center;
-    padding: 10%;
-    margin-top: 50px;
-    font-weight: lighter;
-  }
+
+
   .text-content {
     padding: 10px 5px 6px 5px;
     width: 100%;
     height: 424px;
     margin: 0;
+
+    p {
+      margin: 0 30px 0 50px;
+      text-align: center !important;
+      font-size: 15px;
+    }
   }
-  .text-content p {
-    margin: 0 30px 0 50px;
-    text-align: center !important;
-    font-size: 15px;
-  }
+
+
+
   .p-container {
     border-radius: 0px 0px 60px 60px;
     margin: 8px 0px 0px 7%;
@@ -493,6 +518,7 @@ form {
     height: 240px;
     width: 320px;
   }
+
   .container-bienvenida {
     flex-direction: column;
     width: 390px;
@@ -506,28 +532,36 @@ form {
     /* ajusta según la altura del header */
     border-radius: 30px;
   }
+
   .boton-comienza-ahora {
     margin-left: 100px;
     margin-top: 80px;
     z-index: 11;
     position: relative;
   }
+
   .log-in-oculto {
     margin-left: -4px;
   }
-  .goblinlandingpage1 img {
-    width: 400px;
-    height: auto;
-    z-index: 0;
-  }
+
+
+
   .goblinlandingpage1 {
     margin-top: 30%;
+
+    img {
+      width: 400px;
+      height: auto;
+      z-index: 0;
+    }
   }
+
   .leaf-1,
   .leaf-2,
   .leaf-3 {
     z-index: 10;
   }
+
   .BannerSponsors {
     min-height: 80px;
     width: 100%;
@@ -536,20 +570,28 @@ form {
     margin-top: 180%;
     clip-path: polygon(0% 0%, 0% 0%, 50% 12%, 100% 0%, 100% 30%, 100% 100%, 50% 90%, 0% 100%);
     box-shadow: 5px 5px 15px var --Black 0, 0, 0, 0.8, 0px -5px 10px var --Black 0, 0, 0, 0.8;
+
     /* sombra arriba */
+    h4 {
+      font-size: 1rem;
+      margin-top: 8%;
+    }
+
   }
-  .BannerSponsors h4 {
-    font-size: 1rem;
-    margin-top: 8%;
-  }
+
+
   .supporters-logos {
     flex-direction: row;
     gap: 8px;
+
+    img {
+      width: 80px;
+      height: 80px;
+    }
   }
-  .supporters-logos img {
-    width: 80px;
-    height: 80px;
-  }
+
+
+
   .comofunciona-container {
     @include flex;
     flex-direction: column;
@@ -557,29 +599,35 @@ form {
     padding: 2rem;
     justify-content: space-between;
   }
+
   .comofunciona {
     width: 100%;
     height: auto;
   }
+
   .comunidad-CONTAINER {
     width: 60%;
     height: 600px;
   }
+
   .comunidad {
     width: auto;
     height: 100%;
     font-size: 80%;
   }
+
   .userfondo {
     width: 260px;
     height: 200px;
     border-top: 4px solid #677e52;
   }
+
   .Usuario {
     width: 260px;
     height: 265px;
     border-radius: 30px;
   }
+
   .testimonios-container {
     @include flex;
     flex-direction: column;
@@ -597,6 +645,7 @@ form {
     overflow: visible;
     margin-top: 90%;
   }
+
   .pie-de-pagina {
     margin-top: auto;
   }
@@ -625,7 +674,7 @@ form {
 
 
 @media (min-width: 600px) and (max-width: 768px) {
-  
+
   .hover-background {
     position: absolute;
     background: $falso-blanco;
@@ -638,9 +687,11 @@ form {
     left: -30px;
     border-radius: 0 30px 30px 0;
   }
+
   .hover-background.active {
     opacity: 1;
   }
+
   /* Recorte superior continuo */
   .hover-background::before {
     content: "";
@@ -652,6 +703,7 @@ form {
     background: $Black;
     border-radius: 0 0 15px 15px;
   }
+
   /* Recorte inferior continuo */
   .hover-background::after {
     content: "";
@@ -677,27 +729,33 @@ form {
     justify-content: space-between;
     width: 100%;
   }
+
   .header-jefe-visible {
     justify-content: space-between;
   }
+
   .header-jefe-visible h1 {
     font-size: 36px;
   }
-  .nav > li {
+
+  .nav>li {
     width: 100%;
     flex-direction: column;
     text-align: center;
     margin: 15px 0;
   }
+
   .BannerSponsors {
     height: 140px;
     font-size: 1.1rem;
     padding: 18px 0;
   }
+
   .supporters-logos img {
     width: 80px;
     height: 80px;
   }
+
   .container-bienvenida {
     flex-direction: row;
     width: 90vw;
@@ -705,41 +763,50 @@ form {
     margin: 60px auto;
     padding: 20px;
   }
+
   .goblinlandingpage1 img {
     width: 350px;
     margin-top: 40px;
   }
+
   .banner-title {
     width: 400px;
     height: 80px;
     margin-top: 20px;
   }
+
   .p-container {
     margin: 24px 0 8px 0;
     padding: 16px 10px 8px 10px;
   }
+
   .comunidad-CONTAINER {
     width: 90vw;
     padding: 40px 20px;
   }
+
   .testimonios-container {
     width: auto;
     height: fit-content;
     padding: 0%;
   }
+
   .userfondo {
     width: 260px;
     height: 200px;
     border-top: 4px solid #677e52;
   }
+
   .Usuario {
     width: 260px;
     height: 265px;
     border-radius: 30px;
   }
+
   .testimonios-container p {
     font-size: 80%;
   }
+
   .pie-de-pagina {
     margin-top: auto;
   }
@@ -762,6 +829,7 @@ form {
   .header-jefe-visible {
     height: 105px;
   }
+
   .container-bienvenida {
     @include flex;
     flex-direction: row;
@@ -771,6 +839,7 @@ form {
     background-color: $Marron-intermedio;
     margin: 80px auto;
   }
+
   .pie-de-pagina {
     margin-top: auto;
   }
