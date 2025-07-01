@@ -13,12 +13,13 @@
   transition: all 0.3s ease;
   position: absolute;
   text-align: center;
+  border: none;
 }
 
-.black-button:hover {
+.green-button :hover {
   background-color: $Black;
   color: $verde-triada;
-   transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 // Botón utilizado en :registro, intercambios, contacto
@@ -42,7 +43,7 @@
 .black-button:hover {
   background-color: $falso-blanco;
   color: $Black;
-   transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 // Botón utilizado en: perfil

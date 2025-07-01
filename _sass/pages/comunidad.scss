@@ -27,21 +27,9 @@
 }
 
 .ideas {
-  background-color: $verde-triada;
-  border-width: 1px;
-  padding: 1rem 2rem;
-  font-size: medium;
-  font-family: $fuente2;
-  color: $Black;
-  cursor: pointer;
-  border-radius: 20px;
-  width: auto;
-  display: inline-block;
-  transition: all 0.3s ease;
+@extend .green-button;
   margin-left: 1460px;
   margin-top: 8px;
-  position: absolute;
-  text-align: center;
 }
 
 /* grid comunidad */
