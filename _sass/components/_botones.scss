@@ -1,11 +1,11 @@
 //Botón utilizado en: inicio, comunidad
 .green-button {
-  background-color: var($verde-triada);
+  background-color: $verde-triada;
   border-width: 1px;
   padding: 1rem 2rem;
   font-size: medium;
   font-family: "tagesschrift";
-  color: var($Black);
+  color: $Black;
   cursor: pointer;
   border-radius: 20px;
   width: auto;
@@ -16,19 +16,20 @@
 }
 
 .black-button:hover {
-  background-color: var($Black);
-  color: var($verde-triada);
+  background-color: $Black;
+  color: $verde-triada;
+   transform: scale(1.05);
 }
 
 // Botón utilizado en :registro, intercambios, contacto
 .black-button {
-  background-color: var($Black);
+  background-color: $Black;
   border-width: 1px;
   border-style: none;
   padding: 1rem 2rem;
   font-size: medium;
   font-family: "tagesschrift";
-  color: var($falso-blanco);
+  color: $falso-blanco;
   cursor: pointer;
   font-weight: normal;
   border-radius: 214px;
@@ -39,8 +40,9 @@
 }
 
 .black-button:hover {
-  background-color: var($falso-blanco);
-  color: var($Black);
+  background-color: $falso-blanco;
+  color: $Black;
+   transform: scale(1.05);
 }
 
 // Botón utilizado en: perfil

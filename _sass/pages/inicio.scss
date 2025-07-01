@@ -77,27 +77,12 @@
 /* Boton de log in pop up ------------------------------------------------------------------------------------------------------------------------------ */
 /* Estilo para la etiqueta que funciona como botón */
 .boton-comienza-ahora {
-  background-color: $verde-lima;
-  border-width: 1px;
-  border-color: #365746;
-  border-style: solid;
-  padding: 1rem 2rem;
-  font-size: medium;
-  font-family: $fuente2;
-  color: $Marron-oscuro;
-  cursor: pointer;
-  border-radius: 4px;
-  width: auto;
-  display: inline-block;
-  transition: all 0.3s ease;
+  @extend .green-button;
   margin: 0px 0px 41px 78px;
-  text-align: center;
 }
 
 .boton-comienza-ahora:hover {
-  background-color: $verde-oscuro;
-  color: $color-fondo;
-  transform: scale(1.05);
+  @extend .green-button:hover;
 }
 
 /* El elemento a mostrar/ocultar */
