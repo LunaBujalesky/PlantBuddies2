@@ -1,11 +1,6 @@
 @charset "UTF-8";
-/* Queria usar esta pero no em dio tiempo
-@mixin flex($justify: center, $align: center) {
-  display: flex;
-  justify-content: $justify;
-  align-items: $align;
-}
-*/
+/*Mixin para centrados*/
+/* Combinación para animación de botones al pasar el mouse*/
 * {
   margin: 0;
   padding: 0;
@@ -329,6 +324,140 @@ header h1 {
     display: none;
   }
 }
+.green-button, .ideas, .boton-comienza-ahora {
+  background-color: #8c9657;
+  border-width: 1px;
+  padding: 1rem 2rem;
+  font-size: medium;
+  font-family: "tagesschrift";
+  color: #473f34;
+  cursor: pointer;
+  border-radius: 20px;
+  width: auto;
+  display: inline-block;
+  transition: all 0.3s ease;
+  position: absolute;
+  text-align: center;
+  border: none;
+}
+
+.black-button, .boton-contacto-enviar {
+  background-color: #473f34;
+  border-width: 1px;
+  border-style: none;
+  padding: 1rem 2rem;
+  font-size: medium;
+  font-family: "tagesschrift";
+  color: #e5e0d8;
+  cursor: pointer;
+  font-weight: normal;
+  border-radius: 214px;
+  width: auto;
+  display: inline-block;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.simple-button {
+  border-style: none;
+  padding: 1rem 2rem;
+  font-size: medium;
+  font-family: "tagesschrift";
+  color: #473f34;
+  cursor: pointer;
+  font-weight: normal;
+  width: auto;
+  display: inline-block;
+  transition: all 0.3s ease;
+  text-align: center;
+  margin-left: auto;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+/* footer-------------------------------------------------------------------------------------------------------------------------------*/
+.pie-de-pagina {
+  flex-shrink: 0;
+  margin-top: auto;
+  background-color: #473f34;
+  width: 100%;
+  font-family: "VT323", monospace;
+  color: #e5e0d8;
+  font-weight: none;
+}
+
+.footer-columna h3 {
+  color: #e5e0d8;
+  margin: 0px 0px 0px 0px;
+}
+
+.footer-columna {
+  width: auto;
+  color: #e5e0d8;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.footer-columna p {
+  width: auto;
+  color: #e5e0d8;
+  text-align: left;
+  max-width: 180px;
+  padding: 10px;
+  margin-top: 8px;
+}
+
+.footerMenu {
+  display: flex;
+  font-family: "VT323", monospace;
+  justify-content: space-around;
+  background-color: #473f34;
+  margin: auto;
+}
+
+.footerMenu li {
+  list-style-type: none;
+  margin: 10px 0px 5px 0px;
+}
+
+.footerMenu ul {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  color: #e5e0d8;
+}
+
+.footerMenu a {
+  font-family: "VT323", monospace;
+  color: #e5e0d8;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+.footerMenu a:hover {
+  text-decoration: underline;
+}
+
+.footerMenu h3 {
+  text-align: left;
+  padding-left: 10px;
+}
+
+#copyright {
+  color: #e5e0d8;
+  font-family: "VT323", monospace;
+  text-align: center;
+  margin: auto;
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+
+/* Contenedor principal */
+main {
+  flex: 1 0 auto;
+  min-height: 100vh;
+}
+
 /* Sección de bienvenida ---------------------------------------------------------------------------------------*/
 #mensaje-de-bienvenida {
   width: 100%;
@@ -351,6 +480,15 @@ header h1 {
   width: 875px;
   height: auto;
 }
+.text-content p {
+  font-family: "tagesschrift";
+  color: #473f34;
+  margin: 40px 40px 40px 40px;
+  height: auto;
+  width: auto;
+  text-align: left;
+  line-height: 1.8;
+}
 
 .banner-title {
   background-color: #473f34;
@@ -361,7 +499,6 @@ header h1 {
   margin-top: 30px;
   border-radius: 0px 18px 18px 0px;
 }
-
 .banner-title h2 {
   font-family: "tagesschrift";
   color: #e5d7c4;
@@ -377,23 +514,12 @@ header h1 {
   padding: 20px 20px 6px 0px;
 }
 
-.text-content p {
-  font-family: "tagesschrift";
-  color: #473f34;
-  margin: 40px 40px 40px 40px;
-  height: auto;
-  width: auto;
-  text-align: left;
-  line-height: 1.8;
-}
-
 .goblinlandingpage1 {
   width: 45%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .goblinlandingpage1 img {
   width: 600px;
   height: auto;
@@ -405,26 +531,11 @@ header h1 {
 /* Boton de log in pop up ------------------------------------------------------------------------------------------------------------------------------ */
 /* Estilo para la etiqueta que funciona como botón */
 .boton-comienza-ahora {
-  background-color: #b7ca79;
-  border-width: 1px;
-  border-color: #365746;
-  border-style: solid;
-  padding: 1rem 2rem;
-  font-size: medium;
-  font-family: "tagesschrift";
-  color: #1c3d19;
-  cursor: pointer;
-  border-radius: 4px;
-  width: auto;
-  display: inline-block;
-  transition: all 0.3s ease;
   margin: 0px 0px 41px 78px;
-  text-align: center;
 }
-
 .boton-comienza-ahora:hover {
-  background-color: #677e52;
-  color: #f6e8b1;
+  background-color: #473f34;
+  color: #8c9657;
   transform: scale(1.05);
 }
 
@@ -577,8 +688,7 @@ form {
   margin-top: 15px;
   transition: all 0.3s ease;
 }
-
-.login-button:hover {
+.login-button :hover {
   background-color: #2a4535;
   transform: scale(1.02);
 }
@@ -630,7 +740,6 @@ form {
   justify-content: space-around;
   align-items: center;
 }
-
 .supporters-logos img {
   width: 100px;
   height: 100px;
@@ -642,7 +751,6 @@ form {
   width: 100%;
   height: fit-content;
 }
-
 .comofunciona h2 {
   font-family: "tagesschrift";
   text-align: center;
@@ -662,12 +770,10 @@ form {
   transition: transform 0.3s ease;
   cursor: pointer;
 }
-
 .comofunciona-container img {
   width: 86px;
   height: auto;
 }
-
 .comofunciona-container div {
   background-color: #b3b792;
   width: 300px;
@@ -677,7 +783,6 @@ form {
   padding: 30px;
   text-align: center;
 }
-
 .comofunciona-container div:hover {
   background-color: #677e52;
   color: #f6e8b1;
@@ -721,13 +826,11 @@ form {
   margin-top: 320px;
   justify-content: space-around;
 }
-
 .testimonios-container p {
   padding: 0px 36px 2px 36px;
   color: #473f34;
 }
-
-.testimonios-container h3 {
+.testimonios-container p h3 {
   color: #473f34;
 }
 
@@ -758,17 +861,16 @@ form {
   border-color: #677e52;
   border-style: solid;
 }
-
 .Usuario img {
   margin-top: -40px;
   width: 80px;
   height: auto;
 }
-
-.Usuario:hover {
+.Usuario :hover {
   transform: scale(1.05);
 }
 
+/* Mediaqueries / Responsive ------------------------------------------------------------------------------------------------------------------------------*/
 @media (max-width: 600px) {
   .desktop-message {
     display: block;
@@ -800,7 +902,7 @@ form {
     z-index: 2;
     position: relative;
   }
-  .banner-title H2 {
+  .banner-title h2 {
     text-align: center;
     padding: 10%;
     margin-top: 50px;
@@ -846,13 +948,13 @@ form {
   .log-in-oculto {
     margin-left: -4px;
   }
+  .goblinlandingpage1 {
+    margin-top: 30%;
+  }
   .goblinlandingpage1 img {
     width: 400px;
     height: auto;
     z-index: 0;
-  }
-  .goblinlandingpage1 {
-    margin-top: 30%;
   }
   .leaf-1,
   .leaf-2,
@@ -1508,21 +1610,8 @@ footer {
 }
 
 .ideas {
-  background-color: #8c9657;
-  border-width: 1px;
-  padding: 1rem 2rem;
-  font-size: medium;
-  font-family: "tagesschrift";
-  color: #473f34;
-  cursor: pointer;
-  border-radius: 20px;
-  width: auto;
-  display: inline-block;
-  transition: all 0.3s ease;
   margin-left: 1460px;
   margin-top: 8px;
-  position: absolute;
-  text-align: center;
 }
 
 /* grid comunidad */
@@ -2139,10 +2228,6 @@ footer {
     margin-top: auto;
   }
 }
-/* aqui comienza contacto-----------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-*/
 /* decoraciones del fondo------------- */
 .decoracion1 {
   position: absolute;
@@ -2843,149 +2928,6 @@ body {
     margin-left: 80%;
   }
 }
-/* footer-------------------------------------------------------------------------------------------------------------------------------*/
-.pie-de-pagina {
-  flex-shrink: 0;
-  margin-top: auto;
-  background-color: #473f34;
-  width: 100%;
-  font-family: "VT323", monospace;
-  color: #e5e0d8;
-  font-weight: none;
-}
-
-.footer-columna h3 {
-  color: #e5e0d8;
-  margin: 0px 0px 0px 0px;
-}
-
-.footer-columna {
-  width: auto;
-  color: #e5e0d8;
-  margin-right: 20px;
-  margin-top: 20px;
-}
-
-.footer-columna p {
-  width: auto;
-  color: #e5e0d8;
-  text-align: left;
-  max-width: 180px;
-  padding: 10px;
-  margin-top: 8px;
-}
-
-.footerMenu {
-  display: flex;
-  font-family: "VT323", monospace;
-  justify-content: space-around;
-  background-color: #473f34;
-  margin: auto;
-}
-
-.footerMenu li {
-  list-style-type: none;
-  margin: 10px 0px 5px 0px;
-}
-
-.footerMenu ul {
-  margin: 0;
-  padding: 0;
-  text-align: left;
-  color: #e5e0d8;
-}
-
-.footerMenu a {
-  font-family: "VT323", monospace;
-  color: #e5e0d8;
-  text-decoration: none;
-  padding: 10px 15px;
-}
-
-.footerMenu a:hover {
-  text-decoration: underline;
-}
-
-.footerMenu h3 {
-  text-align: left;
-  padding-left: 10px;
-}
-
-#copyright {
-  color: #e5e0d8;
-  font-family: "VT323", monospace;
-  text-align: center;
-  margin: auto;
-  padding-top: 60px;
-  padding-bottom: 30px;
-}
-
-/* Contenedor principal */
-main {
-  flex: 1 0 auto;
-  min-height: 100vh;
-}
-
-.green-button {
-  background-color: var(#8c9657);
-  border-width: 1px;
-  padding: 1rem 2rem;
-  font-size: medium;
-  font-family: "tagesschrift";
-  color: var(#473f34);
-  cursor: pointer;
-  border-radius: 20px;
-  width: auto;
-  display: inline-block;
-  transition: all 0.3s ease;
-  position: absolute;
-  text-align: center;
-}
-
-.black-button:hover {
-  background-color: var(#473f34);
-  color: var(#8c9657);
-}
-
-.black-button {
-  background-color: var(#473f34);
-  border-width: 1px;
-  border-style: none;
-  padding: 1rem 2rem;
-  font-size: medium;
-  font-family: "tagesschrift";
-  color: var(#e5e0d8);
-  cursor: pointer;
-  font-weight: normal;
-  border-radius: 214px;
-  width: auto;
-  display: inline-block;
-  transition: all 0.3s ease;
-  text-align: center;
-}
-
-.black-button:hover {
-  background-color: var(#e5e0d8);
-  color: var(#473f34);
-}
-
-.simple-button {
-  border-style: none;
-  padding: 1rem 2rem;
-  font-size: medium;
-  font-family: "tagesschrift";
-  color: var(#473f34);
-  cursor: pointer;
-  font-weight: normal;
-  width: auto;
-  display: inline-block;
-  transition: all 0.3s ease;
-  text-align: center;
-  margin-left: auto;
-  background-color: transparent;
-  text-decoration: none;
-}
-
 .invisible {
   display: none !important;
 }

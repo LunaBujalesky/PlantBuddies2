@@ -4,7 +4,7 @@
   border-width: 1px;
   padding: 1rem 2rem;
   font-size: medium;
-  font-family: "tagesschrift";
+  font-family: $fuente2;
   color: $Black;
   cursor: pointer;
   border-radius: 20px;
@@ -16,11 +16,6 @@
   border: none;
 }
 
-.green-button :hover {
-  background-color: $Black;
-  color: $verde-triada;
-  transform: scale(1.05);
-}
 
 // Botón utilizado en :registro, intercambios, contacto
 .black-button {
@@ -29,7 +24,7 @@
   border-style: none;
   padding: 1rem 2rem;
   font-size: medium;
-  font-family: "tagesschrift";
+  font-family:  $fuente2;
   color: $falso-blanco;
   cursor: pointer;
   font-weight: normal;
@@ -40,19 +35,14 @@
   text-align: center;
 }
 
-.black-button:hover {
-  background-color: $falso-blanco;
-  color: $Black;
-  transform: scale(1.05);
-}
 
 // Botón utilizado en: perfil
 .simple-button {
   border-style: none;
   padding: 1rem 2rem;
   font-size: medium;
-  font-family: "tagesschrift";
-  color: var($Black);
+  font-family:  $fuente2;
+  color: $Black;
   cursor: pointer;
   font-weight: normal;
   width: auto;

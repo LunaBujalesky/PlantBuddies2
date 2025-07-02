@@ -1,8 +1,4 @@
 
-/* aqui comienza contacto-----------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-*/
 /* decoraciones del fondo------------- */
 .decoracion1 {
   position: absolute;
@@ -124,6 +120,10 @@
   right: 0;
 }
 
+.boton-contacto-enviar {
+  @extend .black-button;
+}
+
 /* Mobile (≤ 600px) */
 @media (max-width: 600px) {
   .formulario-container {
@@ -131,83 +131,101 @@
     margin-top: 60px;
     height: auto;
   }
+
   .encabezado-contacto {
     width: 100%;
     height: auto;
     padding: 20px;
     border-radius: 20px 20px 0 0;
   }
+
   .formulario {
     width: 100%;
     height: auto;
     padding: 15px;
   }
+
   .formulario-parte1 {
     flex-direction: column;
   }
+
   .name-usuario {
     width: 90%;
     margin: 10px auto;
   }
+
   .Correo-electronico {
     width: 90%;
     margin: 10px auto;
   }
+
   .formulario-parte2 {
     width: 90%;
     height: 150px;
     margin: 20px auto;
     padding: 15px;
   }
+
   .formulario-parte2 input {
     width: 100%;
     height: 150px;
     margin-top: 0;
     padding: 15px;
   }
+
   .decoracion1,
   .decoracion2 {
     display: none;
   }
 }
+
 /* Tablets (≥ 768px) */
 @media (min-width: 768px) and (max-width: 1199px) {
   .formulario-container {
     width: 90%;
     margin-top: 80px;
   }
+
   .encabezado-contacto {
     width: 100%;
   }
+
   .formulario {
     width: 100%;
   }
+
   .formulario-parte1 {
     flex-direction: column;
   }
+
   .name-usuario {
     width: 80%;
     margin: 15px auto;
   }
+
   .Correo-electronico {
     width: 80%;
     margin: 15px auto;
   }
+
   .formulario-parte2 {
     width: 80%;
     margin: 30px auto;
   }
+
   .decoracion2 {
     width: 300px;
     left: 60%;
   }
 }
+
 /* Desktops grandes (≥ 1200px) */
 @media (min-width: 1200px) {
   .formulario-container {
     width: 1000px;
     margin: 120px auto;
   }
+
   .decoracion2 {
     width: 400px;
     left: 70%;

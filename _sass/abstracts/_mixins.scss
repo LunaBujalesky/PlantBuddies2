@@ -2,10 +2,18 @@
   display: flex;
 }
 
-/* Queria usar esta pero no em dio tiempo
-@mixin flex($justify: center, $align: center) {
+/*Mixin para centrados*/
+
+@mixin flexcenter($_justify:center, $_align:center) {
   display: flex;
-  justify-content: $justify;
-  align-items: $align;
+  justify-content: $_justify;
+  align-items: $_align;
 }
-*/
+
+
+/* Combinación para animación de botones al pasar el mouse*/
+@mixin button-hover-style ($bg-color, $text-color) {
+  background-color: $bg-color;
+  color: $text-color;
+  transform: scale(1.05);
+}
