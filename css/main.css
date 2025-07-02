@@ -2444,6 +2444,18 @@ footer {
 }
 
 
+/* Mobile (≤ 600px) */
+@media (max-width: 600px) {
+  .perfil-container {
+    flex-direction: column-reverse;
+  }
+  .no-implementado-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
 /* registro -------------------------------------------------------------------------------------------------------------------- */
 /* animacion decoraciones */
 @keyframes float {

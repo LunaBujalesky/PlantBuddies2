@@ -59,3 +59,14 @@
 }
 
 /*# sourceMappingURL=main.css.map */
+
+/* Mobile (≤ 600px) */
+@media (max-width: 600px) {
+  .perfil-container {
+    flex-direction: column-reverse;
+  }
+  .no-implementado-container {
+    @include flexcenter;
+    flex-direction: column;
+  }
+}
