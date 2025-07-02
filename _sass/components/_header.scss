@@ -1,4 +1,3 @@
-
 /* Encabezado------------------------------------------------------------------------------------------------------- */
 header {
   position: relative;
@@ -24,7 +23,7 @@ header {
   z-index: 1000;
   width: 100%;
   height: 105px;
-  box-shadow: 0 6px 12px 0.5  $verde-oscuro;
+  box-shadow: 0 6px 12px 0.5 $verde-oscuro;
   padding: 0 20px;
 }
 
@@ -45,9 +44,6 @@ header {
   }
 }
 
-
-
-
 /* Menú -----------------------------------------------------------------------------------------------------*/
 /* MENU EN COMPUTADORAS ----------------------------------------------------------------*/
 .header-menu {
@@ -57,40 +53,33 @@ header {
   margin: 0;
   padding: 0;
   height: 100%;
+  a {
+    text-decoration: none;
+    color: $Marron-oscuro;
+    font-family: $fuente2;
+    font-size: 1.2rem;
+    display: inline-block;
+    transition: all 0.3s ease;
+    &:hover {
+      color: $verde-oscuro;
+      text-decoration: underline;
+      transform: scale(1.05);
+    }
+  }
+  > li:last-child {
+    position: relative;
+  }
 }
 
 .header-menu-item {
   height: 100%;
   margin: auto 0;
+
+  img {
+    width: 60px;
+    height: 60px;
+  }
 }
-
-.header-menu a {
-  text-decoration: none;
-  color: $Marron-oscuro;
-  font-family: $fuente2;
-  font-size: 1.2rem;
-  display: inline-block;
-  transition: all 0.3s ease;
-}
-
-.header-menu>li:last-child {
-  position: relative;
-}
-
-.header-menu a:hover {
-  color: $verde-oscuro;
-  text-decoration: underline;
-  transform: scale(1.05);
-}
-
-.header-menu-item img {
-  width: 60px;
-  height: 60px;
-}
-
-
-
-
 
 /* Menu hamburguesa en celulares ----------------------------------------------------------*/
 .burger-menu-container {
@@ -100,8 +89,7 @@ header {
 .menu-hamburguesa-icon {
   display: none;
   flex-direction: column;
-}	
-
+}
 
 .burger-menu {
   font-family: $fuente2;
@@ -111,8 +99,12 @@ header {
   width: 280px;
   overflow: visible;
   box-shadow: 0 4px 8px rgba(10, 10, 10, 0.6);
+  a {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+  }
 }
-
 
 .burger-item {
   position: relative;
@@ -127,13 +119,9 @@ header {
   border-radius: 0px;
   margin-bottom: 10px;
   border-radius: 20px 20px 20px 20px;
-
-}
-
-.burger-menu a {
-  cursor: pointer;
-  text-decoration: none; 
-  color: inherit; 
+  &:hover {
+    background-color: $Black;
+  }
 }
 
 /*
@@ -146,14 +134,6 @@ header {
   border-radius:  0px 0px 23px 23px;
 }
   */
-
-.burger-item:hover {
-  
-  background-color: $Black;
-}
-
-
-
 
 .bar {
   width: 25px;
@@ -168,10 +148,6 @@ header {
   transition: 0.3s;
 }
 
-
-
-
-
 /* MenuDeslizable Conectado------------------------------------------------------------------------------------------------------------------------- */
 /* contenedor padre menu desplegable*/
 .header-submenu {
@@ -185,7 +161,7 @@ header {
   display: none;
 }
 
-.header-menu>li:last-child:hover .header-submenu {
+.header-menu > li:last-child:hover .header-submenu {
   display: block;
 }
 
@@ -197,20 +173,18 @@ header {
   border-radius: 1172px 0px 0px 0px;
   background-color: $Black;
   padding-left: 50px;
-}
-
-.submenu-usuario-online img {
-  width: 65px;
-  height: 65px;
-  margin: 2rem 0 0 2rem;
-}
-
-.submenu-usuario-online h3 {
-  padding: 0;
-  font-family: $fuente2;
-  font-weight: normal;
-  color: $beige;
-  margin: 2rem 0 0 2rem;
+  img {
+    width: 65px;
+    height: 65px;
+    margin: 2rem 0 0 2rem;
+  }
+  h3 {
+    padding: 0;
+    font-family: $fuente2;
+    font-weight: normal;
+    color: $beige;
+    margin: 2rem 0 0 2rem;
+  }
 }
 
 .submenu-usuario-online .stars {
@@ -228,42 +202,32 @@ header {
   width: 100%;
   flex-direction: column;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    @include flex;
+    padding: 12px 0px;
+    border-bottom: 1px solid #eee;
+    align-items: center;
+    &:hover {
+      background-color: $verde-triada;
+    }
+  }
+  img {
+    width: 35px;
+    height: auto;
+    margin-right: 10px;
+  }
+  a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    width: 100%;
+  }
 }
-
-.submenu-enlaces ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.submenu-enlaces li {
-  @include flex;
-  padding: 12px 0px;
-  border-bottom: 1px solid #eee;
-  align-items: center;
-}
-
-.submenu-enlaces img {
-  width: 35px;
-  height: auto;
-  margin-right: 10px;
-}
-
-.submenu-enlaces a {
-  text-decoration: none;
-  color: #333;
-  display: block;
-  width: 100%;
-}
-
-.submenu-enlaces li:hover {
-  background-color: $verde-triada;
-}
-
-
-
-
-
 
 /* MenuDeslizable Desconectado------------------------------------------------------------------------------------------------------------------------- */
 /* animacion decoraciones */
@@ -314,7 +278,6 @@ header {
   z-index: 1;
 }
 
-
 // Menu hamburguesa en celulares ----------------------------------------------------------
 @media (max-width: 1000px) {
   .menu-hamburguesa-icon {
@@ -339,6 +302,6 @@ header {
   }
 
   .burger-menu {
-    display: none ;
+    display: none;
   }
 }
