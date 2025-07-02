@@ -532,6 +532,13 @@
         section.scrollIntoView({ behavior: 'smooth' });
       }
     }
+    if (window.innerWidth > 768) {
+  // solo aplicar transformaciones cuando NO es mobile
+  window.addEventListener("scroll", () => {
+    const nav = document.getElementById("navbar");
+    nav.style.transform = `translateY(${window.scrollY * 0.3}px)`;
+  });
+}
   </script>
 </body>
 

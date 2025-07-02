@@ -1629,13 +1629,17 @@ footer {
   width: 800px;
   height: fit-content;
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 5 columnas de igual tamaño */
-  grid-template-rows: repeat(2, auto); /* 3 filas que se ajustan al contenido */
+  grid-template-columns: repeat(3, 1fr);
+  /* 5 columnas de igual tamaño */
+  grid-template-rows: repeat(2, auto);
+  /* 3 filas que se ajustan al contenido */
   row-gap: 8%;
   column-gap: 2rem;
   align-content: center;
-  align-items: center; /* eje vertical de las celdas */
-  justify-items: center; /* contenido dentro de las celdas */
+  align-items: center;
+  /* eje vertical de las celdas */
+  justify-items: center;
+  /* contenido dentro de las celdas */
   margin: 4rem 1rem 3rem 2rem;
 }
 .categorias-populares-container h2 {
@@ -1683,7 +1687,8 @@ footer {
   background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.1) 25%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 100%);
   transition: left 0.8s ease-in-out;
   z-index: 1;
-  border-radius: 8px; /* Mismo border-radius que el contenedor */
+  border-radius: 8px;
+  /* Mismo border-radius que el contenedor */
 }
 .categoria:hover::before {
   left: 100%;
@@ -1699,7 +1704,8 @@ footer {
   transition: left 1.3s ease-out;
   z-index: 2;
   opacity: 0;
-  border-radius: 8px; /* Mismo border-radius que el contenedor */
+  border-radius: 8px;
+  /* Mismo border-radius que el contenedor */
 }
 .categoria:hover::after {
   left: 120%;
@@ -1761,8 +1767,10 @@ footer {
 }
 .card:hover {
   height: fit-content;
-  transform: translateY(-2px); /* ← Efecto de elevación */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* ← Sombra  */
+  transform: translateY(-2px);
+  /* ← Efecto de elevación */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  /* ← Sombra  */
 }
 .card:hover .description {
   opacity: 1;
@@ -2037,10 +2045,14 @@ footer {
 /* Mobile (≤ 600px) */
 @media (max-width: 600px) {
   .comunidad-container {
-    flex-direction: column;
+    display: flex;
+    flex-direction: column-reverse;
     padding: 0px;
     width: 100%;
     margin-top: auto;
+  }
+  .container {
+    width: auto;
   }
   .comunidad-titulo {
     font-size: 24px;
@@ -2048,14 +2060,11 @@ footer {
     text-align: center;
   }
   .ideas {
-    position: static;
-    margin: 20px auto;
-    display: block;
-    width: 80%;
+    position: relative;
+    margin: 18px auto 8px 25%;
     max-width: 200px;
     font-size: 16px;
     padding: 0.8rem 1.5rem;
-    margin-left: 250px;
   }
   .encabezado-comunidad {
     height: auto;
@@ -2071,39 +2080,74 @@ footer {
   .encabezado-comunidad p {
     padding: 10px 20px;
     text-align: center;
-    width: 90%;
-    max-width: 500px;
+  }
+  .divisiones-publicaciones {
+    margin: 0 0 0 2%;
   }
   .comunidad-grid-container {
-    display: grid;
-    flex-direction: column;
-    gap: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+  }
+  .navbar-container {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    justify-content: center;
+    position: static;
+    transform: none !important;
+  }
+  .nav-item {
+    margin: 0.5%;
+  }
+  .buscadores-container {
+    margin: 2% auto;
+    justify-content: center;
+    width: 100%;
+  }
+  .comunidad-sidenavbars-container {
+    height: fit-content;
+    width: auto;
+    flex-direction: column-reverse;
   }
   .categorias-populares-container {
     display: flex;
     flex-direction: column;
+    width: auto;
+    row-gap: 10px;
+    margin: 10px 0 15px 0;
   }
   .foros-container {
     width: 100%;
     height: fit-content;
+    margin: 0 0 0 2px;
+  }
+  .cards-grid {
+    margin: auto 2%;
+  }
+  .card {
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
   }
   .actividad-reciente-container {
     width: fit-content;
-  }
-  .buscadores-container {
-    position: static;
-    justify-content: center;
   }
   .pie-de-pagina {
     margin-top: auto;
   }
 }
 /* Tablets (≥ 768px) */
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 600px) and (max-width: 1199px) {
   .comunidad-container {
-    flex-direction: column;
-    padding: 20px;
-    width: 90%;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0px;
+    width: 100%;
+    margin-top: auto;
+  }
+  .container {
+    width: auto;
   }
   .comunidad-titulo {
     font-size: 28px;
@@ -2114,27 +2158,81 @@ footer {
     font-size: 18px;
   }
   .encabezado-comunidad {
-    height: auto;
-    min-height: 280px;
     margin-top: 0;
     padding-top: 0%;
   }
   .encabezado-comunidad h2 {
-    margin: 0;
+    margin: auto auto auto 30%;
     padding: 30px 20px 10px;
   }
   .encabezado-comunidad p {
-    padding: 0px;
+    padding: 10px;
     text-align: center;
     margin-left: 10px;
-    margin-top: 0px;
   }
   .ideas {
-    margin-left: 250px;
+    margin: 0 0 10% 30%;
   }
   .comunidad-grid-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar-container {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    justify-content: center;
+    position: static;
+    transform: none !important;
+  }
+  .nav-item {
+    margin: 0.5%;
+  }
+  .buscadores-container {
+    margin: 2% auto;
+    justify-content: center;
+    width: 90%;
+  }
+  .comunidad-sidenavbars-container {
+    height: fit-content;
+    width: 90%;
+    flex-direction: column-reverse;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .foros-container {
+    width: 90%;
+    height: fit-content;
+    margin: 5px 0 0 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .categorias-populares-container {
+    grid-template-columns: repeat(2, 1fr);
+    width: auto;
+    gap: 6px;
+    margin: 10px 0 15px 0;
+  }
+  .divisiones-publicaciones {
+    margin: 0 0 0 5%;
+  }
+  .cards-grid {
+    margin: auto 2%;
+  }
+  .card {
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+  }
+  .categoria {
+    width: auto;
+  }
+  .actividad-reciente-container {
+    width: fit-content;
   }
   .pie-de-pagina {
     margin-top: auto;
