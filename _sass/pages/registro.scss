@@ -34,7 +34,6 @@
   }
 }
 
-
 /* contenedor general*/
 .registra-abuelo {
   @include flex;
@@ -51,44 +50,41 @@
   @include flex;
   flex-direction: column;
   margin-top: 40px;
-}
+  > form > div:hover {
+    background-color: $Marron-clarito;
+    color: $Black;
+    transform: scale(1.05);
+  }
 
-.formulario-plantas>form>div:hover {
-  background-color: $Marron-clarito;
-  color: $Black;
-  transform: scale(1.05);
-}
-
-.formulario-plantas>form>div {
-  @include flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: $Black;
-  font-family: $fuente2;
-  font-weight: lighter;
-  color: $falso-blanco;
-  border-radius: 41px;
-  width: 600px;
-  margin: 6px 20px 20px 100px;
-}
-
-.formulario-plantas>form>div>input {
-  background-color: $Marron-clarito;
-  font-family: $fuente2;
-  font-weight: lighter;
-  border-radius: 41px;
-  color: $Black;
-  width: 500px;
-  padding: 10px 20px;
-  border-color: $Black;
-}
-
-.formulario-plantas>form>div>input:hover {
-  background-color: $Black;
-  font-weight: lighter;
-  color: $Marron-clarito;
-  transform: scale(1.05);
-  border-color: $Marron-clarito;
+  > form > div {
+    @include flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: $Black;
+    font-family: $fuente2;
+    font-weight: lighter;
+    color: $falso-blanco;
+    border-radius: 41px;
+    width: 600px;
+    margin: 6px 20px 20px 100px;
+    > input {
+      background-color: $Marron-clarito;
+      font-family: $fuente2;
+      font-weight: lighter;
+      border-radius: 41px;
+      color: $Black;
+      width: 500px;
+      padding: 10px 20px;
+      border-color: $Black;
+      &:hover {
+        background-color: $Black;
+        font-weight: lighter;
+        color: $Marron-clarito;
+        transform: scale(1.05);
+        border-color: $Marron-clarito;
+      }
+    }
+  }
 }
 
 .boton-registro1 {
@@ -119,11 +115,9 @@
   height: 70px;
 }
 
-
 .input-Categorías {
   height: 80px;
 }
-
 
 .input-Descripción {
   height: 120px;
@@ -159,8 +153,6 @@
   }
 }
 
-
-
 /* Estilos para el upload de imágenes */
 .image-upload-container {
   border: 3px dashed var(--verde-secundario);
@@ -188,8 +180,7 @@
   }
 }
 
-
-.image-upload-container input[type=file] {
+.image-upload-container input[type="file"] {
   top: 0;
   left: 0;
   width: 100%;
@@ -220,8 +211,6 @@
     margin-bottom: 10px;
   }
 }
-
-
 
 /* Grid para las imágenes múltiples */
 .multiple-images-container {
@@ -282,8 +271,6 @@
   transform: scale(1.1);
 }
 
-
-
 .ranaSaltando {
   position: absolute;
   animation: float 10s ease-in-out infinite;
@@ -322,12 +309,12 @@ body {
     flex-direction: column;
   }
 
-  .formulario-plantas>form>div {
+  .formulario-plantas > form > div {
     width: 90%;
     margin: 10px auto;
   }
 
-  .formulario-plantas>form>div>input {
+  .formulario-plantas > form > div > input {
     width: 70%;
   }
 
@@ -372,7 +359,7 @@ body {
     margin: 20px auto;
   }
 
-  .formulario-plantas>form>div {
+  .formulario-plantas > form > div {
     width: 90%;
     margin: 10px auto;
   }
