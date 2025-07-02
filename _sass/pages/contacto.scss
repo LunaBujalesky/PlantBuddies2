@@ -95,7 +95,9 @@
   height: 250px;
   border-radius: 20px;
   margin: 6% auto auto auto;
-  background-color: transparent;
+  @include flexcenter;
+  align-items: stretch;
+  flex-direction: column;
 }
 
 .formulario-parte2 input {
@@ -122,6 +124,10 @@
 
 .boton-contacto-enviar {
   @extend .black-button;
+  &:hover {
+    @include button-hover-style($Marron-clarito, $Black);
+  }
+  margin: 20px;
 }
 
 /* Mobile (≤ 600px) */
@@ -164,6 +170,7 @@
     height: 150px;
     margin: 20px auto;
     padding: 15px;
+    flex-direction: row;
   }
 
   .formulario-parte2 input {
@@ -179,7 +186,7 @@
   }
 }
 
-/* Tablets (≥ 768px) */
+/* Tablets  (min-width: 600px) and (max-width: 768px)  */
 @media (min-width: 768px) and (max-width: 1199px) {
   .formulario-container {
     width: 90%;
@@ -211,6 +218,7 @@
   .formulario-parte2 {
     width: 80%;
     margin: 30px auto;
+    flex-direction: row;
   }
 
   .decoracion2 {

@@ -1,34 +1,39 @@
-
 /* registro -------------------------------------------------------------------------------------------------------------------- */
 /* animacion decoraciones */
 @keyframes float {
   0% {
     transform: translateY(0) rotate(0deg);
   }
+
   50% {
     transform: translateY(-20px) rotate(10deg);
     /*  rotate, el valor de rotación, translate como se mueve en Y */
   }
+
   100% {
     transform: translateY(0) rotate(0deg);
   }
 }
-.registra-tu-planta img {
-  position: absolute;
-  animation: float 3s ease-in-out infinite;
-  width: 80px;
-  height: auto;
-  margin-left: 580px;
-  margin-top: -80px;
+
+.registra-tu-planta {
+  img {
+    position: absolute;
+    animation: float 3s ease-in-out infinite;
+    width: 80px;
+    height: auto;
+    margin-left: 580px;
+    margin-top: -80px;
+  }
+
+  h3 {
+    font-family: $fuente2;
+    color: $Black;
+    font-size: 30px;
+    margin-left: 340px;
+    margin-top: 50px;
+  }
 }
 
-.registra-tu-planta h3 {
-  font-family: $fuente2;
-  color: $Black;
-  font-size: 30px;
-  margin-left: 340px;
-  margin-top: 50px;
-}
 
 /* contenedor general*/
 .registra-abuelo {
@@ -48,13 +53,13 @@
   margin-top: 40px;
 }
 
-.formulario-plantas > form > div:hover {
+.formulario-plantas>form>div:hover {
   background-color: $Marron-clarito;
   color: $Black;
   transform: scale(1.05);
 }
 
-.formulario-plantas > form > div {
+.formulario-plantas>form>div {
   @include flex;
   flex-direction: row;
   justify-content: space-between;
@@ -67,7 +72,7 @@
   margin: 6px 20px 20px 100px;
 }
 
-.formulario-plantas > form > div > input {
+.formulario-plantas>form>div>input {
   background-color: $Marron-clarito;
   font-family: $fuente2;
   font-weight: lighter;
@@ -78,7 +83,7 @@
   border-color: $Black;
 }
 
-.formulario-plantas > form > div > input:hover {
+.formulario-plantas>form>div>input:hover {
   background-color: $Black;
   font-weight: lighter;
   color: $Marron-clarito;
@@ -87,28 +92,18 @@
 }
 
 .boton-registro1 {
-  background-color: $Black;
-  border-width: 1px;
-  border-style: none;
-  padding: 1rem 2rem;
-  font-size: medium;
-  font-family: $fuente2;
-  color: $falso-blanco;
-  cursor: pointer;
-  font-weight: normal;
-  border-radius: 214px;
-  width: auto;
-  display: inline-block;
-  transition: all 0.3s ease;
-  text-align: center;
+  @extend .black-button;
   margin-left: auto;
+}
+
+.boton-registro2 {
+  @extend .black-button;
+  margin: 130px 0px 20px 300px;
 }
 
 .boton-registro1:hover,
 .boton-registro2:hover {
-  background-color: $falso-blanco;
-  color: $Black;
-  transform: scale(1.05);
+  @include button-hover-style($Marron-intermedio, $Black);
 }
 
 /* estilo cada burbuja del formulario--*/
@@ -135,9 +130,6 @@
 }
 
 /* contenedor p derecha, hijo 2-------------------------------*/
-.form-section {
-  padding: 40px;
-}
 
 .form-group {
   margin-bottom: 25px;
@@ -160,12 +152,14 @@
   background: $falso-blanco;
   border: 2px solid transparent;
   transition: all 0.3s ease;
+
+  &:focus {
+    border-color: var(--verde-principal);
+    box-shadow: 0 0 0 0.2rem rgba(127, 176, 105, 0.25);
+  }
 }
 
-.form-control:focus {
-  border-color: var(--verde-principal);
-  box-shadow: 0 0 0 0.2rem rgba(127, 176, 105, 0.25);
-}
+
 
 /* Estilos para el upload de imágenes */
 .image-upload-container {
@@ -180,20 +174,20 @@
   margin: 50px 0 0 50px;
   width: 440px;
   height: auto;
+
+  &:hover {
+    background: $verde-acento;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(127, 176, 105, 0.3);
+  }
+
+  .dragover {
+    border-color: var(--verde-principal);
+    background: $verde-acento;
+    box-shadow: 0 0 20px rgba(127, 176, 105, 0.4);
+  }
 }
 
-.image-upload-container:hover {
-  border-color: var(--verde-principal);
-  background: $verde-acento;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(127, 176, 105, 0.3);
-}
-
-.image-upload-container.dragover {
-  border-color: var(--verde-principal);
-  background: $verde-acento;
-  box-shadow: 0 0 20px rgba(127, 176, 105, 0.4);
-}
 
 .image-upload-container input[type=file] {
   top: 0;
@@ -219,13 +213,15 @@
 
 .upload-text {
   color: $Marron-oscuro;
+
+  h5 {
+    color: var(--verde-secundario);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
 }
 
-.upload-text h5 {
-  color: var(--verde-secundario);
-  font-weight: 600;
-  margin-bottom: 10px;
-}
+
 
 /* Grid para las imágenes múltiples */
 .multiple-images-container {
@@ -245,17 +241,17 @@
   border: 3px solid var(--verde-principal);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-}
 
-.image-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-}
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
 
-.image-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .image-item .remove-btn {
@@ -286,22 +282,7 @@
   transform: scale(1.1);
 }
 
-.boton-registro2 {
-  background-color: $Black;
-  border-style: none;
-  padding: 1rem 2rem;
-  font-size: medium;
-  font-family: $fuente2;
-  color:$falso-blanco;
-  font-weight: normal;
-  cursor: pointer;
-  border-radius: 214px;
-  width: auto;
-  display: inline-block;
-  transition: all 0.3s ease;
-  margin: 100px 0px 20px 300px;
-  text-align: center;
-}
+
 
 .ranaSaltando {
   position: absolute;
@@ -331,82 +312,101 @@ body {
     margin: 30px auto;
     text-align: center;
   }
+
   .registra-tu-planta img {
     display: none;
   }
+
   .registra-abuelo {
     width: 100%;
     flex-direction: column;
   }
-  .formulario-plantas > form > div {
+
+  .formulario-plantas>form>div {
     width: 90%;
     margin: 10px auto;
   }
-  .formulario-plantas > form > div > input {
+
+  .formulario-plantas>form>div>input {
     width: 70%;
   }
+
   .sube-fotos-oferta {
     margin: 20px auto;
     width: 90%;
   }
+
   .bigphoto img {
     width: 100%;
     max-width: 300px;
     margin: 0 auto;
     display: block;
   }
+
   .littleones {
     justify-content: center;
     gap: 10px;
     flex-wrap: wrap;
   }
+
   .littleones img {
     width: 80px;
   }
+
   .boton-registro1,
   .boton-registro2 {
     margin: 20px auto;
     display: block;
   }
+
   .ranaSaltando,
   .ranaSaltando2 {
     display: none;
   }
 }
+
 /* Tablets (≥ 768px) */
 @media (min-width: 768px) and (max-width: 1199px) {
   .registra-abuelo {
     width: 90%;
     margin: 20px auto;
   }
-  .formulario-plantas > form > div {
+
+  .formulario-plantas>form>div {
     width: 90%;
     margin: 10px auto;
   }
+
   .sube-fotos-oferta {
     margin-right: 20px;
   }
+
   .bigphoto img {
     width: 300px;
   }
+
   .littleones img {
     width: 90px;
   }
+
   .ranaSaltando {
     margin-left: 50px;
     width: 150px;
   }
+
   .ranaSaltando2 {
     margin-left: 90%;
     width: 150px;
   }
 }
+
 /* Desktops grandes (≥ 1200px) */
 @media (min-width: 1200px) {
   .registra-abuelo {
     width: 1200px;
     margin: 40px auto;
   }
+
   .ranaSaltando2 {
     margin-left: 80%;
   }
