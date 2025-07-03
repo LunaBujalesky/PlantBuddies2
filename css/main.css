@@ -1151,18 +1151,25 @@ form {
   height: 290px;
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
+}
+.intercambio-encabezado > div:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .intercambio-encabezado h2 {
   color: #e5d7c4;
   font-family: "tagesschrift";
-  margin: 100px 0 30px 360px;
+  margin: 100px 0 30px auto;
   font-weight: normal;
   font-size: 32px;
 }
 .intercambio-encabezado p {
   color: #e5d7c4;
   font-family: "tagesschrift";
-  margin: 0px 0 42px 360px;
+  margin: 0px 0 42px auto;
+  max-width: 440px;
 }
 
 .contador-ecologico {
@@ -1170,7 +1177,7 @@ form {
   width: 380px;
   height: 66px;
   border-radius: 32px;
-  margin: 130px 0 0 360px;
+  margin: auto;
 }
 .contador-ecologico p {
   font-family: "VT323", monospace;
@@ -1187,7 +1194,7 @@ form {
   position: relative;
   display: flex;
   align-items: center;
-  margin: -70px 0px 0 1180px;
+  margin: auto;
   gap: 15px;
   width: 400px;
 }
@@ -1469,16 +1476,26 @@ footer {
 @media (max-width: 600px) {
   .intercambio-encabezado {
     flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px;
+    padding: 15px 15px 30px 15px;
+    height: auto;
+  }
+  .intercambio-encabezado > div:last-child {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
   }
   .intercambio-encabezado h2 {
+    text-align: center;
     font-size: 24px;
-    margin: 30px 15px 15px 15px;
+    margin: 30px auto 15px auto;
   }
   .intercambio-encabezado p {
+    text-align: center;
     margin: auto;
   }
   .search-wrapper {
@@ -1486,13 +1503,14 @@ footer {
     width: fit-content;
   }
   .contador-ecologico {
-    width: 60%;
+    width: auto;
     height: 50px;
-    margin: auto;
+    margin: 20px auto;
   }
   .contador-ecologico p {
     font-size: 16px;
-    padding: 12px;
+    padding: 12px 18px;
+    margin: auto;
   }
   .ofertas-grid {
     grid-template-columns: 1fr;
@@ -1515,28 +1533,46 @@ footer {
   }
 }
 /* Tablets (≥ 768px) */
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 600px) and (max-width: 1199px) {
   .intercambio-encabezado {
     flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: stretch;
     padding: 15px;
+    gap: 30px;
+  }
+  .intercambio-encabezado :last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
   }
   .intercambio-encabezado h2 {
     font-size: 24px;
-    margin: 30px 15px 15px 15px;
+    margin: 30px 15px 15px 0px;
+  }
+  .intercambio-encabezado p {
+    margin: auto;
+    max-width: 400px;
   }
   .contador-ecologico {
-    width: 90%;
+    width: auto;
     height: 50px;
   }
   .contador-ecologico p {
     font-size: 24px;
-    padding: 12px;
+    padding: 8px 18px;
+  }
+  .search-wrapper {
+    margin: auto;
+    width: fit-content;
   }
   .ofertas-grid {
-    grid-template-columns: 1fr;
-    width: 95%;
-    gap: 30px;
-    margin-bottom: 100px;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    margin: 20px 2px 100px 2px;
   }
   .ofertas-grid > div {
     width: 200px;
