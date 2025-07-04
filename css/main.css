@@ -2962,8 +2962,9 @@ body {
 /* Tablets (≥ 768px) */
 @media (min-width: 601px) and (max-width: 1254px) {
   .registra-abuelo {
-    width: 90%;
-    margin: 20px auto;
+    width: 100%;
+    flex-direction: column;
+    padding: auto 8% auto 6%;
   }
   .formulario-plantas > form > div {
     width: 90%;
@@ -2983,7 +2984,7 @@ body {
     width: 150px;
   }
   .ranaSaltando2 {
-    margin-left: 90%;
+    margin-left: 60%;
     width: 150px;
   }
 }
