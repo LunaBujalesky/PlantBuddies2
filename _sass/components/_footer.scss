@@ -71,5 +71,5 @@
 /* Contenedor principal */
 main {
   flex: 1 0 auto;
-  min-height: 100vh;
+ min-height: 100vh; /* ojo con esto, en mobile decencarrila todo, en pc y tablet puede generar errores */
 }

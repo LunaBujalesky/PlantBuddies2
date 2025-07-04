@@ -12,13 +12,15 @@
   height: 500px;
   background-color: $Marron-intermedio;
   margin: 80px auto;
+  border-radius: 10px;
 }
 
 /* cartel bienvenida */
 .text-content {
   justify-content: left;
   width: 875px;
-  height: auto;
+  height: fit-content;
+ 
 
   p {
     font-family: $fuente2;
@@ -67,10 +69,12 @@
   align-items: center;
 
   img {
-    width: 600px;
+    width: 460px;
     height: auto;
     position: relative;
     margin-top: 100px;
+    overflow-clip-margin: content-box;
+    overflow: clip;
   }
 }
 
@@ -367,6 +371,7 @@ form {
   background-color: $verde-oscuro;
   align-content: center;
   color: $Black;
+  height: fit-content;
 }
 
 .comunidad-CONTAINER {
@@ -378,7 +383,6 @@ form {
   border-radius: 20px;
   width: 1200px;
   margin: 50px auto;
-  padding: 60px;
 }
 
 /* Testimonios------------------------------------------------------------------------------------------------------------------------------*/
@@ -564,7 +568,6 @@ form {
     width: 100%;
     font-size: 0.9rem;
     padding: 8px 0;
-    margin-top: 180%;
     clip-path: polygon(0% 0%, 0% 0%, 50% 12%, 100% 0%, 100% 30%, 100% 100%, 50% 90%, 0% 100%);
     box-shadow: 5px 5px 15px var --Black 0, 0, 0, 0.8, 0px -5px 10px var --Black 0, 0, 0, 0.8;
 
@@ -614,8 +617,8 @@ form {
   }
 
   .userfondo {
-    width: 260px;
-    height: 200px;
+    width: 255px;
+    height: 192px;
     border-top: 4px solid #677e52;
   }
 
@@ -720,7 +723,7 @@ form {
 
 
 /* Tablets --------------------------------------------------------) */
-@media (min-width: 768px) and (max-width: 1000px) {
+@media (min-width: 600px) and (max-width: 1100px) {
 
   .nav {
     justify-content: space-between;
@@ -756,57 +759,76 @@ form {
   .container-bienvenida {
     flex-direction: row;
     width: 90vw;
-    height: 400px;
+    height: 500px;
     margin: 60px auto;
-    padding: 20px;
   }
 
   .goblinlandingpage1 img {
     width: 350px;
     margin-top: 40px;
   }
-
+.boton-comienza-ahora {
+    margin: 10px 0px 41px 78px;
+  }
   .banner-title {
     width: 400px;
     height: 80px;
     margin-top: 20px;
   }
 
-  .p-container {
-    margin: 24px 0 8px 0;
-    padding: 16px 10px 8px 10px;
+  .text-content p {
+    margin: 0px 0 8px 0;
+    padding: 8px 10px 8px 10px;
   }
 
   .comunidad-CONTAINER {
     width: 90vw;
-    padding: 40px 20px;
   }
-
-  .testimonios-container {
-    width: auto;
-    height: fit-content;
-    padding: 0%;
-  }
-
   .userfondo {
-    width: 260px;
-    height: 200px;
+    width: 293px;
+    height: 230px;
     border-top: 4px solid #677e52;
   }
 
   .Usuario {
-    width: 260px;
-    height: 265px;
+    width: 300px;
+    height: 305px;
     border-radius: 30px;
   }
 
-  .testimonios-container p {
-    font-size: 80%;
+  .testimonios-container {
+    @include flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: fit-content;
+    padding: 0%;
+    font-size: 100%;
+    border-radius: 8px;
+    margin-top: 320px;
+    justify-content: space-between;
+    align-content: stretch;
+    min-height: 65vh;
+    /* o la altura necesaria */
+    overflow: visible;
+    margin-top: 40%;
+     p {
+      padding: 10px 36px 2px 36px;
   }
+  h3 {
+    padding: 10px;
+  }
+  }
+
 
   .pie-de-pagina {
     margin-top: auto;
   }
+  /* Contenedor principal */
+main {
+  flex: 1 0 auto;
+ height: fit-content;
+}
 }
 
 
@@ -818,8 +840,8 @@ form {
 
 
 
-/* Desktops grandes (≥ 1200px) */
-@media (min-width: 1200px) {
+/* Desktops grandes (≥ 1100px) */
+@media (min-width: 1100px) {
 
 
 
@@ -840,5 +862,9 @@ form {
   .pie-de-pagina {
     margin-top: auto;
   }
-
+  /* Contenedor principal */
+  main {
+    flex: 1 0 auto;
+   height: fit-content;
+  }
 }

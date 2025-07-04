@@ -353,7 +353,7 @@ body {
 }
 
 /* Tablets (≥ 768px) */
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 601px) and (max-width: 1254px) {
   .registra-abuelo {
     width: 90%;
     margin: 20px auto;
@@ -388,7 +388,7 @@ body {
 }
 
 /* Desktops grandes (≥ 1200px) */
-@media (min-width: 1200px) {
+@media (min-width: 1255px) {
   .registra-abuelo {
     width: 1200px;
     margin: 40px auto;
