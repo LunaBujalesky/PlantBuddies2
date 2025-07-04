@@ -757,18 +757,20 @@ form {
   height: auto;
 }
 .comofunciona-container div {
+  color: #677e52;
   background-color: #b3b792;
   width: 300px;
-  height: 200px;
+  height: 220px;
   margin: 30px;
   border-radius: 16px;
   padding: 30px;
   text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 .comofunciona-container div:hover {
   background-color: #677e52;
-  color: #f6e8b1;
-  transform: scale(1.05) rotate(8deg);
+  color: #e5d7c4;
+  transform: scale(1.05) rotate(3deg);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -1475,6 +1477,24 @@ form {
   transform: scale(1.05);
   z-index: 5;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.varOferta1 button {
+  pointer-events: auto;
+  transition: all 0.2s ease;
+}
+.varOferta1 button:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.encabezado1,
+.parte-inferior-blanca,
+.parte-a,
+.parte-b,
+.parte-c,
+h3,
+p {
+  pointer-events: none;
 }
 
 /* Personalización de la paginación Bootstrap */

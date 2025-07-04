@@ -296,8 +296,27 @@
     z-index: 5;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   }
+  button {
+    pointer-events: auto;
+    transition: all 0.2s ease;
+    
+    &:hover {
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transform: scale(1.05);
+    }
 }
-
+}
+    // Desactiva hover en elementos internos
+    .encabezado1,
+    .parte-inferior-blanca,
+    .parte-a,
+    .parte-b,
+    .parte-c,
+    h3,
+    p {
+        pointer-events: none;
+    }
+    
 /* Personalización de la paginación Bootstrap */
 .pagination .page-link {
   color: $verde-acento;
