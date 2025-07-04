@@ -426,6 +426,7 @@ form {
   height: 194px;
   position: absolute;
   box-sizing: border-box;
+ 
 }
 
 .Usuario {
@@ -444,7 +445,7 @@ form {
     height: auto;
   }
 
-  :hover {
+  &:hover {
     transform: scale(1.05);
   }
 }
@@ -620,6 +621,9 @@ form {
     width: 255px;
     height: 192px;
     border-top: 4px solid #677e52;
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 
   .Usuario {
@@ -788,6 +792,9 @@ form {
     width: 293px;
     height: 230px;
     border-top: 4px solid #677e52;
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 
   .Usuario {

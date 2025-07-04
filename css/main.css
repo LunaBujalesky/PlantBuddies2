@@ -848,7 +848,7 @@ form {
   width: 80px;
   height: auto;
 }
-.Usuario :hover {
+.Usuario:hover {
   transform: scale(1.05);
 }
 
@@ -989,6 +989,9 @@ form {
     height: 192px;
     border-top: 4px solid #677e52;
   }
+  .userfondo:hover {
+    transform: scale(1.05);
+  }
   .Usuario {
     width: 260px;
     height: 265px;
@@ -1110,6 +1113,9 @@ form {
     width: 293px;
     height: 230px;
     border-top: 4px solid #677e52;
+  }
+  .userfondo:hover {
+    transform: scale(1.05);
   }
   .Usuario {
     width: 300px;
