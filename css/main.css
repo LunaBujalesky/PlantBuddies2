@@ -32,7 +32,7 @@ header h1 {
 
 .header-jefe-visible {
   display: flex;
-  background-color: #b3b792;
+  background-color: #8c9657;
   align-items: center;
   justify-content: space-between;
   position: fixed;
@@ -73,14 +73,14 @@ header h1 {
 }
 .header-menu a {
   text-decoration: none;
-  color: #1c3d19;
+  color: #473f34;
   font-family: "tagesschrift";
   font-size: 1.2rem;
   display: inline-block;
   transition: all 0.3s ease;
 }
 .header-menu a:hover {
-  color: #677e52;
+  color: #365c19;
   text-decoration: underline;
   transform: scale(1.05);
 }
@@ -185,7 +185,7 @@ header h1 {
   display: flex;
   height: 126px;
   width: 100%;
-  border-radius: 1172px 0px 0px 0px;
+  border-radius: 10px 10px 0px 0px;
   background-color: #473f34;
   padding-left: 50px;
 }
@@ -212,8 +212,11 @@ header h1 {
 .submenu-enlaces {
   /* contenedor*/
   display: flex;
+  flex-direction: row;
+  align-items: flex-end;
   padding-left: 50px;
-  background-color: #b3b792;
+  background-color: #8c9657;
+  border-radius: 0 0 18px 85px;
   width: 100%;
   flex-direction: column;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -225,12 +228,17 @@ header h1 {
 }
 .submenu-enlaces li {
   display: flex;
+  flex-direction: row;
   padding: 12px 0px;
-  border-bottom: 1px solid #eee;
-  align-items: center;
+  margin-right: 30px;
+  margin-left: -40px;
 }
 .submenu-enlaces li:hover {
-  background-color: #8c9657;
+  background-color: #b3b792;
+  border-radius: 50px;
+  border: 11px solid #e5d7c4;
+  width: 420px;
+  align-items: flex-end;
 }
 .submenu-enlaces img {
   width: 35px;
@@ -242,6 +250,7 @@ header h1 {
   color: #333;
   display: block;
   width: 100%;
+  text-align: end;
 }
 
 /* MenuDeslizable Desconectado------------------------------------------------------------------------------------------------------------------------- */
@@ -362,64 +371,82 @@ header h1 {
 }
 
 /* footer-------------------------------------------------------------------------------------------------------------------------------*/
-.pie-de-pagina {
+.footerContainer {
   flex-shrink: 0;
   margin-top: auto;
   background-color: #473f34;
   width: 100%;
-  font-family: "VT323", monospace;
-  color: #e5e0d8;
-  font-weight: none;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-
-.footer-columna {
-  width: auto;
-  color: #e5e0d8;
-  margin-right: 20px;
+.footerContainer .botonColapsar {
+  align-self: flex-end;
+}
+.footerContainer .botonColapsar img {
+  width: 80px;
+  height: fit-content;
   margin-top: 20px;
 }
-.footer-columna h3 {
-  color: #e5e0d8;
-  margin: 0px 0px 0px 0px;
+.footerContainer .botonColapsar button {
+  background-color: transparent;
+  border: none;
 }
-.footer-columna p {
-  width: auto;
-  color: #e5e0d8;
-  text-align: left;
-  max-width: 180px;
-  padding: 10px;
-  margin-top: 8px;
+.footerContainer .botonColapsar :hover {
+  background-color: transparent;
 }
-
-.footerMenu {
+.footerContainer .siguenos {
+  width: 100%;
+}
+.footerContainer .siguenos > nav > ul {
   display: flex;
-  font-family: "VT323", monospace;
-  justify-content: space-around;
-  background-color: #473f34;
+  flex-direction: row; /* por defecto ya es row */
+  justify-content: space-evenly;
+  list-style: none; /* saca los puntitos */
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.footerContainer .siguenos img {
+  width: 80px;
+  height: 80px;
+}
+.footerContainer .footerNavs {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  gap: 30px;
+}
+.footerContainer .footerNavs p {
+  font-family: "tagesschrift";
+  color: #e5e0d8;
+  padding: 0;
   margin: auto;
 }
-.footerMenu li {
-  list-style-type: none;
-  margin: 10px 0px 5px 0px;
+.footerContainer .footerNavs .enlaces p {
+  cursor: pointer;
 }
-.footerMenu ul {
-  margin: 0;
-  padding: 0;
-  text-align: left;
+.footerContainer .footerNavs .barraVertical {
+  height: 30px;
+  width: 1.5px;
+  background-color: #8c9657;
+}
+.footerContainer .footerNavs .recursos p {
+  cursor: pointer;
+}
+.footerContainer .descripcionPagina {
+  width: 100%;
   color: #e5e0d8;
-}
-.footerMenu a {
-  font-family: "VT323", monospace;
-  color: #e5e0d8;
-  text-decoration: none;
-  padding: 10px 15px;
-}
-.footerMenu a:hover {
-  text-decoration: underline;
-}
-.footerMenu h3 {
   text-align: left;
-  padding-left: 10px;
+  margin-top: 8px;
+  font-family: "tagesschrift";
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 #copyright {
@@ -427,8 +454,6 @@ header h1 {
   font-family: "VT323", monospace;
   text-align: center;
   margin: auto;
-  padding-top: 60px;
-  padding-bottom: 30px;
 }
 
 /* Contenedor principal */
@@ -2152,6 +2177,13 @@ footer {
     padding: 0px;
     width: 100%;
     margin-top: auto;
+  }
+  h3 {
+    margin-top: 1.5rem; /* espacio arriba */
+    margin-bottom: 0.5rem; /* espacio abajo */
+  }
+  p {
+    margin-bottom: 1.5rem;
   }
   .container {
     width: auto;

@@ -14,7 +14,7 @@ header {
 
 .header-jefe-visible {
   @include flex;
-  background-color: $verde-acento;
+  background-color: $verde-triada;
   align-items: center;
   justify-content: space-between;
   position: fixed;
@@ -55,13 +55,13 @@ header {
   height: 100%;
   a {
     text-decoration: none;
-    color: $Marron-oscuro;
+    color: $Black;
     font-family: $fuente2;
     font-size: 1.2rem;
     display: inline-block;
     transition: all 0.3s ease;
     &:hover {
-      color: $verde-oscuro;
+      color: $verde-logo;
       text-decoration: underline;
       transform: scale(1.05);
     }
@@ -111,6 +111,7 @@ header {
   padding: 20px 30px;
   font-size: 15px;
   font-weight: 400;
+
   transition: color 0.3s ease;
   z-index: 3;
   text-align: right;
@@ -170,7 +171,7 @@ header {
   @include flex;
   height: 126px;
   width: 100%;
-  border-radius: 1172px 0px 0px 0px;
+  border-radius: 10px 10px 0px 0px;
   background-color: $Black;
   padding-left: 50px;
   img {
@@ -196,24 +197,35 @@ header {
 /* Diseño hijo 2 color claro*/
 .submenu-enlaces {
   /* contenedor*/
-  @include flex;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
   padding-left: 50px;
-  background-color: #b3b792;
+  background-color: $verde-triada;
+  border-radius: 0 0  18px 85px;
   width: 100%;
   flex-direction: column;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
   ul {
     list-style: none;
     margin: 0;
     padding: 0;
   }
   li {
-    @include flex;
+    display: flex;
+    flex-direction: row;
     padding: 12px 0px;
-    border-bottom: 1px solid #eee;
-    align-items: center;
+    margin-right: 30px;
+    margin-left: -40px;
+    
+
     &:hover {
-      background-color: $verde-triada;
+      background-color: $verde-acento;
+      border-radius: 50px;
+      border: 11px solid $Marron-clarito;
+      width: 420px;
+      align-items: flex-end;
     }
   }
   img {
@@ -226,6 +238,7 @@ header {
     color: #333;
     display: block;
     width: 100%;
+    text-align: end;
   }
 }
 
