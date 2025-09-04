@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass _sass/main.scss css/main.css --watch"
+    "sass": "sass _sass/main.scss css/main.css --watch",
+    "dev": "nodemon backend/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express": "^5.1.0",
     "sass": "^1.89.2"
   }
 }
