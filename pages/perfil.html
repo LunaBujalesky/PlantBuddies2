@@ -141,19 +141,48 @@
 
       <div class="no-implementado-container">
         <div>
-          <h2>404</h2>
+          <h2>Registrate</h2>
         </div>
         <div>
+          <!--Aca le pongo un form -->
+          <form id="form-perfil" action="" method="post">
+            <div class="">
+              <label for="name">Nombre: </label>
+              <input type="text" name="name" id="name" required />
+            </div>
+            <div class="">
+              <label for="email">Email: </label>
+              <input type="email" name="email" id="email" required />
+            </div>
+            <div class="">
+              <label for="country">Pais: </label>
+              <input type="text" name="country" id="country" required />
+            </div>
+                        <div class="">
+              <label for="city">Ciudad: </label>
+              <input type="text" name="city" id="city" required />
+            </div>
+
+            <div class="perfil-botones">
+              <div class="perfil-boton-efecto-linea">
+                <input class="simple-button"  type="submit" value="Subscribe!" />
+              </div>
+            </div>
+          </form>
+
+
+</div>
+<!--
           <p>UPS! Nos descubriste, estamos apenados, pero nuestro sistema <br>
             de base de usuarios aún no está implementado. <br>
             Por favor, vuelve más tarde para crear tu perfil <br>
             y comenzar a disfrutar de PlantBuddies! (ㅅ´ ˘ `)♡
 
-          </p>
-        </div>
+          </p>-->
+        
 
         <!-- botones del perfil -->
-        <div class="perfil-botones">
+        
           <!-- Vertically centered modal de bootstrap -->
           <!--  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
             aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -173,7 +202,7 @@
           </div>
         </div>
       </div>
-      <img class="goblinapenado" src="../assets/imagenes/goblinapenado.png" alt="goblinApenadoYDesnudo">
+      <img class="goblinapenado" src="../assets/imagenes/goblinlandingpage1.png" alt="goblinLandingPage">
 
     </div>
   </main>
@@ -206,7 +235,7 @@
           <li><a href="comunidad.html">Comunidad</a></li>
           <li><a href="contacto.html">Contacto</a></li>
           <li><a href="perfil.html">Perfil</a></li>
-          <ul>
+        </ul>
       </div>
       <div class="Recursos">
         <ul>
@@ -231,6 +260,9 @@
     </div>
     <p id="copyright">©2025 hecho con ❤ por el equipo de PlantBuddies. Todos los derechos reservados</p>
   </footer>
+
+  <!-- agrego el script del nuevo usuario -->
+<script src="/js/validacion_perfil.js"></script>
 </body>
 
 </html>
