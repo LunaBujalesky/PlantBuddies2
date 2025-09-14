@@ -4,30 +4,56 @@ form.addEventListener('submit', (e) =>{
     // evita que se mande "por defecto"
     e.preventDefault(); 
 
+        // Obtener todos los elementos de error
+    const nameError = document.getElementById('nameError');
+    const emailError = document.getElementById('emailError');
+    const countryError = document.getElementById('countryError');
+    const cityError = document.getElementById('cityError');
+    const passwordError = document.getElementById('passwordError');
+
+    // Limpiar errores anteriores
+    nameError.textContent = '';
+    emailError.textContent = '';
+    countryError.textContent = '';
+    cityError.textContent = '';
+    passwordError.textContent = '';
+
     // validaciones
-    let name = validar(form.elements['name'].value, 'nombre');
+    let name = validar(form.elements['name'].value, 'nombre', nameError);
     if(!name)return;
 
-    let email = validar(form.elements['email'].value, 'email');
+    let email = validar(form.elements['email'].value, 'email', emailError);
     let emailValidado = email.toLowerCase()
     if(!emailValidado) return;
-    if(!validarMail(email)){
-        alert(`${email} inválido`);
+    if(!validarMail(emailValidado)){
+        emailError.textContent = 'Email inválido';
         return 
     }
 
-    let country = validar(form.elements['country'].value, 'pais');
+    let country = validar(form.elements['country'].value, 'pais', countryError);
     if(!country)return;
 
-    let city = validar(form.elements['city'].value, 'ciudad');
+    let city = validar(form.elements['city'].value, 'ciudad', cityError);
     if(!city)return;
+
+    let password = form.elements['password'].value;
+    if(password.trim() === ''){
+        passwordError.textContent = 'La contraseña es obligatoria para el registro'
+        return;
+    } else if (password.length < 6) {
+        passwordError.textContent = 'La contraseña debe tener al menos 6 caracteres'
+        return;
+    } else {
+        passwordError.textContent ='';
+    }
 
     // objetos con los datos
     const data = {
         nombre: name,
         email: emailValidado,
         pais: country,
-        ciudad: city
+        ciudad: city,
+        password: password
     };
 
 // funcion fetch para enviar los datos al backend - por ahora hardcodeada hasta que agregue .env
@@ -47,13 +73,14 @@ form.addEventListener('submit', (e) =>{
     );
 });
 
-function validar(cadena, nombreCampo){
+function validar(cadena, nombreCampo, errorElemento){
         
     if(cadena.trim() === ''){
-        alert(`El campo ${nombreCampo} es obligatorio para el registro`);
+        errorElemento.textContent = (`El campo ${nombreCampo} es obligatorio para el registro`);
         return null
     }
     else{
+        errorElemento.textContent = '';
         return formatoCadena(cadena)
     }
 }
